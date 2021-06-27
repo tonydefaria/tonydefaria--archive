@@ -1,12 +1,12 @@
 // next.config.js
 
-module.exports = withImages({
+module.exports = {
   webpack5: true,
   i18n: {
-    locales: ["de", "en"],
-    defaultLocale: "de",
+    locales: ["en"],
+    defaultLocale: "en",
     localeDetection: false
   },
   target: "serverless",
   reactStrictMode: true
-})
+}

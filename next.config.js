@@ -7,6 +7,6 @@ module.exports = {
     defaultLocale: "en",
     localeDetection: false
   },
-  target: "serverless",
+  // target: "serverless",
   reactStrictMode: true
 }

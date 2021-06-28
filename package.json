@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "graphql": "^15.5.1",
+    "graphql-request": "^3.4.0",
     "next": "11.0.1",
+    "npm-check-updates": "^11.7.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.35.1"
   },
   "devDependencies": {
     "eslint": "7.29.0",

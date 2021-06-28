@@ -18,6 +18,7 @@
 # misc
 .DS_Store
 *.pem
+tonydefaria.code-workspace
 
 # debug
 npm-debug.log*

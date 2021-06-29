@@ -10,9 +10,15 @@ import MetaComponent from "../components/meta_component"
 import Hankyo from "../lib/hankyo"
 
 export default function Home({project}) {
+
+  const page = project.pages.find(({uid}) => uid === 1)
+  const heroComponent = page.hero_component
+
   return (
     <div>
       <MetaComponent project={project} />
+      <h1>{heroComponent.title}</h1>
+      <p>{heroComponent.description}</p>
     </div>
   )
 }

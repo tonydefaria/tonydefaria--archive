@@ -10,11 +10,21 @@
       {
         "uid": 1,
         "slug": "home",
+
         "seo_component": {
-          "meta_title": "Tony de Faria - Welcome to my website",
-          "meta_description": "I'm a self-taught creative thinker and, I like to use words, images and code to express my thoughts and ideas. I'm passionate about stories that have humanity, compassion and food.",
+          "meta_title": "Tony de Faria - The centre of the brainstorm",
+          "meta_description": "I was born in Africa and grew up in Europe. My curious and open mindset has led me to discover a lot of diverse experiences in life. I embrace failure and, I don't cease to learn.",
           "meta_keywords": "creative, thinking, digital, copy, photography, podcast, video",
           "meta_image": "/images/pages/home/og.jpg"
+        },
+
+        "hero_component": {
+          "title": "The unknown is an opportunity to learn",
+          "subtitle": "",
+          "description": "I'm a self-taught creative thinker and, I like to use words, images and code to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
+          "cta_label": "",
+          "cta_url": "",
+          "image": ""
         }
       }
     ]

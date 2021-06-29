@@ -12,7 +12,7 @@ import Hankyo from "../lib/hankyo"
 export default function Home({project}) {
   return (
     <div>
-      <MetaComponent lang={lang} project={project} />
+      <MetaComponent project={project} />
     </div>
   )
 }

@@ -3,10 +3,23 @@
 module.exports = {
   webpack5: true,
   i18n: {
-    locales: ["en", "de"],
+    locales: ["en"],
     defaultLocale: "en",
     localeDetection: false
   },
   // target: "serverless",
-  reactStrictMode: true
+  reactStrictMode: true,
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "strict-transport-security",
+            value: "max-age=31536000; includeSubDomains; preload",
+          }
+        ]
+      }
+    ]
+  }
 }

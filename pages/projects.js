@@ -19,11 +19,10 @@ export default function Projects({project}) {
 
 export async function getStaticProps({locale}) {
   // Hankyo
-  const lang = locale
   const project = Hankyo.data(locale).project
 
   return {
-    props: { lang, project }
+    props: { project }
   }
 }
 

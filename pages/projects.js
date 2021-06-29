@@ -1,4 +1,4 @@
-// Index
+// Projects
 
 // Layout
 import Primary from "../layouts/primary"
@@ -9,21 +9,22 @@ import MetaComponent from "../components/meta_component"
 // Data
 import Hankyo from "../lib/hankyo"
 
-export default function Home({project}) {
+export default function Projects({project}) {
   return (
     <div>
-      <MetaComponent lang={lang} project={project} />
+      <MetaComponent project={project} />
     </div>
   )
 }
 
 export async function getStaticProps({locale}) {
   // Hankyo
+  const lang = locale
   const project = Hankyo.data(locale).project
 
   return {
-    props: { project }
+    props: { lang, project }
   }
 }
 
-Home.Layout = Primary
+Projects.Layout = Primary

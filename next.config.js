@@ -3,7 +3,7 @@
 module.exports = {
   webpack5: true,
   i18n: {
-    locales: ["en"],
+    locales: ["en", "de"],
     defaultLocale: "en",
     localeDetection: false
   },

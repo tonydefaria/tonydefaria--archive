@@ -1,0 +1,444 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Buttons
+// -------------------------------------------------------------
+
+@mixin button-default {
+  @include button-blue;
+  appearance: none !important;
+  border: 0 !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  float: left !important;
+  letter-spacing: .030em !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  width: auto;
+  object,
+  img,
+  svg {
+    float: left;
+  }
+  &.outline { border: 1px solid !important; }
+}
+
+@mixin button-builder($border, $font, $height, $icon, $edge) {
+  font-size: $font;
+  line-height: $height;
+  padding: 0 $edge;
+  .icon {
+    display: block;
+    float: left;
+    height: $icon;
+    margin: calc($edge / 2) 0;
+    &.float-left { margin: calc($edge / 2) calc($edge / 4) calc($edge / 2) 0; }
+    &.float-right { margin: calc($edge / 2) 0 calc($edge / 2) calc($edge / 4); }
+  }
+  &.pill { @include border-corner($border); }
+  &.condense { padding: 0 calc($edge / 2); }
+  &.outline {
+    line-height: calc($height - 2px);
+    padding: 0 calc($edge - 1px);
+    &.condense {
+      padding: 0 (calc($edge / 2) - 1px);
+    }
+    .icon {
+      margin: (calc($edge / 2) - 1px) 0;
+      &.float-left { margin: (calc($edge / 2) - 1px) (calc($edge / 2) / 2) (calc($edge / 2) - 1px) 0; }
+      &.float-right { margin: (calc($edge / 2) - 1px) 0 (calc($edge / 2) - 1px) (calc($edge / 2) / 2); }
+    }
+  }
+}
+
+@mixin button-xxs {
+  @include button-default;
+  @include button-builder(
+    $font: 12px,
+    $edge: 12px,
+    $icon: 12px,
+    $border: 12px,
+    $height: 24px,
+  );
+}
+
+@mixin button-xs {
+  @include button-default;
+  @include button-builder(
+    $font: 14px,
+    $edge: 16px,
+    $icon: 16px,
+    $border: 16px,
+    $height: 32px,
+  );
+}
+
+@mixin button-s {
+  @include button-default;
+  @include button-builder(
+    $font: 14px,
+    $edge: 20px,
+    $icon: 20px,
+    $border: 20px,
+    $height: 40px,
+  );
+}
+
+@mixin button-m {
+  @include button-default;
+  @include button-builder(
+    $font: 16px,
+    $edge: 24px,
+    $icon: 24px,
+    $border: 24px,
+    $height: 48px,
+  );
+}
+
+@mixin button-l {
+  @include button-default;
+  @include button-builder(
+    $font: 16px,
+    $edge: 28px,
+    $icon: 28px,
+    $border: 28px,
+    $height: 56px,
+  );
+}
+
+@mixin button-xl {
+  @include button-default;
+  @include button-builder(
+    $font: 18px,
+    $edge: 32px,
+    $icon: 32px,
+    $border: 32px,
+    $height: 64px,
+  );
+}
+
+@mixin button-xxl {
+  @include button-default;
+  @include button-builder(
+    $font: 18px,
+    $edge: 36px,
+    $icon: 36px,
+    $border: 36px,
+    $height: 72px
+  );
+}
+
+// Button Colour
+@mixin button-colour($initial-bg, $initial-br, $initial-cl, $initial-fl, $hover-bg, $hover-br, $hover-cl, $hover-fl, $initial-outline-bg, $initial-outline-br, $initial-outline-cl, $initial-outline-fl, $hover-outline-bg, $hover-outline-br, $hover-outline-cl, $hover-outline-fl) {
+  background-color: $initial-bg !important;
+  border-color: $initial-br !important;
+  color: $initial-cl !important;
+  .icon { svg * { fill: $initial-fl !important; } }
+  &:link,
+  &:visited {
+    background-color: $initial-bg !important;
+    border-color: $initial-br !important;
+    color: $initial-cl !important;
+    .icon { svg * { fill: $initial-fl !important; } }
+  }
+  &:hover,
+  &:active {
+    background-color: $hover-bg !important;
+    border-color: $hover-br !important;
+    color: $hover-cl !important;
+    .icon { svg * { fill: $hover-fl !important; } }
+  }
+  &.outline {
+    background-color: $initial-outline-bg !important;
+    border-color: $initial-outline-br !important;
+    color: $initial-outline-cl !important;
+    .icon { svg * { fill: $initial-outline-fl !important; } }
+    &:link,
+    &:visited {
+      background-color: $initial-outline-bg !important;
+      border-color: $initial-outline-br !important;
+      color: $initial-outline-cl !important;
+      .icon { svg * { fill: $initial-outline-fl !important; } }
+    }
+    &:hover,
+    &:active {
+      background-color: $hover-outline-bg !important;
+      border-color: $hover-outline-br !important;
+      color: $hover-outline-cl !important;
+      .icon { svg * { fill: $hover-outline-fl !important; } }
+    }
+  }
+}
+
+@mixin button-white {
+  @include button-colour(
+    $initial-bg: $white,
+    $initial-br: $white,
+    $initial-cl: $black,
+    $initial-fl: $black,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: "",
+    $hover-fl: "",
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $white,
+    $initial-outline-cl: $white,
+    $initial-outline-fl: $white,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: "",
+    $hover-outline-fl: ""
+  );
+}
+
+@mixin button-black {
+  @include button-colour(
+    $initial-bg: $black,
+    $initial-br: $black,
+    $initial-cl: $white,
+    $initial-fl: $white,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: "",
+    $hover-fl: "",
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $black,
+    $initial-outline-cl: $black,
+    $initial-outline-fl: $black,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: "",
+    $hover-outline-fl: ""
+  );
+}
+
+@mixin button-gray {
+  @include button-colour(
+    $initial-bg: $gray,
+    $initial-br: $gray,
+    $initial-cl: $gray-100,
+    $initial-fl: $gray-100,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: $white,
+    $hover-fl: $white,
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $gray,
+    $initial-outline-cl: $gray-300,
+    $initial-outline-fl: $gray-300,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: $gray,
+    $hover-outline-fl: $gray
+  );
+}
+
+@mixin button-purple {
+  @include button-colour(
+    $initial-bg: $purple,
+    $initial-br: $purple,
+    $initial-cl: $purple-100,
+    $initial-fl: $purple-100,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: $white,
+    $hover-fl: $white,
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $purple,
+    $initial-outline-cl: $purple-300,
+    $initial-outline-fl: $purple-300,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: $purple,
+    $hover-outline-fl: $purple
+  );
+}
+
+@mixin button-blue {
+  @include button-colour(
+    $initial-bg: $blue,
+    $initial-br: $blue,
+    $initial-cl: $blue-100,
+    $initial-fl: $blue-100,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: $white,
+    $hover-fl: $white,
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $blue,
+    $initial-outline-cl: $blue-300,
+    $initial-outline-fl: $blue-300,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: $blue,
+    $hover-outline-fl: $blue
+  );
+}
+
+@mixin button-aqua {
+  @include button-colour(
+    $initial-bg: $aqua,
+    $initial-br: $aqua,
+    $initial-cl: $aqua-100,
+    $initial-fl: $aqua-100,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: $white,
+    $hover-fl: $white,
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $aqua,
+    $initial-outline-cl: $aqua-300,
+    $initial-outline-fl: $aqua-300,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: $aqua,
+    $hover-outline-fl: $aqua
+  );
+}
+
+@mixin button-green {
+  @include button-colour(
+    $initial-bg: $green,
+    $initial-br: $green,
+    $initial-cl: $green-100,
+    $initial-fl: $green-100,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: $white,
+    $hover-fl: $white,
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $green,
+    $initial-outline-cl: $green-300,
+    $initial-outline-fl: $green-300,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: $green,
+    $hover-outline-fl: $green
+  );
+}
+
+@mixin button-lime {
+  @include button-colour(
+    $initial-bg: $lime,
+    $initial-br: $lime,
+    $initial-cl: $lime-100,
+    $initial-fl: $lime-100,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: $white,
+    $hover-fl: $white,
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $lime,
+    $initial-outline-cl: $lime-300,
+    $initial-outline-fl: $lime-300,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: $lime,
+    $hover-outline-fl: $lime
+  );
+}
+
+@mixin button-yellow {
+  @include button-colour(
+    $initial-bg: $yellow,
+    $initial-br: $yellow,
+    $initial-cl: $yellow-100,
+    $initial-fl: $yellow-100,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: $white,
+    $hover-fl: $white,
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $yellow,
+    $initial-outline-cl: $yellow-300,
+    $initial-outline-fl: $yellow-300,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: $yellow,
+    $hover-outline-fl: $yellow
+  );
+}
+
+@mixin button-orange {
+  @include button-colour(
+    $initial-bg: $orange,
+    $initial-br: $orange,
+    $initial-cl: $orange-100,
+    $initial-fl: $orange-100,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: $white,
+    $hover-fl: $white,
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $orange,
+    $initial-outline-cl: $orange-300,
+    $initial-outline-fl: $orange-300,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: $orange,
+    $hover-outline-fl: $orange
+  );
+}
+
+@mixin button-red {
+  @include button-colour(
+    $initial-bg: $red,
+    $initial-br: $red,
+    $initial-cl: $red-100,
+    $initial-fl: $red-100,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: $white,
+    $hover-fl: $white,
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $red,
+    $initial-outline-cl: $red-300,
+    $initial-outline-fl: $red-300,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: $red,
+    $hover-outline-fl: $red
+  );
+}
+
+@mixin button-pink {
+  @include button-colour(
+    $initial-bg: $pink,
+    $initial-br: $pink,
+    $initial-cl: $pink-100,
+    $initial-fl: $pink-100,
+    $hover-bg: "",
+    $hover-br: "",
+    $hover-cl: $white,
+    $hover-fl: $white,
+    $initial-outline-bg: $transparent,
+    $initial-outline-br: $pink,
+    $initial-outline-cl: $pink-300,
+    $initial-outline-fl: $pink-300,
+    $hover-outline-bg: "",
+    $hover-outline-br: "",
+    $hover-outline-cl: $pink,
+    $hover-outline-fl: $pink
+  );
+}
+
+// Classes
+// -------------------------------------------------------------
+.button-xxs { @include button-xxs; }
+.button-xs  { @include button-xs; }
+.button-s   { @include button-s; }
+.button-m   { @include button-m; }
+.button-l   { @include button-l; }
+.button-xl  { @include button-xl; }
+.button-xxl { @include button-xxl; }
+
+.button-white   { @include button-white; }
+.button-black   { @include button-black; }
+.button-gray    { @include button-gray; }
+.button-purple  { @include button-purple; }
+.button-blue    { @include button-blue; }
+.button-aqua    { @include button-aqua; }
+.button-green   { @include button-green; }
+.button-lime    { @include button-lime; }
+.button-yellow  { @include button-yellow; }
+.button-orange  { @include button-orange; }
+.button-red     { @include button-red; }
+.button-pink    { @include button-pink; }

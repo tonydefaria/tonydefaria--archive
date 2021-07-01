@@ -1,0 +1,15 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Fixed
+// -------------------------------------------------------------
+
+@mixin fixed {
+  position: fixed;
+  backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  perspective: none;
+  transform: translate3d(0, 0, 0);
+}
+
+// Classes
+// -------------------------------------------------------------
+.fixed { @include fixed; }

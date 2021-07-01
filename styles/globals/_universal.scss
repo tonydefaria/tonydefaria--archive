@@ -1,0 +1,128 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Universal
+// -------------------------------------------------------------
+
+$class: "universal";
+
+.#{$class} {
+  @include border-box;
+  display: flex;
+  float: left;
+  justify-content: center;
+  margin: 0 auto;
+  min-width: 240px;
+  padding: 0;
+  width: 100%;
+  .#{$class}-box {
+    @include border-box;
+    @include clearfix;
+    margin: 0 auto;
+    padding: 0;
+    width: 240px;
+    .#{$class}-row {
+      @include border-box;
+      float: left;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
+
+// Media Query 240px
+// -------------------------------------------------------------
+@media #{$xxs} {
+  .#{$class} {
+    min-width: 240px;
+    .#{$class}-box {
+      width: 240px;
+      .#{$class}-row {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Media Query 360px
+// -------------------------------------------------------------
+@media #{$xs} {
+  .#{$class} {
+    min-width: 360px;
+    .#{$class}-box {
+      width: 360px;
+      .#{$class}-row {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Media Query 480px
+// -------------------------------------------------------------
+@media #{$s} {
+  .#{$class} {
+    min-width: 480px;
+    .#{$class}-box {
+      width: 480px;
+      .#{$class}-row {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Media Query 720px
+// -------------------------------------------------------------
+@media #{$m} {
+  .#{$class} {
+    min-width: 720px;
+    .#{$class}-box {
+      width: 720px;
+      .#{$class}-row {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Media Query 960px
+// -------------------------------------------------------------
+@media #{$l} {
+  .#{$class} {
+    min-width: 960px;
+    .#{$class}-box {
+      width: 960px;
+      .#{$class}-row {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Media Query 1440px
+// -------------------------------------------------------------
+@media #{$xl} {
+  .#{$class} {
+    min-width: 1440px;
+    .#{$class}-box {
+      width: 1440px;
+      .#{$class}-row {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Media Query 1920px
+// -------------------------------------------------------------
+@media #{$xxl} {
+  .#{$class} {
+    min-width: 1920px;
+    .#{$class}-box {
+      width: 1920px;
+      .#{$class}-row {
+        width: 100%;
+      }
+    }
+  }
+}

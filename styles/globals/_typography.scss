@@ -1,0 +1,158 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Typography
+// -------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+  float: left;
+  font-weight: 700;
+  hyphens: none;
+  width: 100%;
+}
+
+p,
+.text {
+  float: left;
+  font-weight: 400;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.text {
+  @include font-size-m;
+  display: block;
+  margin: 0;
+  padding: 0;
+  a {
+    color: $blue-300;
+    display: inline;
+    float: none;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    vertical-align: bottom;
+    &:link,
+    &:visited {
+      color: $blue-300;
+    }
+    &:hover,
+    &:active {
+      color: $blue-500;
+    }
+  }
+}
+
+blockquote {
+  background-color: $gray-000;
+  float: left;
+  margin: 0;
+  padding: 16px;
+  width: 100%;
+}
+
+ol,
+ul {
+  display: block;
+  float: left;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  li {
+    float: left;
+    margin: 8px 0;
+    padding: 0;
+    width: 100%;
+    a {
+      color: inherit;
+      display: inline;
+      float: none;
+      font-size: inherit;
+      line-height: inherit;
+      margin: 0;
+      padding: 0;
+      text-decoration: underline;
+      vertical-align: bottom;
+    }
+  }
+  li:first-child {
+    margin-top: 0;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+abbr,
+code,
+del,
+em,
+mark,
+small,
+sub,
+sup,
+strong {
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+abbr   { cursor: help; text-decoration: underline dashed; }
+code   { @include font-size-s; }
+del    { text-decoration: line-through; }
+mark   { background-color: $yellow; }
+small  { font-size: 70%; }
+sub    { font-size: 70%; }
+sup    { font-size: 70%; }
+em     { font-style: italic; }
+strong { font-weight: bold; }
+
+// Media Query 240px
+// -------------------------------------------------------------
+@media #{$xxs} {
+}
+
+// Media Query 360px
+// ------------------------------------------------------------
+@media #{$xs} {
+}
+
+// Media Query 480px
+// -------------------------------------------------------------
+@media #{$s} {
+}
+
+// Media Query 720px
+// -------------------------------------------------------------
+@media #{$m} {
+}
+
+// Media Query 960px
+// -------------------------------------------------------------
+@media #{$l} {
+}
+
+// Media Query 1440px
+// -------------------------------------------------------------
+@media #{$xl} {
+}
+
+// Media Query 1920px
+// -------------------------------------------------------------
+@media #{$xxl} {
+}

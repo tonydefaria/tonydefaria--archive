@@ -1,0 +1,268 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Links
+// -------------------------------------------------------------
+
+@mixin link-default {
+  @include link-blue;
+  appearance: none !important;
+  border: 0 !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  float: left !important;
+  letter-spacing: .030em !important;
+  text-align: left !important;
+  text-decoration: none !important;
+  object,
+  img,
+  svg {
+    float: left;
+  }
+}
+
+@mixin link-builder($font, $height, $icon, $push) {
+  font-size: $font;
+  line-height: $height;
+  .icon {
+    display: block;
+    float: left;
+    height: $icon;
+    margin: 0;
+    &.float-left {
+      margin: 0 calc($push / 2) 0 0;
+      &.condense { margin: 0 calc(#{$push} / 2) 0 0; }
+    }
+    &.float-right {
+      margin: 0 0 0 calc($push / 2);
+      &.condense { margin: 0 0 0 calc(#{$push} / 2); }
+    }
+    object,
+    img,
+    svg {
+      &.round { border-radius: calc(#{$height} / 2); }
+    }
+  }
+}
+
+@mixin link-xxs {
+  @include font-size-xxs;
+  @include link-default;
+  @include link-builder (
+    $font: 10px,
+    $push: 9px,
+    $icon: 18px,
+    $height: 18px
+  );
+}
+
+@mixin link-xs {
+  @include font-size-xs;
+  @include link-default;
+  @include link-builder (
+    $font: 12px,
+    $push: 10px,
+    $icon: 20px,
+    $height: 20px
+  );
+}
+
+@mixin link-s {
+  @include font-size-s;
+  @include link-default;
+  @include link-builder (
+    $font: 14px,
+    $push: 11px,
+    $icon: 22px,
+    $height: 22px
+  );
+}
+
+@mixin link-m {
+  @include font-size-m;
+  @include link-default;
+  @include link-builder (
+    $font: 16px,
+    $push: 12px,
+    $icon: 24px,
+    $height: 24px
+  );
+}
+
+@mixin link-l {
+  @include font-size-l;
+  @include link-default;
+  @include link-builder (
+    $font: 16px,
+    $push: 16px,
+    $icon: 32px,
+    $height: 32px
+  );
+}
+
+@mixin link-xl {
+  @include font-size-xl;
+  @include link-default;
+  @include link-builder (
+    $font: 16px,
+    $push: 20px,
+    $icon: 40px,
+    $height: 40px
+  );
+}
+
+@mixin link-xxl {
+  @include link-default;
+  @include link-builder (
+    $font: 16px,
+    $push: 24px,
+    $icon: 48px,
+    $height: 48px
+  );
+}
+
+// Link Colour
+
+@mixin link-colour($initial-cl, $initial-fl, $hover-cl, $hover-fl) {
+  color: $initial-cl !important;
+  .icon { svg * { fill: $initial-cl !important; } }
+  &:link,
+  &:visited {
+    color: $initial-cl !important;
+    .icon { svg * { fill: $initial-cl !important; } }
+  }
+  &:hover,
+  &:active {
+    color: $hover-cl !important;
+    .icon { svg * { fill: $hover-cl !important; } }
+  }
+}
+
+@mixin link-white {
+  @include link-colour(
+    $initial-cl: $white,
+    $initial-fl: $white,
+    $hover-cl: "",
+    $hover-fl: ""
+  );
+}
+
+@mixin link-black {
+  @include link-colour(
+    $initial-cl: $black,
+    $initial-fl: $black,
+    $hover-cl: "",
+    $hover-fl: ""
+  );
+}
+
+@mixin link-gray {
+  @include link-colour(
+    $initial-cl: $gray-300,
+    $initial-fl: $gray-300,
+    $hover-cl: $gray,
+    $hover-fl: $gray
+  );
+}
+
+@mixin link-purple {
+  @include link-colour(
+    $initial-cl: $purple-300,
+    $initial-fl: $purple-300,
+    $hover-cl: $purple,
+    $hover-fl: $purple
+  );
+}
+
+@mixin link-blue {
+  @include link-colour(
+    $initial-cl: $blue-300,
+    $initial-fl: $blue-300,
+    $hover-cl: $blue,
+    $hover-fl: $blue
+  );
+}
+
+@mixin link-aqua {
+  @include link-colour(
+    $initial-cl: $aqua-300,
+    $initial-fl: $aqua-300,
+    $hover-cl: $aqua,
+    $hover-fl: $aqua
+  );
+}
+
+@mixin link-green {
+  @include link-colour(
+    $initial-cl: $green-300,
+    $initial-fl: $green-300,
+    $hover-cl: $green,
+    $hover-fl: $green
+  );
+}
+
+@mixin link-lime {
+  @include link-colour(
+    $initial-cl: $lime-300,
+    $initial-fl: $lime-300,
+    $hover-cl: $lime,
+    $hover-fl: $lime
+  );
+}
+
+@mixin link-yellow {
+  @include link-colour(
+    $initial-cl: $yellow-300,
+    $initial-fl: $yellow-300,
+    $hover-cl: $yellow,
+    $hover-fl: $yellow
+  );
+}
+
+@mixin link-orange {
+  @include link-colour(
+    $initial-cl: $orange-300,
+    $initial-fl: $orange-300,
+    $hover-cl: $orange,
+    $hover-fl: $orange
+  );
+}
+
+@mixin link-red {
+  @include link-colour(
+    $initial-cl: $red-300,
+    $initial-fl: $red-300,
+    $hover-cl: $red,
+    $hover-fl: $red
+  );
+}
+
+@mixin link-pink {
+  @include link-colour(
+    $initial-cl: $pink-300,
+    $initial-fl: $pink-300,
+    $hover-cl: $pink,
+    $hover-fl: $pink
+  );
+}
+
+// Classes
+// -------------------------------------------------------------
+.link-xxs { @include link-xxs; }
+.link-xs  { @include link-xs; }
+.link-s   { @include link-s; }
+.link-m   { @include link-m; }
+.link-l   { @include link-l; }
+.link-xl  { @include link-xl; }
+.link-xxl { @include link-xxl; }
+
+.link-white   { @include link-white; }
+.link-black   { @include link-black; }
+.link-gray    { @include link-gray; }
+.link-purple  { @include link-purple; }
+.link-blue    { @include link-blue; }
+.link-aqua    { @include link-aqua; }
+.link-green   { @include link-green; }
+.link-lime    { @include link-lime; }
+.link-yellow  { @include link-yellow; }
+.link-orange  { @include link-orange; }
+.link-red     { @include link-red; }
+.link-pink    { @include link-pink; }

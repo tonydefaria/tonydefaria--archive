@@ -1,0 +1,75 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Dividers
+// -------------------------------------------------------------
+
+@mixin divider-default {
+  appearance: none !important;
+  border: 0 !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  float: left !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 0 !important;
+}
+
+@mixin divider-xxs {
+  @include divider-default;
+  margin: 0 4px !important;
+}
+
+@mixin divider-xs {
+  @include divider-default;
+  margin: 0 8px !important;
+}
+
+@mixin divider-s {
+  @include divider-default;
+  margin: 0 16px !important;
+}
+
+@mixin divider-m {
+  @include divider-default;
+  margin: 0 24px !important;
+}
+
+@mixin divider-l {
+  @include divider-default;
+  margin: 0 32px !important;
+}
+
+@mixin divider-xl {
+  @include divider-default;
+  margin: 0 40px !important;
+}
+
+@mixin divider-xxl {
+  @include divider-default;
+  margin: 0 48px !important;
+}
+
+@mixin divider-dashed {
+  border-right: 1px dashed $gray-300 !important;
+}
+
+@mixin divider-dotted {
+  border-right: 1px dotted $gray-300 !important;
+}
+
+@mixin divider-solid {
+  border-right: 1px solid $gray-300 !important;
+}
+
+// Classes
+// -------------------------------------------------------------
+.divider-xxs    { @include divider-xxs; }
+.divider-xs     { @include divider-xs; }
+.divider-s      { @include divider-s; }
+.divider-m      { @include divider-m; }
+.divider-l      { @include divider-l; }
+.divider-xl     { @include divider-xl; }
+.divider-xxl    { @include divider-xxl; }
+.divider-dashed { @include divider-dashed; }
+.divider-dotted { @include divider-dotted; }
+.divider-solid  { @include divider-solid; }

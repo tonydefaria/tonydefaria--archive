@@ -1,0 +1,256 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Writer
+// -------------------------------------------------------------
+
+.writer {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    float: left;
+    font-weight: 700;
+    width: 100%;
+  }
+  h1 {
+    @include font-size-xxl;
+    margin: 40px 0 24px;
+  }
+  h2 {
+    @include font-size-xl;
+    margin: 32px 0 20px;
+  }
+  h3 {
+    @include font-size-l;
+    margin: 24px 0 16px;
+  }
+  h4 {
+    @include font-size-m;
+    margin: 22px 0 14px;
+  }
+  h5 {
+    @include font-size-s;
+    margin: 20px 0 12px;
+  }
+  h6 {
+    @include font-size-xs;
+    margin: 18px 0 10px;
+  }
+  p,
+  .text {
+    @include clearfix;
+    @include font-size-m;
+    font-weight: 400;
+    margin: 0 0 24px;
+    a {
+      color: $blue-300;
+      display: inline;
+      float: none;
+      font-size: inherit;
+      line-height: inherit;
+      margin: 0;
+      padding: 0;
+      text-decoration: underline;
+      vertical-align: bottom;
+      &:link,
+      &:visited {
+        color: $blue-300;
+      }
+      &:hover,
+      &:active {
+        color: $blue-500;
+      }
+    }
+  }
+  h1:first-child,
+  h2:first-child,
+  h3:first-child,
+  h4:first-child,
+  h5:first-child,
+  h6:first-child,
+  p:first-child,
+  .text:first-child {
+    margin-top: 0 !important;
+  }
+  ol,
+  ul {
+    padding: 8px 32px 16px;
+  }
+  blockquote {
+    @include font-size-l;
+    float: left;
+    max-width: 80%;
+    padding: 32px 32px 64px;
+  }
+  .floater {
+    display: block;
+    float: left;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    .floater-box {
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      .floater-item {
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+    }
+    &.float-left {
+      max-width: 60%;
+      .floater-box {
+        .floater-item {
+          padding: 8px 16px 16px 0;
+        }
+      }
+    }
+    &.float-right {
+      max-width: 60%;
+      .floater-box {
+        .floater-item {
+          padding: 8px 0 16px 16px;
+        }
+      }
+    }
+    &.wide {
+      max-width: 100%;
+      .floater-box {
+        .floater-item {
+          padding: 8px 0 16px;
+        }
+      }
+    }
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// Media Query 240px
+// -------------------------------------------------------------
+@media #{$xxs} {
+  .writer {
+    blockquote {
+      max-width: 100%;
+    }
+    ol,
+    ul {
+      padding: 16px 0 32px;
+    }
+    .floater {
+      width: 100%;
+      .floater-box {
+        width: 100%;
+        .floater-item {
+          width: 100%;
+        }
+      }
+      &.float-left,
+      &.float-right,
+      &.wide {
+        max-width: 100%;
+        width: 100%;
+        .floater-box {
+          .floater-item {
+            padding: 8px 0 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query 360px
+// ------------------------------------------------------------
+@media #{$xs} {
+  .writer {
+    blockquote {
+      max-width: 100%;
+    }
+    ol,
+    ul {
+      padding: 16px 0 32px;
+    }
+    .floater {
+      width: 100%;
+      .floater-box {
+        width: 100%;
+        .floater-item {
+          width: 100%;
+        }
+      }
+      &.float-left,
+      &.float-right,
+      &.wide {
+        max-width: 100%;
+        width: 100%;
+        .floater-box {
+          .floater-item {
+            padding: 8px 0 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query 480px
+// -------------------------------------------------------------
+@media #{$s} {
+  .writer {
+    blockquote {
+      max-width: 100%;
+    }
+    .floater {
+      width: 100%;
+      .floater-box {
+        width: 100%;
+        .floater-item {
+          width: 100%;
+        }
+      }
+      &.float-left,
+      &.float-right,
+      &.wide {
+        max-width: 100%;
+        width: 100%;
+        .floater-box {
+          .floater-item {
+            padding: 8px 0 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query 720px
+// -------------------------------------------------------------
+@media #{$m} {
+}
+
+// Media Query 960px
+// -------------------------------------------------------------
+@media #{$l} {
+}
+
+// Media Query 1440px
+// -------------------------------------------------------------
+@media #{$xl} {
+}
+
+// Media Query 1920px
+// -------------------------------------------------------------
+@media #{$xxl} {
+}

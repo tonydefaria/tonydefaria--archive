@@ -1,0 +1,541 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Forms
+// -------------------------------------------------------------
+
+form {
+  @include border-box;
+  @include clearfix;
+  border: 0;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  *,
+  *::after,
+  *::before {
+    color: $gray;
+  }
+
+  .honeypot {
+    display: none;
+    visibility: hidden;
+  }
+
+  fieldset {
+    border: 0;
+    float: left;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+
+  &.form {
+    border: 0;
+    float: left;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+    .form-row {
+      float: left;
+      margin: 0;
+      max-width: 100%;
+      padding: 0;
+      width: 100%;
+      .form-group {
+        float: left;
+        margin: 0;
+        width: 100%;
+      }
+      .form-item {
+        float: left;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  legend {
+    @include font-size-l;
+    color: $gray-700;
+    float: left;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  label,
+  .label,
+  .label-group,
+  .label-reference {
+    @include font-size-m;
+    color: $gray-900;
+    display: block;
+    float: left;
+    margin: 0;
+    min-height: 24;
+    padding: 0;
+    i {
+      color: $gray-100;
+      font-weight: normal;
+    }
+    &.required::after {
+      content: "*";
+    }
+  }
+
+  label,
+  .label {
+    width: auto;
+  }
+
+  .label-group {
+    width: 100%;
+  }
+
+  .label-reference {
+    @include font-size-xs;
+    color: $gray;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    @include font-size-m;
+    appearance: none;
+    background-color: $transparent;
+    border: 0;
+    box-shadow: none;
+    display: block;
+    float: left;
+    max-width: 100%;
+    outline: none;
+    overflow: auto;
+    width: 100%;
+  }
+
+  [type=email],
+  [type=number],
+  [type=password],
+  [type=search],
+  [type=tel],
+  [type=text],
+  [type=url],
+  [type=time],
+  [type=week],
+  [type=month] {
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+  }
+
+  textarea {
+    line-height: 24px;
+    margin: 0;
+    max-width: 100%;
+    min-height: 72px;
+    padding: 0;
+    resize: none;
+    width: 100%;
+  }
+
+  .input {
+    background-color: $white;
+    border: 1px solid $gray-100;
+    float: left;
+    max-width: 100%;
+    padding: 3px 7px;
+    width: 100%;
+  }
+
+  .textarea {
+    background-color: $white;
+    border: 1px solid $gray-100;
+    float: left;
+    max-width: 100%;
+    min-height: 136px;
+    padding: 8px;
+    width: 100%;
+    textarea {
+      min-height: 120px;
+    }
+    trix-editor {
+      border: 1px solid $gray-100;
+      min-height: 128px;
+    }
+    &.body {
+      min-height: 512px;
+      trix-editor {
+        min-height: 512px;
+      }
+      textarea {
+        min-height: 512px;
+      }
+    }
+  }
+
+  select {
+    appearance: none;
+    background-color: $transparent;
+    // background-image: url("../images/icons/circle.png");
+    background-position: right 0 bottom 0;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: $transparent;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 100%;
+    outline: none;
+    overflow: hidden;
+    padding: 0;
+    text-shadow: 0 0 0 $gray;
+    width: 100%;
+    option {
+      @include font-size-m;
+      background-color: $transparent;
+      width: 100%;
+    }
+  }
+
+  .select {
+    background-color: $white;
+    border: 1px solid $gray-100;
+    float: left;
+    max-width: 100%;
+    padding: 7px 8px;
+    width: 100%;
+    select {
+      text-shadow: 0 0 0 $gray;
+      option {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .checkbox,
+  .radio {
+    background-color: $white;
+    border: 1px solid $gray-100;
+    float: left;
+    font-size: 12px;
+    max-width: 100%;
+    padding: 7px;
+    width: 100%;
+    label {
+      color: $gray;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 24px;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+      .checkmark {
+        background-color: $gray-100;
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        display: block;
+        float: left;
+        height: 24px;
+        margin: 0 7px 0 0;
+        padding: 0;
+        width: 24px;
+      }
+      input:checked ~ .checkmark {
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+      }
+    }
+    [type=checkbox],
+    [type=radio] {
+      appearance: none;
+      background-color: $transparent;
+      border: 0;
+      color: $transparent;
+      filter: alpha(opacity = 0);
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
+      width: 0;
+    }
+  }
+
+  .checkbox {
+    label {
+      .checkmark {
+        @include border-corner(4px);
+        background-color: $gray-100;
+      }
+      input:checked ~ .checkmark {
+        background-color: $gray-300;
+      }
+    }
+  }
+
+  .radio {
+    label {
+      .checkmark {
+        @include border-corner(12px);
+        background-color: $gray-100;
+      }
+      input:checked ~ .checkmark {
+        background-color: $gray-300;
+      }
+    }
+  }
+
+  .gdpr {
+    background-color: $white;
+    border: 0;
+    float: left;
+    font-size: 12px;
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+    label {
+      color: $gray;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 24px;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+      .checkmark {
+        @include border-corner(4px);
+        background-color: $gray-100;
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        display: block;
+        float: left;
+        height: 24px;
+        margin: 0 7px 0 0;
+        padding: 0;
+        width: 24px;
+      }
+      input:checked ~ .checkmark {
+        background-color: $gray-300;
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+      }
+    }
+    [type=checkbox] {
+      appearance: none;
+      background-color: $transparent;
+      border: 0;
+      color: $transparent;
+      filter: alpha(opacity = 0);
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
+      width: 0;
+    }
+  }
+
+  .file {
+    background-color: $white;
+    border: 1px solid $gray-100;
+    float: left;
+    max-width: 100%;
+    padding: 7px;
+    width: 100%;
+    label {
+      @include font-size-m;
+      appearance: none;
+      background-color: $transparent;
+      // background-image: url("../images/icons/circle.png");
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      color: $gray;
+      cursor: pointer;
+      font-size: 14px !important;
+      padding: 0 0 0 32px;
+      position: relative;
+      width: 100%;
+    }
+    [type=file] {
+      appearance: none;
+      background-color: $transparent;
+      cursor: pointer;
+      filter: alpha(opacity = 0);
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
+      width: 0;
+    }
+  }
+
+  .submit {
+    float: left;
+    max-width: 100%;
+    width: 100%;
+    [type=submit] {
+      appearance: none;
+      display: block;
+      float: left;
+      margin: 0;
+    }
+  }
+
+  .form-menu {
+    float: left;
+    width: 100%;
+    .form-menu-box {
+      float: left;
+      padding: 4px 0;
+      width: 100%;
+      .form-menu-row {
+        float: left;
+        padding: 4px 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .form-errors {
+    float: left;
+    width: 100%;
+    .form-errors-box {
+      float: left;
+      width: 100%;
+      .form-errors-row {
+        background-color: $red-000;
+        border: 1px solid $red;
+        color: $red;
+        float: left;
+        margin: 4px 0;
+        padding: 7px;
+        width: 100%;
+        p {
+          color: $red;
+        }
+        &:first-child {
+          margin: 0 0 4px;
+        }
+        &:last-child {
+          margin: 4px 0 0;
+        }
+      }
+    }
+  }
+
+  ::placeholder {
+    color: $gray-100;
+    line-height: 1;
+    // opacity: 0;
+  }
+
+  :focus::placeholder {
+    color: $transparent;
+    opacity: 0;
+  }
+
+  :invalid,
+  :invalid:focus {
+    box-shadow: 0 0 0 $transparent;
+  }
+
+  // scss-lint:disable MergeableSelector
+  // Configuration Classes
+
+  legend {
+    padding: 8px 24px;
+  }
+
+  label,
+  .label {
+    padding: 0 0 8px;
+  }
+
+  .label-group {
+    padding: 0 24px;
+  }
+
+  &.form {
+    .form-row {
+      .form-group {
+        padding: 16px 0 8px;
+        .form-item {
+          padding: 8px 24px;
+        }
+      }
+      .form-item {
+        padding: 16px 24px;
+      }
+    }
+  }
+
+  .form-errors {
+    .form-errors-box {
+      padding: 8px 24px;
+    }
+  }
+
+  .form-menu {
+    .form-menu-box {
+      padding: 8px 24px;
+    }
+  }
+
+  .input,
+  .textarea,
+  .select,
+  .checkbox,
+  .radio,
+  .file,
+  .submit input,
+  .form-errors-row {
+    @include border-corner(4px);
+  }
+  // scss-lint:enable MergeableSelector
+}
+
+// Media Query 240px
+// -------------------------------------------------------------
+@media #{$xxs} {
+}
+
+// Media Query 360px
+// ------------------------------------------------------------
+@media #{$xs} {
+}
+
+// Media Query 480px
+// -------------------------------------------------------------
+@media #{$s} {
+}
+
+// Media Query 720px
+// -------------------------------------------------------------
+@media #{$m} {
+}
+
+// Media Query 960px
+// -------------------------------------------------------------
+@media #{$l} {
+}
+
+// Media Query 1440px
+// -------------------------------------------------------------
+@media #{$xl} {
+}
+
+// Media Query 1920px
+// -------------------------------------------------------------
+@media #{$xxl} {
+}

@@ -1,0 +1,24 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Visibilities
+// -------------------------------------------------------------
+
+@mixin hide-element {
+  display: none;
+  visibility: hidden;
+}
+
+@mixin show-block-element {
+  display: block;
+  visibility: visible;
+}
+
+@mixin show-inline-block-element {
+  display: inline-block;
+  visibility: visible;
+}
+
+// Classes
+// -------------------------------------------------------------
+.hide-element               { @include hide-element; }
+.show-block-element         { @include show-block-element; }
+.show-inline-block-element  { @include show-inline-block-element; }

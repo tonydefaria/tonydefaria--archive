@@ -1,0 +1,75 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Separators
+// -------------------------------------------------------------
+
+@mixin separator-default {
+  appearance: none !important;
+  border: 0 !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  float: left !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+@mixin separator-xxs {
+  @include separator-default;
+  margin: 4px 0 !important;
+}
+
+@mixin separator-xs {
+  @include separator-default;
+  margin: 8px 0 !important;
+}
+
+@mixin separator-s {
+  @include separator-default;
+  margin: 16px 0 !important;
+}
+
+@mixin separator-m {
+  @include separator-default;
+  margin: 32px 0 !important;
+}
+
+@mixin separator-l {
+  @include separator-default;
+  margin: 48px 0 !important;
+}
+
+@mixin separator-xl {
+  @include separator-default;
+  margin: 64px 0 !important;
+}
+
+@mixin separator-xxl {
+  @include separator-default;
+  margin: 96px 0 !important;
+}
+
+@mixin separator-dashed {
+  border-top: 1px dashed $gray-300 !important;
+}
+
+@mixin separator-dotted {
+  border-top: 1px dotted $gray-300 !important;
+}
+
+@mixin separator-solid {
+  border-top: 1px solid $gray-300 !important;
+}
+
+// Classes
+// -------------------------------------------------------------
+.separator-xxs    { @include separator-xxs; }
+.separator-xs     { @include separator-xs; }
+.separator-s      { @include separator-s; }
+.separator-m      { @include separator-m; }
+.separator-l      { @include separator-l; }
+.separator-xl     { @include separator-xl; }
+.separator-xxl    { @include separator-xxl; }
+.separator-dashed { @include separator-dashed; }
+.separator-dotted { @include separator-dotted; }
+.separator-solid  { @include separator-solid; }

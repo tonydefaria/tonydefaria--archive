@@ -1,0 +1,72 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Tables
+// -------------------------------------------------------------
+
+table {
+  @include clearfix-left;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  margin: 0 0 24px;
+  padding: 0;
+  width: 100%;
+  thead {
+    background-color: $gray-000;
+    padding: 16px;
+    text-align: left;
+    width: 100%;
+    tr,
+    th {
+      border: 1px solid $gray-100;
+      padding: 8px 16px;
+      width: auto;
+    }
+  }
+  tbody {
+    background-color: $white;
+    text-align: left;
+    width: 100%;
+    tr,
+    td {
+      border: 1px solid $gray-000;
+      padding: 8px 16px;
+      width: auto;
+    }
+  }
+}
+
+// Media Query 240px
+// -------------------------------------------------------------
+@media #{$xxs} {
+}
+
+// Media Query 360px
+// ------------------------------------------------------------
+@media #{$xs} {
+}
+
+// Media Query 480px
+// -------------------------------------------------------------
+@media #{$s} {
+}
+
+// Media Query 720px
+// -------------------------------------------------------------
+@media #{$m} {
+}
+
+// Media Query 960px
+// -------------------------------------------------------------
+@media #{$l} {
+}
+
+// Media Query 1440px
+// -------------------------------------------------------------
+@media #{$xl} {
+}
+
+// Media Query 1920px
+// -------------------------------------------------------------
+@media #{$xxl} {
+}

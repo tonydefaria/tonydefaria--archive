@@ -1,0 +1,55 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Animations
+// -------------------------------------------------------------
+
+@mixin hover-animation($time) {
+  transition: background-color $time ease, color $time ease, fill $time ease, border $time ease;
+}
+
+@mixin appear-animation($time) {
+  animation: appear ease $time;
+}
+
+@mixin disappear-animation($time) {
+  animation: disappear ease $time forwards;
+}
+
+@mixin expandable-up-animation($time) {
+  height: 0;
+  transition: all ease-in-out $time forwards;
+}
+
+@mixin expandable-down-animation($time) {
+  transition: expandable-down ease-in-out $time forwards;
+}
+
+// Keyframes
+// -------------------------------------------------------------
+
+@keyframes appear {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes disappear {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes expandable-up {
+  0% { height: 100vh; }
+  100% { height: 0; }
+}
+
+@keyframes expandable-down {
+  0% { height: 0; }
+  100% { height: 100vh; }
+}
+
+// Classes
+// -------------------------------------------------------------
+.hover-animation            { @include hover-animation(.25s); }
+.appear-animation           { @include appear-animation(1s); }
+.disappear-animation        { @include disappear-animation(1s); }
+.expandable-up-animation    { @include expandable-up-animation(1s); }
+.expandable-down-animation  { @include expandable-down-animation(1s); }

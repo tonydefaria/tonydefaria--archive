@@ -1,0 +1,50 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Centers
+// -------------------------------------------------------------
+
+@mixin flex-h-center {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+@mixin flex-v-center {
+  align-items: center !important;
+  display: flex !important;
+}
+
+@mixin center-h-parent {
+  float: left !important;
+  position: relative !important;
+  right: -50% !important;
+}
+
+@mixin center-h-child {
+  float: left !important;
+  overflow: hidden !important;
+  position: relative !important;
+  right: 50% !important;
+}
+
+@mixin center-v-parent {
+  display: table !important;
+  float: left !important;
+  height: 100% !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+@mixin center-v-child {
+  display: table-cell !important;
+  float: left !important;
+  height: auto !important;
+  vertical-align: middle !important;
+}
+
+// Classes
+// -------------------------------------------------------------
+.flex-h-center    { @include flex-h-center; }
+.flex-v-center    { @include flex-v-center; }
+.center-h-parent  { @include center-h-parent; }
+.center-h-child   { @include center-h-child; }
+.center-v-parent  { @include center-v-parent; }
+.center-v-child   { @include center-v-child; }

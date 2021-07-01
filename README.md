@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @tonydefaria
-- 👀 I’m interested in the impact caused by AI in social politics.
-- 🌱 I’m currently learning how to write and develop conceptual digital ideas.
-- 💞️ I’m looking to collaborate on openai concepts.
-- 📫 You can reach me@tonydefaria.com
+- 👀 I’m interested in geographic politics.
+- 🌱 I’m currently learning how to think and write like a journalist.
+- 💞️ I’m looking to collaborate on OpenAI concepts and photojournalism assignments.
+- 📫 Get in touch with me@tonydefaria.com
 
 <!---
 tonydefaria/tonydefaria is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.

@@ -3,7 +3,7 @@
 // -------------------------------------------------------------
 
 @mixin hover-animation($time) {
-  transition: background-color $time ease, color $time ease, fill $time ease, border $time ease;
+  transition: background-color $time ease, color $time ease, fill $time ease, border $time ease, border-color $time ease;
 }
 
 @mixin appear-animation($time) {

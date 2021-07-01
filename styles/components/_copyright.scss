@@ -1,29 +1,18 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File:    Universal
+// File: Copyright
 // -------------------------------------------------------------
 
-$class: "universal";
+$class: "copyright";
 
 .#{$class} {
-  @include border-box;
-  // display: flex;
   float: left;
-  // justify-content: center;
-  margin: 0 auto;
-  min-width: 240px;
-  padding: 0;
-  width: 100%;
+  width: auto;
   .#{$class}-box {
-    @include border-box;
-    @include clearfix;
-    margin: 0 auto;
-    padding: 0;
-    width: 240px;
+    float: left;
+    width: 100%;
     .#{$class}-row {
-      @include border-box;
       float: left;
-      margin: 0 auto;
-      padding: 0;
+      padding: 32px;
       width: 100%;
     }
   }
@@ -33,25 +22,33 @@ $class: "universal";
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
-    min-width: 240px;
+    width: 100%;
     .#{$class}-box {
-      width: 240px;
+      width: 100%;
       .#{$class}-row {
+        padding: 16px;
         width: 100%;
+        .font-size-xs {
+          text-align: center;
+        }
       }
     }
   }
 }
 
 // Media Query 360px
-// -------------------------------------------------------------
+// ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
-    min-width: 360px;
+    width: 100%;
     .#{$class}-box {
-      width: 360px;
+      width: 100%;
       .#{$class}-row {
+        padding: 24px;
         width: 100%;
+        .font-size-xs {
+          text-align: center;
+        }
       }
     }
   }
@@ -61,11 +58,15 @@ $class: "universal";
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
-    min-width: 480px;
+    width: 100%;
     .#{$class}-box {
-      width: 480px;
+      width: 100%;
       .#{$class}-row {
+        padding: 32px;
         width: 100%;
+        .font-size-xs {
+          text-align: center;
+        }
       }
     }
   }
@@ -75,11 +76,8 @@ $class: "universal";
 // -------------------------------------------------------------
 @media #{$m} {
   .#{$class} {
-    min-width: 720px;
     .#{$class}-box {
-      width: 720px;
       .#{$class}-row {
-        width: 100%;
       }
     }
   }
@@ -89,11 +87,8 @@ $class: "universal";
 // -------------------------------------------------------------
 @media #{$l} {
   .#{$class} {
-    min-width: 960px;
     .#{$class}-box {
-      width: 960px;
       .#{$class}-row {
-        width: 100%;
       }
     }
   }
@@ -103,11 +98,8 @@ $class: "universal";
 // -------------------------------------------------------------
 @media #{$xl} {
   .#{$class} {
-    min-width: 1440px;
     .#{$class}-box {
-      width: 1440px;
       .#{$class}-row {
-        width: 100%;
       }
     }
   }
@@ -117,11 +109,8 @@ $class: "universal";
 // -------------------------------------------------------------
 @media #{$xxl} {
   .#{$class} {
-    min-width: 1920px;
     .#{$class}-box {
-      width: 1920px;
       .#{$class}-row {
-        width: 100%;
       }
     }
   }

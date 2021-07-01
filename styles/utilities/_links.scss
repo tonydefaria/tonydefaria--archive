@@ -12,10 +12,33 @@
   letter-spacing: .030em !important;
   text-align: left !important;
   text-decoration: none !important;
+  div,
   object,
   img,
-  svg {
-    float: left;
+  svg,
+  .image {
+    float: left !important;
+    margin: 0;
+    padding: 0;
+  }
+  &.underline {
+    border-bottom: 1px solid !important;
+  }
+  &.underline-condense {
+    text-decoration: underline !important;
+  }
+  &.hover-underline {
+    border-bottom: 1px solid $transparent !important;
+  }
+  &:hover,
+  &:active {
+    &.hover-underline-condense {
+      text-decoration: underline !important;
+    }
+    &.hover-underline {
+      // text-decoration: underline !important;
+      border-bottom: 1px solid !important;
+    }
   }
 }
 
@@ -38,6 +61,7 @@
     object,
     img,
     svg {
+      height: $font !important;
       &.round { border-radius: calc(#{$height} / 2); }
     }
   }
@@ -124,6 +148,7 @@
 @mixin link-colour($initial-cl, $initial-fl, $hover-cl, $hover-fl) {
   color: $initial-cl !important;
   .icon { svg * { fill: $initial-cl !important; } }
+  &.underline { border-color: $initial-cl !important; }
   &:link,
   &:visited {
     color: $initial-cl !important;
@@ -133,6 +158,10 @@
   &:active {
     color: $hover-cl !important;
     .icon { svg * { fill: $hover-cl !important; } }
+    &.underline { border-color: $hover-cl !important; }
+    &.hover-underline {
+      border-color: $hover-cl !important;
+    }
   }
 }
 

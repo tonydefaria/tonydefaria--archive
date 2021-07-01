@@ -26,7 +26,6 @@ export default function MetaComponent({project}) {
       {/* Languages */}
       <link rel="alternate" hrefLang="x-default" href={"https://" + project.base_domain + pathname} />
       <link rel="alternate" hrefLang="en" href={"https://" + project.base_domain + "/" + "en" + pathname} />
-      <link rel="alternate" hrefLang="de" href={"https://" + project.base_domain + "/" + "de" + pathname} />
 
       {/* SEO */}
       <title>{metaComponent.meta_title}</title>

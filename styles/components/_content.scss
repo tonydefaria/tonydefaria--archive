@@ -1,12 +1,19 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Template
+// File: Content
 // -------------------------------------------------------------
 
-$class: "template";
+$class: "content";
 
 .#{$class} {
+  float: left;
+  width: 100%;
   .#{$class}-box {
-    .#{$class}-item {
+    float: left;
+    width: 100%;
+    .#{$class}-row {
+      float: left;
+      padding: 32px;
+      width: 100%;
     }
   }
 }
@@ -16,7 +23,8 @@ $class: "template";
 @media #{$xxs} {
   .#{$class} {
     .#{$class}-box {
-      .#{$class}-item {
+      .#{$class}-row {
+        padding: 16px;
       }
     }
   }
@@ -27,7 +35,8 @@ $class: "template";
 @media #{$xs} {
   .#{$class} {
     .#{$class}-box {
-      .#{$class}-item {
+      .#{$class}-row {
+        padding: 24px;
       }
     }
   }
@@ -38,7 +47,7 @@ $class: "template";
 @media #{$s} {
   .#{$class} {
     .#{$class}-box {
-      .#{$class}-item {
+      .#{$class}-row {
       }
     }
   }
@@ -49,7 +58,7 @@ $class: "template";
 @media #{$m} {
   .#{$class} {
     .#{$class}-box {
-      .#{$class}-item {
+      .#{$class}-row {
       }
     }
   }
@@ -60,7 +69,7 @@ $class: "template";
 @media #{$l} {
   .#{$class} {
     .#{$class}-box {
-      .#{$class}-item {
+      .#{$class}-row {
       }
     }
   }
@@ -71,7 +80,7 @@ $class: "template";
 @media #{$xl} {
   .#{$class} {
     .#{$class}-box {
-      .#{$class}-item {
+      .#{$class}-row {
       }
     }
   }
@@ -82,7 +91,7 @@ $class: "template";
 @media #{$xxl} {
   .#{$class} {
     .#{$class}-box {
-      .#{$class}-item {
+      .#{$class}-row {
       }
     }
   }

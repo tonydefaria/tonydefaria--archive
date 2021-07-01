@@ -20,7 +20,11 @@ export default function Primary({ children }) {
       </header>
 
       <main className="universal main hero" id="hero">
-        {children}
+        <div className="universal-box">
+          <div className="universal-row">
+            {children}
+          </div>
+        </div>
       </main>
 
       <footer className="universal footer">

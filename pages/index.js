@@ -17,8 +17,15 @@ export default function Home({project}) {
   return (
     <div>
       <MetaComponent project={project} />
-      <h1 className="font-size-display">{heroComponent.title}</h1>
-      <p className="font-size-xxl">{heroComponent.description}</p>
+      <div className="content">
+        <div className="content-box">
+          <div className="content-row">
+            <h1 className="font-size-display">{heroComponent.title}</h1>
+            <hr className="separator-s" />
+            <p className="font-size-display font-weight-100">{heroComponent.description}</p>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

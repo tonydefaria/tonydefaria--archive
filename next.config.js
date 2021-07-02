@@ -1,6 +1,7 @@
 // next.config.js
 
 module.exports = {
+  trailingSlash: true,
   webpack5: true,
   i18n: {
     locales: ["en"],

@@ -1,24 +1,40 @@
 {
   "project": {
+    "uid": 1,
+    "slug": "project",
+
     "lang": "en",
     "project_type": "website",
     "project_title": "Project Title",
     "twitter_card_type": "summary_large_image",
     "twitter_site_handle": "@tonydefaria",
     "base_domain": "www.tonydefaria.com",
+
+    "brand_component": {
+      "uid": 1,
+      "slug": "brand",
+
+      "name": "Tony de Faria",
+      "tagline": "This is a subtitle",
+      "image": "/images/brand_component/brand.jpg"
+    },
+
     "pages": [
       {
         "uid": 1,
         "slug": "home",
 
-        "seo_component": {
+        "meta_component": {
           "meta_title": "Tony de Faria - The centre of a brainstorm",
           "meta_description": "I was born in Africa and grew up in Europe. My curious and open mindset has led me to discover a lot of diverse experiences in life. I don't cease to learn and, I embrace failure.",
           "meta_keywords": "creative, thinking, digital, copy, photography, podcast, video",
-          "meta_image": "/images/pages/home/og.jpg"
+          "meta_image": "/images/pages/home/seo_component/og.jpg"
         },
 
         "hero_component": {
+          "uid": 1,
+          "slug": "hero",
+
           "title": "The unknown is an opportunity to learn",
           "subtitle": "",
           "description": "I'm a self-taught creative thinker and, I like to use words, images and code to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
@@ -26,6 +42,49 @@
           "cta_url": "",
           "image": ""
         }
+      }
+    ],
+
+    "networks_component": [
+      {
+        "uid": 1,
+        "slug": "github",
+
+        "network": "Github",
+        "network_url": "https://github.com/",
+        "username": "tonydefaria",
+        "image": "/images/networks_component/github.jpg",
+        "position": 1
+      },
+      {
+        "uid": 2,
+        "slug": "twitter",
+
+        "network": "Twitter",
+        "network_url": "https://twitter.com/",
+        "username": "tonydefaria",
+        "image": "/images/networks_component/twitter.jpg",
+        "position": 2
+      },
+      {
+        "uid": 3,
+        "slug": "instagram",
+
+        "network": "Instagram",
+        "network_url": "https://instagram.com/",
+        "username": "tonydefaria",
+        "image": "/images/networks_component/instagram.jpg",
+        "position": 3
+      },
+      {
+        "uid": 4,
+        "slug": "facebook",
+
+        "network": "Facebook",
+        "network_url": "https://www.facebook.com/",
+        "username": "tonydefaria",
+        "image": "/images/networks_component/facebook.jpg",
+        "position": 4
       }
     ]
   }

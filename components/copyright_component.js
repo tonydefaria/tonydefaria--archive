@@ -5,7 +5,7 @@
 // Built-in Components
 import React, { useEffect } from "react"
 
-export default function Copyright(props) {
+export default function Copyright() {
 
   useEffect(() => {
     var date = new Date()

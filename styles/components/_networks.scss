@@ -1,8 +1,8 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Social Networks
+// File: Networks
 // -------------------------------------------------------------
 
-$class: "social-networks";
+$class: "networks";
 
 .#{$class} {
   float: right;
@@ -36,7 +36,6 @@ $class: "social-networks";
         width: 100%;
         .link-xs {
           text-align: center !important;
-          width: 100%;
         }
         &:last-child {
           padding: 0;
@@ -59,7 +58,6 @@ $class: "social-networks";
         width: 100%;
         .link-xs {
           text-align: center !important;
-          // width: 100%;
         }
         &:last-child {
           padding: 0;
@@ -82,7 +80,6 @@ $class: "social-networks";
         width: 100%;
         .link-xs {
           text-align: center !important;
-          // width: 100%;
         }
         &:last-child {
           padding: 0;

@@ -7,10 +7,14 @@ import TagManager from "react-gtm-module";
 
 // Components
 import BrandComponent from "../components/brand_component"
-import SocialNetworksComponent from "../components/social_networks_component"
+import NetworksComponent from "../components/networks_component"
 import CopyrightComponent from "../components/copyright_component"
 
 export default function Primary({ children }) {
+
+  // Get Project
+  const project = children.props.project
+
   // Hooks
   useEffect(() => {
     TagManager.initialize({ gtmId: "GTM-PB6NJJW" });
@@ -24,7 +28,7 @@ export default function Primary({ children }) {
       <header className="universal header">
         <div className="universal-box">
           <div className="universal-row">
-            <BrandComponent />
+            <BrandComponent project={project} />
           </div>
         </div>
       </header>
@@ -42,7 +46,7 @@ export default function Primary({ children }) {
       <footer className="universal footer">
         <div className="universal-box">
           <div className="universal-row">
-            <SocialNetworksComponent />
+            <NetworksComponent project={project} />
             <CopyrightComponent />
           </div>
         </div>

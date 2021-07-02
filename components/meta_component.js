@@ -11,7 +11,7 @@ export default function MetaComponent({project}) {
   const baseURL = "https://" + project.base_domain
   const pathname = useRouter().pathname
   const page = project.pages.find(({uid}) => uid === 1)
-  const metaComponent = page.seo_component
+  const metaComponent = page.meta_component
 
   return (
     <Head>

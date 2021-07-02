@@ -25,10 +25,10 @@
         "slug": "home",
 
         "meta_component": {
-          "meta_title": "Tony de Faria - The centre of a brainstorm",
+          "meta_title": "Tony de Faria - ✍️ writing, 📸 snapping, 🧑‍💻 coding and 🍔 eating",
           "meta_description": "I was born in Africa and grew up in Europe. My curious and open mindset has led me to discover a lot of diverse experiences in life. I don't cease to learn and, I embrace failure.",
-          "meta_keywords": "creative, thinking, digital, copy, photography, podcast, video",
-          "meta_image": "/images/pages/home/seo_component/og.jpg"
+          "meta_keywords": "creative, technologist, writer, photographer, coder, foodie",
+          "meta_image": "/images/pages/home/meta_component/og.jpg"
         },
 
         "hero_component": {

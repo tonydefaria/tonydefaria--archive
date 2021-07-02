@@ -10,7 +10,7 @@ export default function NetworksComponent({project}) {
     <div className="networks">
       <ul className="networks-box list-style-none">
         {networks.map((network) => (
-          <li className="networks-item flex-h-center">
+          <li key={network.uid} className="networks-item flex-h-center">
             <a className="link-xs link-black hover-underline" rel="noreferrer noopener" href={network.network_url + network.username} target="_blank">{network.network}</a>
           </li>
         ))}

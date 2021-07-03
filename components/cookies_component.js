@@ -38,7 +38,7 @@ export default function CookiesComponent() {
           <p className="white-cl text-align-center">Cookies allow us to deliver and improve our web content and provide you with a personalised experience. Our website uses cookies for these purposes.</p>
         </div>
         <div className="cookies-row flex-h-center">
-          <a className="button-m button-white" onClick={handleConsent}>I'm in</a>
+          <a className="button-m button-white" onClick={handleConsent}>I am in</a>
         </div>
       </div>
       <style jsx>{`

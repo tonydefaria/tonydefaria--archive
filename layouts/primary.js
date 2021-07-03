@@ -2,9 +2,11 @@
 
 // Built-in Components
 import { useEffect } from "react";
+import Cookies from "js-cookie"
 import TagManager from "react-gtm-module";
 
 // Components
+import CookiesComponent from "../components/cookies_component"
 import FaviconComponent from "../components/favicon_component"
 import BrandComponent from "../components/brand_component"
 import NetworksComponent from "../components/networks_component"
@@ -17,7 +19,10 @@ export default function Primary({ children }) {
 
   // Hooks
   useEffect(() => {
-    TagManager.initialize({ gtmId: "GTM-PB6NJJW" });
+    const cookie = Cookies.get("weLoveCookies")
+    if (cookie === "iWantCookies") {
+      TagManager.initialize({ gtmId: "GTM-PB6NJJW" })
+    }
   }, []);
 
   return (
@@ -49,6 +54,7 @@ export default function Primary({ children }) {
           </div>
         </div>
       </footer>
+      <CookiesComponent />
     </div>
   )
 }

@@ -61,9 +61,6 @@ export default function MetaComponent({project}) {
       <meta name="twitter:title"        content={metaComponent.meta_title} />
       <meta name="twitter:description"  content={metaComponent.meta_description} />
       <meta name="twitter:image"        content={baseURL + metaComponent.meta_image} />
-
-      {/* No Follow & No Indexing */}
-      <meta name="robots" content="noindex" />
     </Head>
   )
 }

@@ -4,14 +4,37 @@
 
 // Built-in Components
 import Head from "next/head"
+import { useEffect } from "react";
 import { useRouter } from "next/router"
 
 export default function MetaComponent({project}) {
 
-  const baseURL = "https://" + project.base_domain
-  const pathname = useRouter().pathname
   const page = project.pages.find(({uid}) => uid === 1)
   const metaComponent = page.meta_component
+
+  // Environment
+  const isDevelopment = process.env.NODE_ENV === "development"
+
+  // Get Locale & Pathname
+  const locale = useRouter().locale
+  const pathname = useRouter().pathname
+
+  let baseURL
+  if (isDevelopment === true) {
+    baseURL = "http://" + "localhost:3000"
+  } else {
+    baseURL = "https://" + project.base_domain
+  }
+
+  useEffect(() => {
+    let currentURL = window.location.href
+    const regex = new RegExp("(http:\/\/localhost:3000\/" + locale + "\/)")
+    const localised = baseURL + "/" + locale + pathname
+
+    if (regex.test(currentURL) ===  true) {
+      document.querySelectorAll("[rel='canonical']")[0].href = localised
+    }
+  }, []);
 
   return (
     <Head>
@@ -38,6 +61,9 @@ export default function MetaComponent({project}) {
       <meta name="twitter:title"        content={metaComponent.meta_title} />
       <meta name="twitter:description"  content={metaComponent.meta_description} />
       <meta name="twitter:image"        content={baseURL + metaComponent.meta_image} />
+
+      {/* No Follow & No Indexing */}
+      <meta name="robots" content="noindex" />
     </Head>
   )
 }

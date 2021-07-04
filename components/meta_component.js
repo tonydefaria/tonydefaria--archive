@@ -28,7 +28,7 @@ export default function MetaComponent({project}) {
 
   useEffect(() => {
     let currentURL = window.location.href
-    const regex = new RegExp("(http:\/\/localhost:3000\/" + locale + "\/)")
+    const regex = new RegExp((baseURL + "\/" + locale + "\/"))
     const localised = baseURL + "/" + locale + pathname
 
     if (regex.test(currentURL) ===  true) {

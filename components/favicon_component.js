@@ -7,7 +7,7 @@ import Head from "next/head"
 
 export default function MetaComponent() {
   return (
-    <>
+    <Head>
       {/* Favicon */}
       <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png" />
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png" />
@@ -29,6 +29,6 @@ export default function MetaComponent() {
       <meta name="msapplication-square150x150logo" content="./favicons/mstile-150x150.png" />
       <meta name="msapplication-wide310x150logo" content="./favicons/mstile-310x150.png" />
       <meta name="msapplication-square310x310logo" content="./favicons/mstile-310x310.png" />
-    </>
+    </Head>
   )
 }

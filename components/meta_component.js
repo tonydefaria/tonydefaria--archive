@@ -6,9 +6,6 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
 
-// Components
-import FaviconComponent from "../components/favicon_component"
-
 export default function MetaComponent({project}) {
 
   // Get Page & Component
@@ -32,7 +29,7 @@ export default function MetaComponent({project}) {
       {/* SEO */}
       <title>{metaComponent.meta_title}</title>
       <meta name="description"          content={metaComponent.meta_description} />
-      <meta name="keywords"             content={metaComponent.meta_tags} />
+      <meta name="keywords"             content={metaComponent.meta_keywords} />
       <link rel="canonical"             href={baseURL + pathname} />
 
       {/* Open Graph */}
@@ -48,8 +45,6 @@ export default function MetaComponent({project}) {
       <meta name="twitter:title"        content={metaComponent.meta_title} />
       <meta name="twitter:description"  content={metaComponent.meta_description} />
       <meta name="twitter:image"        content={baseURL + metaComponent.meta_image} />
-
-      <FaviconComponent />
     </Head>
   )
 }

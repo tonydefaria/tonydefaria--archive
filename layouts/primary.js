@@ -7,7 +7,6 @@ import TagManager from "react-gtm-module";
 
 // Components
 import CookiesComponent from "../components/cookies_component"
-import FaviconComponent from "../components/favicon_component"
 import BrandComponent from "../components/brand_component"
 import NetworksComponent from "../components/networks_component"
 import CopyrightComponent from "../components/copyright_component"
@@ -27,7 +26,7 @@ export default function Primary({ children }) {
 
   return (
     <div>
-      <FaviconComponent />
+
       <header className="universal header">
         <div className="universal-box">
           <div className="universal-row">

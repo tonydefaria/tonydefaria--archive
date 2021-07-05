@@ -7,6 +7,9 @@ import Head from "next/head"
 import { useEffect } from "react";
 import { useRouter } from "next/router"
 
+// Components
+import FaviconComponent from "../components/favicon_component"
+
 export default function MetaComponent({project}) {
 
   const page = project.pages.find(({uid}) => uid === 1)
@@ -27,12 +30,13 @@ export default function MetaComponent({project}) {
 
   // Get Locale
   const locale = useRouter().locale
+  const localised = baseURL + "/" + locale + pathname
+  const regex = new RegExp((baseURL + "\/" + locale + "\/"))
+
+  console.log(useRouter())
 
   useEffect(() => {
     let currentURL = window.location.href
-    const regex = new RegExp((baseURL + "\/" + locale + "\/"))
-    const localised = baseURL + "/" + locale + pathname
-
     if (regex.test(currentURL) ===  true) {
       document.querySelectorAll("[rel='canonical']")[0].href = localised
     }
@@ -42,7 +46,7 @@ export default function MetaComponent({project}) {
     <Head>
       {/* Languages */}
       <link rel="alternate" hrefLang="x-default" href={baseURL + pathname} />
-      <link rel="alternate" hrefLang="en" href={baseURL + "/" + "en" + pathname} />
+      {/* <link rel="alternate" hrefLang="en" href={baseURL + "/" + "en" + pathname} /> */}
 
       {/* SEO */}
       <title>{metaComponent.meta_title}</title>
@@ -63,6 +67,8 @@ export default function MetaComponent({project}) {
       <meta name="twitter:title"        content={metaComponent.meta_title} />
       <meta name="twitter:description"  content={metaComponent.meta_description} />
       <meta name="twitter:image"        content={baseURL + metaComponent.meta_image} />
+
+      <FaviconComponent />
     </Head>
   )
 }

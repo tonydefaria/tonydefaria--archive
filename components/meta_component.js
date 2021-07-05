@@ -4,7 +4,7 @@
 
 // Built-in Components
 import Head from "next/head"
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/router"
 
 export default function MetaComponent({project}) {
@@ -26,17 +26,17 @@ export default function MetaComponent({project}) {
   }
 
   // Get Locale
-  // const locale = useRouter().locale
+  const locale = useRouter().locale
 
-  // useEffect(() => {
-  //   let currentURL = window.location.href
-  //   const regex = new RegExp((baseURL + "\/" + locale + "\/"))
-  //   const localised = baseURL + "/" + locale + pathname
+  useEffect(() => {
+    let currentURL = window.location.href
+    const regex = new RegExp((baseURL + "\/" + locale + "\/"))
+    const localised = baseURL + "/" + locale + pathname
 
-  //   if (regex.test(currentURL) ===  true) {
-  //     document.querySelectorAll("[rel='canonical']")[0].href = localised
-  //   }
-  // }, []);
+    if (regex.test(currentURL) ===  true) {
+      document.querySelectorAll("[rel='canonical']")[0].href = localised
+    }
+  }, []);
 
   return (
     <Head>

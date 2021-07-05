@@ -1,3 +1,5 @@
+// Hankyo Integration
+// ----------------------------------------------------
 // Cookies
 
 import { useEffect } from "react"
@@ -38,7 +40,7 @@ export default function CookiesComponent() {
           <p className="white-cl text-align-center">Cookies allow us to deliver and improve our web content and provide you with a personalised experience. Our website uses cookies for these purposes.</p>
         </div>
         <div className="cookies-row flex-h-center">
-          <a className="button-m button-white" onClick={handleConsent}>I am in</a>
+          <a href="#" className="button-m button-white" rel="nofollow" onClick={handleConsent}>I am in</a>
         </div>
       </div>
       <style jsx>{`

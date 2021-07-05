@@ -4,7 +4,6 @@
 
 // Built-in Components
 import Head from "next/head"
-import { useEffect } from "react";
 import { useRouter } from "next/router"
 
 // Components
@@ -12,15 +11,12 @@ import FaviconComponent from "../components/favicon_component"
 
 export default function MetaComponent({project}) {
 
+  // Get Page & Component
   const page = project.pages.find(({uid}) => uid === 1)
   const metaComponent = page.meta_component
 
-  // Environment
-  const isDevelopment = process.env.NODE_ENV === "development"
-
-  // Pathname
   const pathname = useRouter().pathname
-
+  const isDevelopment = process.env.NODE_ENV === "development"
   let baseURL
   if (isDevelopment === true) {
     baseURL = "http://" + "localhost:3000"
@@ -28,25 +24,10 @@ export default function MetaComponent({project}) {
     baseURL = "https://" + project.base_domain
   }
 
-  // Get Locale
-  const locale = useRouter().locale
-  const localised = baseURL + "/" + locale + pathname
-  const regex = new RegExp((baseURL + "\/" + locale + "\/"))
-
-  console.log(useRouter())
-
-  useEffect(() => {
-    let currentURL = window.location.href
-    if (regex.test(currentURL) ===  true) {
-      document.querySelectorAll("[rel='canonical']")[0].href = localised
-    }
-  }, []);
-
   return (
     <Head>
       {/* Languages */}
       <link rel="alternate" hrefLang="x-default" href={baseURL + pathname} />
-      {/* <link rel="alternate" hrefLang="en" href={baseURL + "/" + "en" + pathname} /> */}
 
       {/* SEO */}
       <title>{metaComponent.meta_title}</title>

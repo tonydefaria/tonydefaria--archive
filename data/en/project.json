@@ -16,7 +16,7 @@
 
       "name": "Tony de Faria",
       "tagline": "This is a subtitle",
-      "image": "/images/brand_component/brand.jpg"
+      "image": "/images/brand_component/brand.png"
     },
 
     "pages": [
@@ -53,7 +53,7 @@
         "network": "Twitter",
         "network_url": "https://twitter.com/",
         "username": "tonydefaria",
-        "image": "/images/networks_component/twitter.jpg",
+        "image": "/images/networks_component/twitter.png",
         "position": 1
       },
       {
@@ -63,7 +63,7 @@
         "network": "Instagram",
         "network_url": "https://instagram.com/",
         "username": "tonydefaria",
-        "image": "/images/networks_component/instagram.jpg",
+        "image": "/images/networks_component/instagram.png",
         "position": 2
       },
       {
@@ -73,7 +73,7 @@
         "network": "Facebook",
         "network_url": "https://www.facebook.com/",
         "username": "tonydefaria",
-        "image": "/images/networks_component/facebook.jpg",
+        "image": "/images/networks_component/facebook.png",
         "position": 3
       }
     ]

@@ -25,9 +25,9 @@
         "slug": "home",
 
         "meta_component": {
-          "meta_title": "Tony de Faria - writing, snapping, coding and eating",
-          "meta_description": "Born in Africa & raised in Europe. Has a curious & creative mindset, leading to experiment with technology, writing & photography. Passionate about Humanity.",
-          "meta_keywords": "creative, concept, technologist, writer, photographer, coder",
+          "meta_title": "Tony de Faria - photography, writing, coding and eating",
+          "meta_description": "Born in Africa and raised in Europe. Has a curious and creative mindset, leading to experiment with all sorts of mediums. Passionate about Humanity.",
+          "meta_keywords": "creative, concept, photographer, writer, technologist, coder",
           "meta_image": "/images/pages/home/meta_component/og.png"
         },
 
@@ -37,7 +37,7 @@
 
           "title": "The unknown is an opportunity to learn",
           "subtitle": "",
-          "description": "I'm a self-taught creative thinker and, I like to use words, images and code to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
+          "description": "I'm a self-taught creative thinker. I like to use images, words and code to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
           "cta_label": "",
           "cta_url": "",
           "image": ""
@@ -48,43 +48,33 @@
     "networks_component": [
       {
         "uid": 1,
-        "slug": "github",
-
-        "network": "Github",
-        "network_url": "https://github.com/",
-        "username": "tonydefaria",
-        "image": "/images/networks_component/github.jpg",
-        "position": 1
-      },
-      {
-        "uid": 2,
         "slug": "twitter",
 
         "network": "Twitter",
         "network_url": "https://twitter.com/",
         "username": "tonydefaria",
         "image": "/images/networks_component/twitter.jpg",
-        "position": 2
+        "position": 1
       },
       {
-        "uid": 3,
+        "uid": 2,
         "slug": "instagram",
 
         "network": "Instagram",
         "network_url": "https://instagram.com/",
         "username": "tonydefaria",
         "image": "/images/networks_component/instagram.jpg",
-        "position": 3
+        "position": 2
       },
       {
-        "uid": 4,
+        "uid": 3,
         "slug": "facebook",
 
         "network": "Facebook",
         "network_url": "https://www.facebook.com/",
         "username": "tonydefaria",
         "image": "/images/networks_component/facebook.jpg",
-        "position": 4
+        "position": 3
       }
     ]
   }

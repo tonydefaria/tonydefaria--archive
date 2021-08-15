@@ -15,7 +15,7 @@
       "slug": "brand",
 
       "name": "Tony de Faria",
-      "tagline": "This is a subtitle",
+      "tagline": "",
       "image": "/images/brand_component/brand.png"
     },
 
@@ -27,7 +27,7 @@
         "meta_component": {
           "meta_title": "Tony de Faria - photography, writing, coding and eating",
           "meta_description": "Born in Africa and raised in Europe. Has a curious and creative mindset, leading to experiment with all sorts of mediums. Passionate about Humanity.",
-          "meta_keywords": "creative, concept, photographer, writer, technologist, coder",
+          "meta_keywords": "creative, concept, artist, photographer, writer, technologist, foodie",
           "meta_image": "/images/pages/home/meta_component/og.png"
         },
 
@@ -37,7 +37,7 @@
 
           "title": "The unknown is an opportunity to learn",
           "subtitle": "",
-          "description": "I'm a self-taught creative thinker. I like to use images, words and code to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
+          "description": "I'm a self-taught creative thinker. I like to use multiple mediums to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
           "cta_label": "",
           "cta_url": "",
           "image": ""

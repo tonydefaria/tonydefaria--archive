@@ -16,6 +16,7 @@
 
       "name": "Tony de Faria",
       "tagline": "",
+      "icon": "/images/brand_component/icon.svg",
       "image": "/images/brand_component/brand.svg"
     },
 
@@ -37,7 +38,7 @@
 
           "title": "The unknown is an opportunity to learn",
           "subtitle": "",
-          "description": "<p class='font-size-xxl'>Hi! I'm Tony, a self-taught creative thinker.<br />I like to use multiple mediums to express my thoughts and ideas.<br />I'm passionate about stories that have humanity, empathy and food.<p>",
+          "description": "<p class='font-size-xxl font-weight-500 black-cl'>Hi! I'm Tony, a self-taught creative thinker. I like to use multiple mediums to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.<p>",
           "cta_label": "",
           "cta_url": "",
           "image": ""

@@ -6,15 +6,25 @@ $class: "brand";
 
 .#{$class} {
   float: left;
-  width: auto;
   .#{$class}-box {
     float: left;
+    margin: 0;
     padding: 32px;
-    width: auto;
     .#{$class}-item {
       float: left;
-      height: 24px;
-      width: 152.02px;
+      margin: 0;
+      &.#{$class}-desktop {
+        display: block;
+        height: 24px;
+        width: 152.02px;
+        visibility: visible;
+      }
+      &.#{$class}-mobile {
+        display: none;
+        height: 24px;
+        width: 23.09px;
+        visibility: hidden;
+      }
     }
   }
 }
@@ -25,6 +35,14 @@ $class: "brand";
   .#{$class} {
     .#{$class}-box {
       .#{$class}-item {
+        &.#{$class}-desktop {
+          display: none;
+          visibility: hidden;
+        }
+        &.#{$class}-mobile {
+          display: block;
+          visibility: visible;
+        }
       }
     }
   }
@@ -36,6 +54,14 @@ $class: "brand";
   .#{$class} {
     .#{$class}-box {
       .#{$class}-item {
+        &.#{$class}-desktop {
+          display: none;
+          visibility: hidden;
+        }
+        &.#{$class}-mobile {
+          display: block;
+          visibility: visible;
+        }
       }
     }
   }
@@ -47,6 +73,14 @@ $class: "brand";
   .#{$class} {
     .#{$class}-box {
       .#{$class}-item {
+        &.#{$class}-desktop {
+          display: none;
+          visibility: hidden;
+        }
+        &.#{$class}-mobile {
+          display: block;
+          visibility: visible;
+        }
       }
     }
   }

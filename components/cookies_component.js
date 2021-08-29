@@ -36,11 +36,9 @@ export default function CookiesComponent() {
   return (
     <div className="cookies">
       <div className="cookies-box">
-        <div className="cookies-row">
-          <p className="white-cl text-align-center">Cookies allow us to deliver and improve our web content and provide you with a personalised experience. Our website uses cookies for these purposes.</p>
-        </div>
-        <div className="cookies-row flex-h-center">
-          <a href="#" className="button-m button-white" rel="nofollow" onClick={handleConsent}>I am in</a>
+        <div className="cookies-item">
+          <p className="font-size-xs white-cl">We use cookies to improve <br />your experience on our site.</p>
+          <a href="#" className="button-s button-white pill" rel="nofollow" onClick={handleConsent}>Accept</a>
         </div>
       </div>
       <style jsx>{`

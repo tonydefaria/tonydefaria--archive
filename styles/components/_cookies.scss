@@ -5,22 +5,24 @@
 $class: "cookies";
 
 .#{$class} {
-  background-color: $black;
-  bottom: 0;
+  bottom: 32px;
   display: none;
   float: left;
-  left: 0;
   position: fixed;
-  right: 0;
-  width: 100%;
+  width: auto;
   .#{$class}-box {
     float: left;
-    padding: 32px;
     width: 100%;
-    .#{$class}-row {
+    .#{$class}-item {
+      background-color: $black;
+      border-radius: 36px;
       float: left;
-      padding: 8px;
-      width: 100%;
+      padding: 16px;
+      width: auto;
+      p {
+        padding: 0 16px;
+        width: auto;
+      }
     }
   }
 }

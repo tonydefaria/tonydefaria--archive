@@ -16,7 +16,7 @@
 
       "name": "Tony de Faria",
       "tagline": "",
-      "image": "/images/brand_component/brand.png"
+      "image": "/images/brand_component/brand.svg"
     },
 
     "pages": [
@@ -25,10 +25,10 @@
         "slug": "home",
 
         "meta_component": {
-          "meta_title": "Tony de Faria - photography, writing, coding and eating",
+          "meta_title": "Tony de Faria - Photography, Writing, Coding and Eating",
           "meta_description": "Born in Africa and raised in Europe. Has a curious and creative mindset, leading to experiment with all sorts of mediums. Passionate about Humanity.",
-          "meta_keywords": "creative, concept, artist, photographer, writer, technologist, foodie",
-          "meta_image": "/images/pages/home/meta_component/og.png"
+          "meta_keywords": "creative, concept, artist, photographer, writer, technologist",
+          "meta_image": "/images/og.png"
         },
 
         "hero_component": {
@@ -37,10 +37,31 @@
 
           "title": "The unknown is an opportunity to learn",
           "subtitle": "",
-          "description": "I'm a self-taught creative thinker. I like to use multiple mediums to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
+          "description": "<p class='font-size-xxl'>Hi! I'm Tony, a self-taught creative thinker.<br />I like to use multiple mediums to express my thoughts and ideas.<br />I'm passionate about stories that have humanity, empathy and food.<p>",
           "cta_label": "",
           "cta_url": "",
           "image": ""
+        }
+      },
+
+      {
+        "uid": 9999,
+        "slug": "contact",
+
+        "meta_component": {
+          "meta_title": "Tony de Faria - Get in touch.",
+          "meta_description": "Born in Africa and raised in Europe. Has a curious and creative mindset, leading to experiment with all sorts of mediums. Passionate about Humanity.",
+          "meta_keywords": "creative, concept, artist, photographer, writer, technologist",
+          "meta_image": "/images/og.png"
+        },
+
+        "title": "Reach out.",
+        "description": "<p class='font-size-l'>Do you have a question?<br />Are you curious about my work?<br /></p><p class='font-size-l'>Then, regardless of your motivation to get in touch, do it.<br />I will happily reply.</p>",
+
+        "vcard_component": {
+          "uid": 1,
+          "slug": "vcard",
+          "email": "me@tonydefaria.com"
         }
       }
     ],

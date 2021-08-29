@@ -5,12 +5,15 @@ import { useEffect } from "react";
 import Cookies from "js-cookie"
 import TagManager from "react-gtm-module";
 
+const img = "/images/bg.jpg";
+
 // Components
-import CookiesComponent from "../components/cookies_component"
 import BrandComponent from "../components/brand_component"
-import NetworksComponent from "../components/networks_component"
-import CopyrightComponent from "../components/copyright_component"
+import CookiesComponent from "../components/cookies_component"
+import CopyrightComponent from "../components/copyright_alt_component"
 import FaviconComponent from "../components/favicon_component"
+import MenuComponent from "../components/menu_component"
+import NetworksComponent from "../components/networks_alt_component"
 
 export default function Primary({ children }) {
 
@@ -26,18 +29,19 @@ export default function Primary({ children }) {
   }, []);
 
   return (
-    <div>
+    <div className="keyvisual">
       <FaviconComponent />
       <header className="universal header">
         <div className="universal-box">
           <div className="universal-row">
             <BrandComponent project={project} />
+            <MenuComponent />
           </div>
         </div>
       </header>
 
-      <div className="sticky-footer flex-v-center">
-        <main className="universal main hero" id="hero">
+      <div className="sticky-footer">
+        <main className="universal main">
           <div className="universal-box">
             <div className="universal-row">
               {children}
@@ -54,7 +58,19 @@ export default function Primary({ children }) {
           </div>
         </div>
       </footer>
-      <CookiesComponent />
+      <div className="width-wide flex-h-center">
+        <CookiesComponent />
+      </div>
+      <style jsx>{`
+        .keyvisual {
+          background-image: url(${img});
+          background-position: bottom right;
+          background-size: cover;
+          min-height: 100%;
+          position: absolute;
+          width: 100%;
+        }
+      `}</style>
     </div>
   )
 }

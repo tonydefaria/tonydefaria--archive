@@ -5,27 +5,19 @@ import Primary from "../layouts/primary"
 
 // Components
 import MetaComponent from "../components/meta_component"
+import HeroComponent from "../components/hero_component"
 
 // Data
 import Hankyo from "../lib/hankyo"
 
-export default function Home({project}) {
+export default function Index({project}) {
 
   const page = project.pages.find(({uid}) => uid === 1)
-  const heroComponent = page.hero_component
 
   return (
     <div>
-      <MetaComponent project={project} />
-      <div className="content">
-        <div className="content-box">
-          <div className="content-row">
-            <h1 className="font-size-display">{heroComponent.title}</h1>
-            <hr className="separator-s" />
-            <p className="font-size-display font-weight-100">{heroComponent.description}</p>
-          </div>
-        </div>
-      </div>
+      <MetaComponent project={project} page={page} />
+      <HeroComponent project={project} />
     </div>
   )
 }
@@ -39,4 +31,4 @@ export async function getStaticProps({locale}) {
   }
 }
 
-Home.Layout = Primary
+Index.Layout = Primary

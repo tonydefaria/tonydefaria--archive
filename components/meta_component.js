@@ -6,10 +6,10 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
 
-export default function MetaComponent({project}) {
+export default function MetaComponent({project, page}) {
 
   // Get Page & Component
-  const page = project.pages.find(({uid}) => uid === 1)
+  // const page = project.pages.find(({uid}) => uid === 1)
   const metaComponent = page.meta_component
 
   const pathname = useRouter().pathname
@@ -45,6 +45,9 @@ export default function MetaComponent({project}) {
       <meta name="twitter:title"        content={metaComponent.meta_title} />
       <meta name="twitter:description"  content={metaComponent.meta_description} />
       <meta name="twitter:image"        content={baseURL + metaComponent.meta_image} />
+
+      {/* Preloaders */}
+      <link rel="preload" href="/images/bg.jpg" as="image" />
     </Head>
   )
 }

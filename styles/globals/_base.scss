@@ -53,6 +53,15 @@ body::-webkit-scrollbar {
   visibility: hidden;
 }
 
+::-moz-selection {
+  background-color: $black;
+  color: $white;
+}
+::selection {
+  background-color: $black;
+  color: $white;
+}
+
 a,
 button,
 [type=button],

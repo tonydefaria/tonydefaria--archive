@@ -9,6 +9,7 @@
   box-sizing: border-box !important;
   display: block !important;
   float: left !important;
+  font-weight: 300;
   letter-spacing: .030em !important;
   text-align: left !important;
   text-decoration: none !important;
@@ -28,7 +29,8 @@
     text-decoration: underline !important;
   }
   &.hover-underline {
-    border-bottom: 1px solid $transparent !important;
+    text-decoration: underline 1px rgba(255, 255, 255, 0) !important;
+    transition: text-decoration-color 500ms;
   }
   &:hover,
   &:active {
@@ -36,8 +38,7 @@
       text-decoration: underline !important;
     }
     &.hover-underline {
-      // text-decoration: underline !important;
-      border-bottom: 1px solid !important;
+      text-decoration-color: rgba(0, 0, 0, 1) !important;
     }
   }
 }
@@ -65,6 +66,10 @@
       &.round { border-radius: calc(#{$height} / 2); }
     }
   }
+}
+
+@mixin link {
+  @include link-default;
 }
 
 @mixin link-xxs {
@@ -172,6 +177,12 @@
     $hover-cl: "",
     $hover-fl: ""
   );
+  &:hover,
+  &:active {
+    &.hover-underline {
+      text-decoration: underline 1px rgba(255, 255, 255, 1) !important;
+    }
+  }
 }
 
 @mixin link-black {
@@ -181,6 +192,12 @@
     $hover-cl: "",
     $hover-fl: ""
   );
+  &:hover,
+  &:active {
+    &.hover-underline {
+      text-decoration: underline 1px rgba(0, 0, 0, 1) !important;
+    }
+  }
 }
 
 @mixin link-gray {
@@ -275,6 +292,7 @@
 
 // Classes
 // -------------------------------------------------------------
+.link     { @include link; }
 .link-xxs { @include link-xxs; }
 .link-xs  { @include link-xs; }
 .link-s   { @include link-s; }

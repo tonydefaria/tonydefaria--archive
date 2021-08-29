@@ -17,21 +17,57 @@
 @mixin separator-xxs {
   @include separator-default;
   margin: 4px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} { margin: 2px 0 !important; }
 }
 
 @mixin separator-xs {
   @include separator-default;
   margin: 8px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} { margin: 2px 0 !important; }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} { margin: 4px 0 !important; }
 }
 
 @mixin separator-s {
   @include separator-default;
   margin: 16px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} { margin: 8px 0 !important }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} { margin: 8px 0 !important; }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} { margin: 12px 0 !important; }
 }
 
 @mixin separator-m {
   @include separator-default;
   margin: 32px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} { margin: 12px 0 !important }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} { margin: 16px 0 !important; }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} { margin: 24px 0 !important; }
 }
 
 @mixin separator-l {

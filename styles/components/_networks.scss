@@ -11,6 +11,9 @@ $class: "networks";
     float: left;
     padding: 32px;
     width: 100%;
+    &.no-padding {
+      padding: 0;
+    }
     .#{$class}-item {
       float: left;
       margin: 0;

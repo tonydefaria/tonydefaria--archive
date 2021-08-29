@@ -9,11 +9,12 @@ $class: "brand";
   width: auto;
   .#{$class}-box {
     float: left;
-    padding: 30px 32px;
+    padding: 32px;
     width: auto;
     .#{$class}-item {
       float: left;
-      width: auto;
+      height: 24px;
+      width: 152.02px;
     }
   }
 }

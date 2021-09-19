@@ -5,7 +5,7 @@
 
     "lang": "en",
     "project_type": "website",
-    "project_title": "Project Title",
+    "project_title": "",
     "twitter_card_type": "summary_large_image",
     "twitter_site_handle": "@tonydefaria",
     "base_domain": "www.tonydefaria.com",
@@ -51,13 +51,13 @@
 
         "meta_component": {
           "meta_title": "Tony de Faria - Get in touch.",
-          "meta_description": "Born in Africa and raised in Europe. Has a curious and creative mindset, leading to experiment with all sorts of mediums. Passionate about Humanity.",
+          "meta_description": "Be it through a video call, while grabbing a coffee or via email. Tony is responsive and always open to conversation. So get in touch; he will try to help if he feels fit to do so.",
           "meta_keywords": "creative, concept, artist, photographer, writer, technologist",
           "meta_image": "/images/og.png"
         },
 
         "title": "Reach out.",
-        "description": "<p class='font-size-l'>Do you have a question?<br />Are you curious about my work?<br /></p><p class='font-size-l'>Then, regardless of your motivation to get in touch, do it.<br />I will happily reply.</p>",
+        "description": "<p class='font-size-l'>Do you have a question?<br />Are you curious about my work?<br /></p><p class='font-size-l'>Well, get in touch. I will happily reply, and hopefully, I will be able to help.</p>",
 
         "vcard_component": {
           "uid": 1,

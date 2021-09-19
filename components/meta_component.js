@@ -11,6 +11,7 @@ export default function MetaComponent({project, page}) {
   // Get Page & Component
   // const page = project.pages.find(({uid}) => uid === 1)
   const metaComponent = page.meta_component
+  const brand = project.brand_component
 
   const pathname = useRouter().pathname
   const isDevelopment = process.env.NODE_ENV === "development"
@@ -47,7 +48,8 @@ export default function MetaComponent({project, page}) {
       <meta name="twitter:image"        content={baseURL + metaComponent.meta_image} />
 
       {/* Preloaders */}
-      <link rel="preload" href="/images/bg.jpg" as="image" />
+      <link rel="preload" as="image" href="/images/bg.jpg" />
+      <link rel="preload" as="image" href={brand.icon} />
     </Head>
   )
 }

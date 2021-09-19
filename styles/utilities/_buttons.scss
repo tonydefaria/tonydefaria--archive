@@ -39,12 +39,12 @@
     line-height: calc(#{$height} - 2px);
     padding: 0 calc(#{$edge} - 1px);
     &.condense {
-      padding: 0 (calc(#{$edge} / 2) - 1px);
+      padding: 0 calc((#{$edge} / 2) - 1px);
     }
     .icon {
-      margin: (calc(#{$edge} / 2) - 1px) 0;
-      &.float-left { margin: (calc(#{$edge} / 2) - 1px) (calc(#{$edge} / 2) / 2) (calc(#{$edge} / 2) - 1px) 0; }
-      &.float-right { margin: (calc(#{$edge} / 2) - 1px) 0 (calc(#{$edge} / 2) - 1px) (calc(#{$edge} / 2) / 2); }
+      margin: calc((#{$edge} / 2) - 1px) 0;
+      &.float-left { margin: calc((#{$edge} / 2) - 1px) calc((#{$edge} / 2) / 2) calc((#{$edge} / 2) - 1px) 0; }
+      &.float-right { margin: calc((#{$edge} / 2) - 1px) 0 calc((#{$edge} / 2) - 1px) calc((#{$edge} / 2) / 2); }
     }
   }
 }

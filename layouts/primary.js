@@ -13,6 +13,9 @@ import FaviconComponent from "../components/favicon_component"
 import MenuComponent from "../components/menu_component"
 import NetworksComponent from "../components/networks_component"
 
+// Assets
+const img = "/images/bg.jpg";
+
 export default function Primary({ children }) {
 
   // Get Project

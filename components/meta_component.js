@@ -48,8 +48,12 @@ export default function MetaComponent({project, page}) {
       <meta name="twitter:image"        content={baseURL + metaComponent.meta_image} />
 
       {/* Preloaders */}
-      <link rel="preload" as="image" href="/images/bg.jpg" />
-      <link rel="preload" as="image" href={brand.icon} />
+      <link rel="dns-prefetch" href="https://use.typekit.net/sjv6gba.css" />
+      <link rel="prefetch" as="image" href="/images/bg.jpg" />
+      <link rel="prefetch" as="image" href={brand.icon} />
+
+      {/* Analytics */}
+      <script async defer src="https://scripts.withcabin.com/hello.js"></script>
     </Head>
   )
 }

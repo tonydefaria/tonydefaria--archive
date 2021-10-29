@@ -14,10 +14,10 @@ export default function BrandComponent({project}) {
     <div className="brand">
       <ul className="brand-box list-style-none">
         <li className="brand-item brand-desktop">
-          <Link href="/"><a className="link"><Image src={brand.image} width="304.04" height="48" alt="Tony de Faria" /></a></Link>
+          <Link href="/"><a className="link"><Image src={brand.image} width="304.04" height="48" alt="Tony de Faria" priority={true} /></a></Link>
         </li>
         <li className="brand-item brand-mobile">
-          <Link href="/"><a className="link"><Image src={brand.icon} width="46.19" height="48" alt="Tony de Faria" /></a></Link>
+          <Link href="/"><a className="link"><Image src={brand.icon} width="46.19" height="48" alt="Tony de Faria" priority={true} /></a></Link>
         </li>
       </ul>
     </div>

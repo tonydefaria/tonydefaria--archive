@@ -53,7 +53,7 @@ export default function MetaComponent({project, page}) {
       <link rel="prefetch" as="image" href={brand.icon} />
 
       {/* Analytics */}
-      <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+      <script async defer src="https://cabin.tonydefaria.com/hello.js"></script>
     </Head>
   )
 }

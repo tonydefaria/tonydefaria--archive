@@ -31,6 +31,7 @@ export default function CookiesComponent() {
       "cookies-box",
       "cookies-row"
     )[0].classList.add("hide")
+    // window.location.reload();
   }
 
   return (

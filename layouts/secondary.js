@@ -22,7 +22,7 @@ export default function Secondary({ children }) {
   useEffect(() => {
     const cookie = Cookies.get("weLoveCookies")
     if (cookie === "iWantCookies") {
-      TagManager.initialize({ gtmId: "GTM-PB6NJJW" })
+      TagManager.initialize({ gtmId: "GTM-W4P8CGP" })
     }
   }, []);
 

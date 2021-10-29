@@ -5,8 +5,6 @@ import { useEffect } from "react";
 import Cookies from "js-cookie"
 import TagManager from "react-gtm-module";
 
-const img = "/images/bg.jpg";
-
 // Components
 import BrandComponent from "../components/brand_component"
 import CookiesComponent from "../components/cookies_component"
@@ -24,7 +22,7 @@ export default function Primary({ children }) {
   useEffect(() => {
     const cookie = Cookies.get("weLoveCookies")
     if (cookie === "iWantCookies") {
-      TagManager.initialize({ gtmId: "GTM-PB6NJJW" })
+      TagManager.initialize({ gtmId: "GTM-W4P8CGP" })
     }
   }, []);
 

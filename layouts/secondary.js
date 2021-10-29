@@ -51,8 +51,8 @@ export default function Secondary({ children }) {
       <footer className="universal footer">
         <div className="universal-box">
           <div className="universal-row">
-            <NetworksComponent project={project} />
-            <CopyrightComponent />
+            <NetworksComponent link_colour="link-black" project={project} />
+            <CopyrightComponent text_colour="black-cl" />
           </div>
         </div>
       </footer>

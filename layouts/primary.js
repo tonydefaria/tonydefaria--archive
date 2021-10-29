@@ -10,10 +10,10 @@ const img = "/images/bg.jpg";
 // Components
 import BrandComponent from "../components/brand_component"
 import CookiesComponent from "../components/cookies_component"
-import CopyrightComponent from "../components/copyright_alt_component"
+import CopyrightComponent from "../components/copyright_component"
 import FaviconComponent from "../components/favicon_component"
 import MenuComponent from "../components/menu_component"
-import NetworksComponent from "../components/networks_alt_component"
+import NetworksComponent from "../components/networks_component"
 
 export default function Primary({ children }) {
 
@@ -53,8 +53,8 @@ export default function Primary({ children }) {
       <footer className="universal footer">
         <div className="universal-box">
           <div className="universal-row">
-            <NetworksComponent project={project} />
-            <CopyrightComponent />
+            <NetworksComponent link_colour="link-white" project={project} />
+            <CopyrightComponent text_colour="white-cl" />
           </div>
         </div>
       </footer>

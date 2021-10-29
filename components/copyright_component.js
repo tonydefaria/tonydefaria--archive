@@ -5,7 +5,7 @@
 // Built-in Components
 import React, { useEffect } from "react"
 
-export default function Copyright() {
+export default function Copyright({text_colour}) {
 
   useEffect(() => {
     var date = new Date()
@@ -17,7 +17,7 @@ export default function Copyright() {
     <div className="copyright">
       <div className="copyright-box">
         <div className="copyright-row">
-          <p className="font-size-xs">Copyright &copy; <span className="year"></span> Tony de Faria. All rights reserved.</p>
+          <p className={`font-size-xs ${text_colour}`}>Copyright &copy; <span className="year"></span> Tony de Faria. All rights reserved.</p>
         </div>
       </div>
     </div>

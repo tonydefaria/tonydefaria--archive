@@ -11,16 +11,16 @@
   },
   "dependencies": {
     "js-cookie": "^3.0.1",
-    "next": "11.1.2",
+    "next": "12.0.1",
     "npm-check-updates": "^11.8.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-gtm-module": "^2.0.11",
-    "sass": "^1.42.1"
+    "sass": "^1.43.4"
   },
   "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "next-sitemap": "^1.6.168"
+    "eslint": "8.1.0",
+    "eslint-config-next": "12.0.1",
+    "next-sitemap": "^1.6.192"
   }
 }

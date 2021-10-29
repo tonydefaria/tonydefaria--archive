@@ -25,7 +25,7 @@ export default function CookiesComponent() {
   function handleConsent(e) {
     e.preventDefault()
     // Set cookie
-    Cookies.set("weLoveCookies", "iWantCookies")
+    Cookies.set("weLoveCookies", "iWantCookies", { sameSite: "None", secure: true })
     document.getElementsByClassName(
       "cookies",
       "cookies-box",

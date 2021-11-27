@@ -2,16 +2,20 @@
 // ----------------------------------------------------
 // Networks Component
 
-export default function NetworksComponent({project, link_colour}) {
+// Built-in Components
+import Image from "next/image"
 
-  const networks = project.networks_component
-
+export default function NetworksComponent({project, networks}) {
   return (
-    <div className="networks">
-      <ul className="networks-box list-style-none">
+    <div className="networks flex-h-center">
+      <ul className="networks-box">
         {networks.map((network) => (
-          <li key={network.uid} className="networks-item flex-h-center">
-            <a className={`link-xs ${link_colour} hover-underline`} rel="noreferrer noopener" href={network.network_url + network.username} target="_blank">{network.network}</a>
+          <li key={network.uid} className="networks-item">
+            <a className={`link`} rel="noreferrer noopener" href={network.network_url + network.username} target="_blank">
+              <div className="icon">
+                <Image src={network.image} height="64" width="64" alt="icon" title={project.title}/>
+              </div>
+            </a>
           </li>
         ))}
       </ul>

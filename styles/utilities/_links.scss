@@ -13,7 +13,6 @@
   letter-spacing: .030em !important;
   text-align: left !important;
   text-decoration: none !important;
-  div,
   object,
   img,
   svg,
@@ -49,14 +48,14 @@
   .icon {
     display: block;
     float: left;
-    height: $icon;
+    height: calc($icon - 1px);
     margin: 0;
     &.float-left {
-      margin: 0 calc(#{$push} / 2) 0 0;
+      margin: 0 calc(#{$push} / 1.25) 0 0;
       &.condense { margin: 0 calc(#{$push} / 2) 0 0; }
     }
     &.float-right {
-      margin: 0 0 0 calc(#{$push} / 2);
+      margin: 0 0 0 calc(#{$push} / 1.25);
       &.condense { margin: 0 0 0 calc(#{$push} / 2); }
     }
     object,

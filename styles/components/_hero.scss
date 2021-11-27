@@ -9,10 +9,11 @@ $class: "hero";
   width: 720px;
   .#{$class}-box {
     float: left;
+    padding: 16px;
     width: 100%;
     .#{$class}-row {
       float: left;
-      padding: 32px;
+      padding: 16px;
       width: 100%;
     }
   }
@@ -24,8 +25,8 @@ $class: "hero";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
+      padding: 0;
       .#{$class}-row {
-        padding: 16px;
       }
     }
   }
@@ -37,8 +38,8 @@ $class: "hero";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
+      padding: 0;
       .#{$class}-row {
-        padding: 24px;
       }
     }
   }
@@ -50,6 +51,7 @@ $class: "hero";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
+      padding: 0;
       .#{$class}-row {
       }
     }

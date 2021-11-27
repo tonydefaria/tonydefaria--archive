@@ -1,0 +1,11 @@
+{
+  "galleries": [
+    {
+      "uid": 1,
+      "slug": "gallery-one",
+      "title": "Gallery One.",
+      "description": "Hi! I'm Tony, a self-taught creative thinker. I like to use multiple mediums to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
+      "cover": "/images/pages/street_and_travel/galleries/0001/cover_0001.jpg"
+    }
+  ]
+}

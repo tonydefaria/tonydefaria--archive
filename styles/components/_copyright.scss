@@ -9,11 +9,15 @@ $class: "copyright";
   width: auto;
   .#{$class}-box {
     float: left;
+    padding: 16px;
     width: 100%;
     .#{$class}-row {
       float: left;
-      padding: 32px;
+      padding: 16px;
       width: 100%;
+      p {
+        line-height: 32px;
+      }
     }
   }
 }
@@ -24,13 +28,10 @@ $class: "copyright";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
+      padding: 0;
       width: 100%;
       .#{$class}-row {
-        padding: 16px;
         width: 100%;
-        .font-size-xs {
-          text-align: center;
-        }
       }
     }
   }
@@ -42,13 +43,10 @@ $class: "copyright";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
+      padding: 0;
       width: 100%;
       .#{$class}-row {
-        padding: 24px;
         width: 100%;
-        .font-size-xs {
-          text-align: center;
-        }
       }
     }
   }
@@ -60,13 +58,10 @@ $class: "copyright";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
+      padding: 0;
       width: 100%;
       .#{$class}-row {
-        padding: 32px;
         width: 100%;
-        .font-size-xs {
-          text-align: center;
-        }
       }
     }
   }

@@ -6,6 +6,7 @@
   @include button-blue;
   appearance: none !important;
   border: 0 !important;
+  border-radius: 4px;
   box-sizing: border-box !important;
   display: block !important;
   float: left !important;
@@ -30,8 +31,8 @@
     float: left;
     height: $icon;
     margin: calc(#{$edge} / 2) 0;
-    &.float-left { margin: calc(#{$edge} / 2) calc(#{$edge} / 4) calc(#{$edge} / 2) 0; }
-    &.float-right { margin: calc(#{$edge} / 2) 0 calc(#{$edge} / 2) calc(#{$edge} / 4); }
+    &.float-left { margin: calc(#{$edge} / 2) calc(#{$edge} / 1.25) calc(#{$edge} / 2) 0; }
+    &.float-right { margin: calc(#{$edge} / 2) 0 calc(#{$edge} / 2) calc(#{$edge} / 1.25); }
   }
   &.pill { @include border-corner($border); }
   &.condense { padding: 0 calc(#{$edge} / 2); }

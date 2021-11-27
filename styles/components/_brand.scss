@@ -8,21 +8,38 @@ $class: "brand";
   float: left;
   .#{$class}-box {
     float: left;
+    list-style: none;
     margin: 0;
-    padding: 32px;
+    padding: 16px;
     .#{$class}-item {
       float: left;
-      margin: 0;
+      padding: 16px;
+      &.#{$class}-icon {
+        .link {
+          height: 24px;
+          width: 23.09px;
+          .icon {
+            height: inherit;
+            width: inherit;
+          }
+        }
+      }
+      &.#{$class}-logo {
+        .link {
+          height: 24px;
+          width: 152.02px;
+          .icon {
+            height: inherit;
+            width: inherit;
+          }
+        }
+      }
       &.#{$class}-desktop {
         display: block;
-        height: 24px;
-        width: 152.02px;
         visibility: visible;
       }
       &.#{$class}-mobile {
         display: none;
-        height: 24px;
-        width: 23.09px;
         visibility: hidden;
       }
     }
@@ -34,6 +51,7 @@ $class: "brand";
 @media #{$xxs} {
   .#{$class} {
     .#{$class}-box {
+      padding: 0;
       .#{$class}-item {
         &.#{$class}-desktop {
           display: none;
@@ -53,6 +71,7 @@ $class: "brand";
 @media #{$xs} {
   .#{$class} {
     .#{$class}-box {
+      padding: 0;
       .#{$class}-item {
         &.#{$class}-desktop {
           display: none;
@@ -72,6 +91,7 @@ $class: "brand";
 @media #{$s} {
   .#{$class} {
     .#{$class}-box {
+      padding: 0;
       .#{$class}-item {
         &.#{$class}-desktop {
           display: none;

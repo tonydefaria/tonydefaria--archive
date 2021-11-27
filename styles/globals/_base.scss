@@ -25,7 +25,7 @@ body {
 
 html {
   background-color: $white;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -43,6 +43,7 @@ body {
   overflow-y: scroll;
   overscroll-behavior: contain;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar,
@@ -123,6 +124,9 @@ svg {
 span {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
 }
 
 // Media Query 240px

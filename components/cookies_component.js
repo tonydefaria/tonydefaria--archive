@@ -1,7 +1,6 @@
-// Hankyo Integration
-// ----------------------------------------------------
 // Cookies
 
+// Built-in Components
 import { useEffect } from "react"
 import Cookies from "js-cookie"
 

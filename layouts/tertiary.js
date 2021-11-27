@@ -1,19 +1,16 @@
-// Primary
+// Tertiary
 
 // Built-in Components
 import { useEffect } from "react";
 // Components
-import BrandLogoComponent from "../components/brand_logo_component"
+import BrandIconComponent from "../components/brand_icon_component"
 import CookiesComponent from "../components/cookies_component"
 import CopyrightComponent from "../components/copyright_component"
 import FaviconComponent from "../components/favicon_component"
-import MenuComponent from "../components/menu_component"
 import NetworksComponent from "../components/networks_component"
-// Assets
-const img = "/images/bg.jpg";
 
-export default function Primary({ children }) {
-  // Get props
+export default function Tertiary({ children }) {
+  // Get Props
   const project = children.props.project
   const networks = project.networks_component
 
@@ -22,19 +19,18 @@ export default function Primary({ children }) {
   // }, []);
 
   return (
-    <div className="keyvisual">
+    <div className="black-bg">
       <FaviconComponent project={project} />
       <header className="universal header">
         <div className="universal-box">
-          <div className="universal-row">
-            <BrandLogoComponent link_colour="link-black" />
-            <MenuComponent />
+          <div className="universal-row flex-h-center">
+            <BrandIconComponent link_colour="link-white" />
           </div>
         </div>
       </header>
 
       <div className="sticky-footer">
-        <main className="universal main">
+        <main className="universal main padding-0">
           <div className="universal-box">
             <div className="universal-row">
               {children}
@@ -54,16 +50,6 @@ export default function Primary({ children }) {
       <div className="width-wide flex-h-center">
         <CookiesComponent />
       </div>
-      <style jsx>{`
-        .keyvisual {
-          background-image: url(${img});
-          background-position: bottom right;
-          background-size: cover;
-          min-height: 100%;
-          position: absolute;
-          width: 100%;
-        }
-      `}</style>
     </div>
   )
 }

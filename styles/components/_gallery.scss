@@ -1,44 +1,68 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Content
+// File: Gallery
 // -------------------------------------------------------------
 
-$class: "content";
+$class: "gallery";
 
 .#{$class} {
-  float: left;
+  float: right;
+  padding: 0;
   width: 100%;
   .#{$class}-box {
     float: left;
-    padding: 16px;
+    list-style: none;
     width: 100%;
     .#{$class}-row {
       float: left;
-      padding: 16px;
       width: 100%;
     }
+    .#{$class}-inner {
+      float: left;
+      padding: 32px;
+      width: 100%;
+    }
+    .#{$class}-left {
+      float: left;
+      padding: 32px;
+      width: 35%;
+    }
+    .#{$class}-right {
+      float: right;
+      padding: 32px;
+      width: 65%;
+    }
   }
+  .#{$class}-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  &.#{$class}-2-1 { width: calc(100% / 2) }
+  &.#{$class}-3-1 { width: calc(100% / 3) }
+  &.#{$class}-3-2 { width: calc((100% / 3) * 2) }
 }
-
-.#{$class}-2-1 { width: calc(100% / 2) !important }
-
-.#{$class}-3-1 { width: calc(100% / 3) !important }
-.#{$class}-3-2 { width: calc((100% / 3) * 2) !important }
-.#{$class}-3-3 { width: calc((100% / 3) * 3) !important }
 
 // Media Query 240px
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
     .#{$class}-box {
-      padding: 0;
       .#{$class}-row {
+      }
+      .#{$class}-inner {
+        padding: 16px;
+      }
+      .#{$class}-left {
+        padding: 8px 16px 16px;
+        width: 100%;
+      }
+      .#{$class}-right {
+        float: left;
+        padding: 16px 16px 8px;
+        width: 100%;
       }
     }
   }
-  .#{$class}-2-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-2 { width: calc((100% / 1) * 1) !important }
-  .#{$class}-3-3 { width: calc((100% / 3) * 3) !important }
 }
 
 // Media Query 360px
@@ -46,15 +70,22 @@ $class: "content";
 @media #{$xs} {
   .#{$class} {
     .#{$class}-box {
-      padding: 0;
       .#{$class}-row {
+      }
+      .#{$class}-inner {
+        padding: 16px;
+      }
+      .#{$class}-left {
+        padding: 8px 16px 16px;
+        width: 100%;
+      }
+      .#{$class}-right {
+        float: left;
+        padding: 16px 16px 8px;
+        width: 100%;
       }
     }
   }
-  .#{$class}-2-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-2 { width: calc((100% / 1) * 1) !important }
-  .#{$class}-3-3 { width: calc((100% / 3) * 3) !important }
 }
 
 // Media Query 480px
@@ -62,15 +93,22 @@ $class: "content";
 @media #{$s} {
   .#{$class} {
     .#{$class}-box {
-      padding: 0;
       .#{$class}-row {
+      }
+      .#{$class}-inner {
+        padding: 16px;
+      }
+      .#{$class}-left {
+        padding: 8px 16px 16px;
+        width: 100%;
+      }
+      .#{$class}-right {
+        float: left;
+        padding: 16px 16px 8px;
+        width: 100%;
       }
     }
   }
-  .#{$class}-2-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-2 { width: calc((100% / 1) * 1) !important }
-  .#{$class}-3-3 { width: calc((100% / 3) * 3) !important }
 }
 
 // Media Query 720px

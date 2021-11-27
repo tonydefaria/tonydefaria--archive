@@ -5,64 +5,54 @@
 
     "lang": "en",
     "project_type": "website",
-    "project_title": "",
+    "project_title": "Tony de Faria",
     "twitter_card_type": "summary_large_image",
     "twitter_site_handle": "@tonydefaria",
     "base_domain": "www.tonydefaria.com",
-
-    "brand_component": {
-      "uid": 1,
-      "slug": "brand",
-
-      "name": "Tony de Faria",
-      "tagline": "",
-      "icon": "/images/brand_component/icon.svg",
-      "image": "/images/brand_component/brand.svg"
-    },
+    "base_url": "https://www.tonydefaria.com",
 
     "pages": [
       {
         "uid": 1,
         "slug": "home",
+        "title": "The unknown is an opportunity to learn.",
+        "subtitle": "",
+        "description": "Hi! I'm Tony, a self-taught creative thinker. I like to use multiple mediums to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
 
         "meta_component": {
-          "meta_title": "Tony de Faria - Photography, Writing, Coding and Eating",
-          "meta_description": "Born in Africa and raised in Europe. Has a curious and creative mindset, leading to experiment with all sorts of mediums. Passionate about Humanity.",
-          "meta_keywords": "creative, concept, artist, photographer, writer, technologist",
-          "meta_image": "/images/og.png"
-        },
+          "meta_title": "Tony de Faria - Storytelling through photography",
+          "meta_description": "Born in Africa and raised in Europe. Has a curious and creative mindset, leading to experimenting with all sorts of mediums. Passionate about Humanity.",
+          "meta_keywords": "creative, concept, artist, photographer, writer",
+          "meta_image": "/images/project/defaults/og.png"
+        }
+      },
 
-        "hero_component": {
-          "uid": 1,
-          "slug": "hero",
+      {
+        "uid": 2,
+        "slug": "street-and-travel",
+        "title": "Street & Travel.",
+        "description": "Hi! I'm Tony, a self-taught creative thinker. I like to use multiple mediums to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
 
-          "title": "The unknown is an opportunity to learn",
-          "subtitle": "",
-          "description": "<p class='font-size-xxl font-weight-500 black-cl'>Hi! I'm Tony, a self-taught creative thinker. I like to use multiple mediums to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.<p>",
-          "cta_label": "",
-          "cta_url": "",
-          "image": ""
+        "meta_component": {
+          "meta_title": "Tony de Faria - Storytelling through photography",
+          "meta_description": "Born in Africa and raised in Europe. Has a curious and creative mindset, leading to experimenting with all sorts of mediums. Passionate about Humanity.",
+          "meta_keywords": "creative, concept, artist, photographer, writer",
+          "meta_image": "/images/project/defaults/og.png"
         }
       },
 
       {
         "uid": 9999,
         "slug": "contact",
-
-        "meta_component": {
-          "meta_title": "Tony de Faria - Get in touch.",
-          "meta_description": "Be it through a video call, while grabbing a coffee or via email. Tony is responsive and always open to conversation. So get in touch; he will try to help if he feels fit to do so.",
-          "meta_keywords": "creative, concept, artist, photographer, writer, technologist",
-          "meta_image": "/images/og.png"
-        },
-
         "title": "Reach out.",
         "description": "<p class='font-size-l'>Do you have a question?<br />Are you curious about my work?<br /></p><p class='font-size-l'>Well, get in touch. I will happily reply, and hopefully, I will be able to help.</p>",
+        "email": "me@tonydefaria.com",
 
-        "vcard_component": {
-          "uid": 1,
-          "slug": "vcard",
-          "email": "me@tonydefaria.com"
+        "meta_component": {
+          "meta_title": "Tony de Faria - Get in touch",
+          "meta_description": "Be it through a video call, while grabbing a coffee or via email. Tony is responsive and always open to conversation. So get in touch; he will try to help if he feels fit to do so.",
+          "meta_keywords": "creative, concept, artist, photographer, writer",
+          "meta_image": "/images/project/defaults/og.png"
         }
       }
     ],
@@ -71,32 +61,26 @@
       {
         "uid": 1,
         "slug": "twitter",
-
         "network": "Twitter",
         "network_url": "https://twitter.com/",
         "username": "tonydefaria",
-        "image": "/images/networks_component/twitter.png",
-        "position": 1
+        "image": "/images/project/networks_component/twitter.png"
       },
       {
         "uid": 2,
         "slug": "instagram",
-
         "network": "Instagram",
         "network_url": "https://instagram.com/",
         "username": "tonydefaria",
-        "image": "/images/networks_component/instagram.png",
-        "position": 2
+        "image": "/images/project/networks_component/instagram.png"
       },
       {
         "uid": 3,
-        "slug": "facebook",
-
-        "network": "Facebook",
-        "network_url": "https://www.facebook.com/",
-        "username": "tonydefaria",
-        "image": "/images/networks_component/facebook.png",
-        "position": 3
+        "slug": "tiktok",
+        "network": "TikTok",
+        "network_url": "https://www.tiktok.com/",
+        "username": "@tony.de.faria",
+        "image": "/images/project/networks_component/tiktok.png"
       }
     ]
   }

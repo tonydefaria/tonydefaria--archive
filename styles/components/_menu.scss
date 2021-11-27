@@ -8,14 +8,21 @@ $class: "menu";
   float: right;
   .#{$class}-box {
     float: left;
-    padding: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 16px;
     .#{$class}-item {
       float: left;
       margin: 0;
-      padding: 0 32px 0 0;
+      padding: 16px;
       width: auto;
-      &:last-child {
-        padding: 0;
+      &.#{$class}-desktop {
+        display: block;
+        visibility: visible;
+      }
+      &.#{$class}-mobile {
+        display: none;
+        visibility: hidden;
       }
     }
   }
@@ -26,7 +33,16 @@ $class: "menu";
 @media #{$xxs} {
   .#{$class} {
     .#{$class}-box {
+      padding: 0;
       .#{$class}-item {
+        &.#{$class}-desktop {
+          display: none;
+          visibility: hidden;
+        }
+        &.#{$class}-mobile {
+          display: block;
+          visibility: visible;
+        }
       }
     }
   }
@@ -37,7 +53,16 @@ $class: "menu";
 @media #{$xs} {
   .#{$class} {
     .#{$class}-box {
+      padding: 0;
       .#{$class}-item {
+        &.#{$class}-desktop {
+          display: none;
+          visibility: hidden;
+        }
+        &.#{$class}-mobile {
+          display: block;
+          visibility: visible;
+        }
       }
     }
   }
@@ -48,7 +73,16 @@ $class: "menu";
 @media #{$s} {
   .#{$class} {
     .#{$class}-box {
+      padding: 0;
       .#{$class}-item {
+        &.#{$class}-desktop {
+          display: none;
+          visibility: hidden;
+        }
+        &.#{$class}-mobile {
+          display: block;
+          visibility: visible;
+        }
       }
     }
   }

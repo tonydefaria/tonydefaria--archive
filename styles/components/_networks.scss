@@ -9,18 +9,28 @@ $class: "networks";
   width: auto;
   .#{$class}-box {
     float: left;
-    padding: 32px;
-    width: 100%;
+    list-style: none;
+    padding: 16px;
+    width: auto;
     &.no-padding {
       padding: 0;
     }
     .#{$class}-item {
       float: left;
       margin: 0;
-      padding: 0 16px 0 0;
+      padding: 16px 16px 16px 0;
       width: auto;
-      &:last-child {
-        padding: 0;
+      &:first-child {
+        padding: 16px;
+      }
+      .icon {
+        background-color: $black;
+        border-radius: 4px;
+        height: 32px;
+        width: 32px;
+        img {
+          border-radius: 4px;
+        }
       }
     }
   }
@@ -32,17 +42,8 @@ $class: "networks";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
-      padding: 16px 16px 0;
-      width: 100%;
+      padding: 0;
       .#{$class}-item {
-        padding: 0 0 8px;
-        width: 100%;
-        .link-xs {
-          text-align: center !important;
-        }
-        &:last-child {
-          padding: 0;
-        }
       }
     }
   }
@@ -54,17 +55,8 @@ $class: "networks";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
-      padding: 24px 24px 0;
-      width: 100%;
+      padding: 0;
       .#{$class}-item {
-        padding: 0 0 8px;
-        width: 100%;
-        .link-xs {
-          text-align: center !important;
-        }
-        &:last-child {
-          padding: 0;
-        }
       }
     }
   }
@@ -76,17 +68,8 @@ $class: "networks";
   .#{$class} {
     width: 100%;
     .#{$class}-box {
-      padding: 32px 32px 0;
-      width: 100%;
+      padding: 0;
       .#{$class}-item {
-        padding: 0 0 8px;
-        width: 100%;
-        .link-xs {
-          text-align: center !important;
-        }
-        &:last-child {
-          padding: 0;
-        }
       }
     }
   }

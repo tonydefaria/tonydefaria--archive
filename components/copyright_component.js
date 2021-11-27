@@ -1,5 +1,3 @@
-// Hankyo Integration
-// ----------------------------------------------------
 // Copyright Component
 
 // Built-in Components
@@ -17,7 +15,7 @@ export default function Copyright({text_colour}) {
     <div className="copyright">
       <div className="copyright-box">
         <div className="copyright-row">
-          <p className={`font-size-xs ${text_colour}`}>Copyright &copy; <span className="year"></span> Tony de Faria. All rights reserved.</p>
+          <p className={`font-size-xs text-align-center ${text_colour}`}>Copyright &copy; <span className="year"></span> Tony de Faria. All rights reserved.</p>
         </div>
       </div>
     </div>

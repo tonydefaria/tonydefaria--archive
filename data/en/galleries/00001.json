@@ -1,0 +1,55 @@
+{
+  "gallery": {
+    "uid": 1,
+    "slug": "gallery-one",
+    "title": "Gallery One.",
+    "description": "Hi! I'm Tony, a self-taught creative thinker. I like to use multiple mediums to express my thoughts and ideas. I'm passionate about stories that have humanity, empathy and food.",
+    "cover": "/images/pages/street_and_travel/galleries/0001/cover_0001.jpg",
+
+    "meta_component": {
+      "meta_title": "Tony de Faria - Storytelling through photography",
+      "meta_description": "Born in Africa and raised in Europe. Has a curious and creative mindset, leading to experimenting with all sorts of mediums. Passionate about Humanity.",
+      "meta_keywords": "creative, concept, artist, photographer, writer",
+      "meta_image": "/images/project/defaults/og.png"
+    },
+
+    "images": [
+      {
+        "uid": "1",
+        "url": "/images/pages/street_and_travel/galleries/0001/photo_0001.jpg",
+        "width": "1024",
+        "height": "819",
+        "caption": "",
+        "location": "",
+        "print": false,
+        "print_url": "",
+        "nft": false,
+        "nft_url": ""
+      },
+      {
+        "uid": "2",
+        "url": "/images/pages/street_and_travel/galleries/0001/photo_0002.jpg",
+        "width": "1024",
+        "height": "819",
+        "caption": "",
+        "location": "",
+        "print": false,
+        "print_url": "",
+        "nft": false,
+        "nft_url": ""
+      },
+      {
+        "uid": "3",
+        "url": "/images/pages/street_and_travel/galleries/0001/photo_0003.jpg",
+        "width": "1024",
+        "height": "819",
+        "caption": "",
+        "location": "",
+        "print": false,
+        "print_url": "",
+        "nft": false,
+        "nft_url": ""
+      }
+    ]
+  }
+}

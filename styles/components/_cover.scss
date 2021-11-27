@@ -1,76 +1,81 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Content
+// File: Cover
 // -------------------------------------------------------------
 
-$class: "content";
+$class: "cover";
 
 .#{$class} {
   float: left;
+  min-height: 540px;
   width: 100%;
   .#{$class}-box {
     float: left;
-    padding: 16px;
+    height: 100%;
+    padding: 32px;
     width: 100%;
     .#{$class}-row {
       float: left;
-      padding: 16px;
+      height: 100%;
       width: 100%;
+      .#{$class}-left {
+        float: left;
+        height: 100%;
+        padding: 32px;
+        width: 50%;
+      }
     }
   }
 }
-
-.#{$class}-2-1 { width: calc(100% / 2) !important }
-
-.#{$class}-3-1 { width: calc(100% / 3) !important }
-.#{$class}-3-2 { width: calc((100% / 3) * 2) !important }
-.#{$class}-3-3 { width: calc((100% / 3) * 3) !important }
 
 // Media Query 240px
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
+    min-height: 480px;
     .#{$class}-box {
-      padding: 0;
+      padding: 16px;
       .#{$class}-row {
+        .#{$class}-left {
+          padding: 16px;
+          width: 100%;
+        }
       }
     }
   }
-  .#{$class}-2-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-2 { width: calc((100% / 1) * 1) !important }
-  .#{$class}-3-3 { width: calc((100% / 3) * 3) !important }
 }
 
 // Media Query 360px
 // ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
+    min-height: 480px;
     .#{$class}-box {
-      padding: 0;
+      padding: 16px;
       .#{$class}-row {
+        .#{$class}-left {
+          padding: 16px;
+          width: 100%;
+        }
       }
     }
   }
-  .#{$class}-2-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-2 { width: calc((100% / 1) * 1) !important }
-  .#{$class}-3-3 { width: calc((100% / 3) * 3) !important }
 }
 
 // Media Query 480px
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
+    min-height: 480px;
     .#{$class}-box {
-      padding: 0;
+      padding: 16px;
       .#{$class}-row {
+        .#{$class}-left {
+          padding: 16px;
+          width: 100%;
+        }
       }
     }
   }
-  .#{$class}-2-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-1 { width: calc(100% / 1) !important }
-  .#{$class}-3-2 { width: calc((100% / 1) * 1) !important }
-  .#{$class}-3-3 { width: calc((100% / 3) * 3) !important }
 }
 
 // Media Query 720px
@@ -79,6 +84,8 @@ $class: "content";
   .#{$class} {
     .#{$class}-box {
       .#{$class}-row {
+        .#{$class}-left {
+        }
       }
     }
   }

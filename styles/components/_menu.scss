@@ -2,58 +2,22 @@
 // File: Menu
 // -------------------------------------------------------------
 
-$class: "menu-mobile";
-
-.#{$class}-wrapper {
-  float: right;
-}
-
-.#{$class}-trigger {
-  float: right;
-  padding: 32px;
-  position: relative;
-  z-index: 1000000 !important;
-}
+$class: "menu";
 
 .#{$class} {
-  background-color: $black;
-  bottom: 0;
-  float: left;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100vw;
+  float: right;
   .#{$class}-box {
     float: left;
     list-style: none;
     margin: 0;
-    padding: 24px;
-    width: 240px;
+    padding: 16px;
+    width: auto;
     .#{$class}-item {
       float: left;
       margin: 0;
-      padding: 8px;
-      width: 100%;
-      .link-xxl {
-        font-size: 32px;
-        text-align: center;
-        width: 100%;
-      }
+      padding: 16px;
+      width: auto;
     }
-  }
-  &.#{$class}-show {
-    opacity: 1;
-    transition: opacity .5s;
-    visibility: visible;
-    z-index: 1;
-  }
-  &.#{$class}-hide {
-    opacity: 0;
-    transition: opacity .2s, visibility 0s .2s;
-    visibility: hidden;
-    z-index: 0;
   }
 }
 
@@ -61,10 +25,11 @@ $class: "menu-mobile";
 // Media Query 240px
 // -------------------------------------------------------------
 @media #{$xxs} {
-  .#{$class}-trigger {
-    padding: 16px;
-  }
   .#{$class} {
+    display: none;
+    height: 0;
+    visibility: hidden;
+    width: 0;
     .#{$class}-box {
       .#{$class}-item {
       }
@@ -75,10 +40,11 @@ $class: "menu-mobile";
 // Media Query 360px
 // ------------------------------------------------------------
 @media #{$xs} {
-  .#{$class}-trigger {
-    padding: 16px;
-  }
   .#{$class} {
+    display: none;
+    height: 0;
+    visibility: hidden;
+    width: 0;
     .#{$class}-box {
       .#{$class}-item {
       }
@@ -89,10 +55,11 @@ $class: "menu-mobile";
 // Media Query 480px
 // -------------------------------------------------------------
 @media #{$s} {
-  .#{$class}-trigger {
-    padding: 16px;
-  }
   .#{$class} {
+    display: none;
+    height: 0;
+    visibility: hidden;
+    width: 0;
     .#{$class}-box {
       .#{$class}-item {
       }

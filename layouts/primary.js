@@ -7,6 +7,7 @@ import BrandLogoComponent from "../components/brand_logo_component"
 import CookiesComponent from "../components/cookies_component"
 import CopyrightComponent from "../components/copyright_component"
 import FaviconComponent from "../components/favicon_component"
+import MenuComponent from "../components/menu_component"
 import MenuMobileComponent from "../components/menu_mobile_component"
 import SocialNetworksComponent from "../components/social_networks_component"
 // Assets
@@ -28,6 +29,7 @@ export default function Primary({ children }) {
         <div className="universal-box">
           <div className="universal-row">
             <BrandLogoComponent link_colour="link-black" />
+            <MenuComponent />
             <MenuMobileComponent />
           </div>
         </div>

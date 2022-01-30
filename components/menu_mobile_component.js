@@ -2,7 +2,8 @@
 
 // Built-in components
 import Link from "next/link"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from "react"
+
 
 export default function MenuMobileComponent() {
 

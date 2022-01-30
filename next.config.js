@@ -9,6 +9,9 @@ module.exports = {
   //   localeDetection: false
   // },
   // target: "serverless",
+  images: {
+    domains: ["hankyo-production.fra1.cdn.digitaloceanspaces.com"],
+  },
   reactStrictMode: true,
   async headers() {
     return [

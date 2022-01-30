@@ -1,8 +1,5 @@
 // Index
 
-// Data
-import Hankyo from "../lib/hankyo"
-
 // Layout
 import Primary from "../layouts/primary"
 
@@ -13,7 +10,7 @@ import { motion } from "framer-motion"
 import MetaComponent from "../components/meta_component"
 import HeroComponent from "../components/hero_component"
 
-export default function Index({project, page, meta}) {
+export default function Index({meta, hankyoProject, hankyoSection}) {
 
   return (
     <motion.div
@@ -23,23 +20,40 @@ export default function Index({project, page, meta}) {
       transition={{opacity: {duration: 0.25}}}
       className="width-wide float-left"
     >
-      <MetaComponent resource={project} meta={meta} />
-      <HeroComponent page={page} />
+      <MetaComponent hankyoProject={hankyoProject} meta={meta} />
+      <HeroComponent hankyoSection={hankyoSection} />
     </motion.div>
   )
 }
 
-export async function getStaticProps({locale}) {
+export async function getStaticProps() {
   // Hankyo
-  const project = Hankyo.data(locale).project
-  const page = project.pages.find(({uid}) => uid === 1)
-  const meta = page.meta_component
+  const url = "https://hankyo-api-pro.herokuapp.com"
+  const token = "?hankyo_token=ZjiAAoU4XpdbuFqLqGTZPR1VmfucM7ya62TV2Dej3DUGMsAG"
+  // Project
+  const resProject = await fetch(`${url}/mies/project${token}`)
+  const hankyoProject = await resProject.json()
+  // Section
+  const sectionUID = "4MDntMTiDVcR9P8vUtvr2eKz"
+  const resSection = await fetch(`${url}/mies/project/sections/${sectionUID}${token}`)
+  const hankyoSection = await resSection.json()
+  // Meta
+  const meta = hankyoSection.section.meta_tag
+
+  if (!hankyoProject) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    }
+  }
 
   return {
     props: {
-      project,
-      page,
-      meta
+      meta,
+      hankyoProject,
+      hankyoSection
     }
   }
 }

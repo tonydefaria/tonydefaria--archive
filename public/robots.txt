@@ -16,3 +16,4 @@ Host: https://www.tonydefaria.com
 
 # Sitemaps
 Sitemap: https://www.tonydefaria.com/sitemap.xml
+Sitemap: https://www.tonydefaria.com/sitemap-0.xml

@@ -2,14 +2,18 @@
 // ----------------------------------------------------
 // Hero Component
 
-export default function HeroComponent({page}) {
+export default function HeroComponent({hankyoSection}) {
+
+  const title = hankyoSection.section.blocks.find(({uid}) => uid === "RaMPALYXTApsxvufdTRdRkYT").title
+  const description = hankyoSection.section.blocks.find(({uid}) => uid === "VCsvw54dXS3kwqcFVaSB8zcr").description
+
   return (
     <div className="hero">
       <div className="hero-box">
         <div className="hero-row">
-          <h1 className="font-size-display">{page.title}</h1>
+          <h1 className="font-size-display">{title}</h1>
           <hr className="separator-s" />
-          <p className="font-size-xxl">{page.description}</p>
+          <div className="font-size-xxl" dangerouslySetInnerHTML={{ __html: `${description}` }} />
         </div>
       </div>
     </div>

@@ -37,10 +37,9 @@
     @include font-size-xs;
     margin: 18px 0 10px;
   }
-  p,
-  .text {
+  p {
     @include clearfix;
-    @include font-size-m;
+    @include font-size-l;
     font-weight: 400;
     margin: 0 0 24px;
     a {
@@ -61,6 +60,9 @@
       &:active {
         color: $blue-500;
       }
+    }
+    &:last-child {
+      margin: 0;
     }
   }
   h1:first-child,

@@ -19,6 +19,11 @@
 .DS_Store
 *.pem
 tonydefaria.code-workspace
+TODO
+TODO/*
+trash
+trash/*
+NOTES.md
 
 # debug
 npm-debug.log*

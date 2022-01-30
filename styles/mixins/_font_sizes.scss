@@ -148,15 +148,45 @@
 
 // Classes
 // -------------------------------------------------------------
-.font-size-xxs      { @include font-size-xxs; }
-.font-size-xs       { @include font-size-xs; }
-.font-size-s        { @include font-size-s; }
-.font-size-m        { @include font-size-m; }
-.font-size-l        { @include font-size-l; }
-.font-size-xl       { @include font-size-xl; }
-.font-size-xxl      { @include font-size-xxl; }
-.font-size-display  { @include font-size-display; }
+.font-size-xxs {
+  @include font-size-xxs;
+  p, div { @include font-size-xxs; }
+}
 
+.font-size-xs {
+  @include font-size-xs;
+  p, div { @include font-size-xs; }
+}
+
+.font-size-s {
+  @include font-size-s;
+  p, div { @include font-size-s; }
+}
+
+.font-size-m {
+  @include font-size-m;
+  p, div { @include font-size-m; }
+}
+
+.font-size-l {
+  @include font-size-l;
+  p, div { @include font-size-l; }
+}
+
+.font-size-xl {
+  @include font-size-xl;
+  p, div { @include font-size-xl; }
+}
+
+.font-size-xxl {
+  @include font-size-xxl;
+  p, div { @include font-size-xxl; }
+}
+
+.font-size-display {
+  @include font-size-display;
+  p, div { @include font-size-display; }
+}
 
 // Media Query 240px
 // -------------------------------------------------------------

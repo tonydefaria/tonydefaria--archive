@@ -8,14 +8,14 @@ import CookiesComponent from "../components/cookies_component"
 import CopyrightComponent from "../components/copyright_component"
 import FaviconComponent from "../components/favicon_component"
 import MenuComponent from "../components/menu_component"
-import NetworksComponent from "../components/networks_component"
+import SocialNetworksComponent from "../components/social_networks_component"
 // Assets
 const img = "/images/bg.jpg";
 
 export default function Primary({ children }) {
   // Get props
-  const project = children.props.project
-  const networks = project.networks_component
+  const project = children.props.hankyoProject.project
+  const social_networks = project.social_networks
 
   // Hooks
   // useEffect(() => {
@@ -46,14 +46,16 @@ export default function Primary({ children }) {
       <footer className="universal footer">
         <div className="universal-box">
           <div className="universal-row">
-            <NetworksComponent project={project} networks={networks} />
+            <SocialNetworksComponent project={project} social_networks={social_networks} />
             <CopyrightComponent text_colour="white-cl" />
           </div>
         </div>
       </footer>
-      <div className="width-wide flex-h-center">
-        <CookiesComponent />
-      </div>
+      {/*
+        <div className="width-wide flex-h-center">
+          <CookiesComponent />
+        </div>
+      */}
       <style jsx>{`
         .keyvisual {
           background-image: url(${img});

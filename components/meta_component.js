@@ -3,11 +3,10 @@
 // Meta Component
 
 // Built-in Components
+// import { useRouter } from "next/router"
 import Head from "next/head"
-import { useRouter } from "next/router"
 
 export default function MetaComponent({hankyoProject, meta}) {
-
   const isDevelopment = process.env.NODE_ENV === "development"
   let baseURL
   if (isDevelopment === true) {
@@ -15,8 +14,11 @@ export default function MetaComponent({hankyoProject, meta}) {
   } else {
     baseURL = meta.url
   }
-
   const title = hankyoProject.project.title + " | " + meta.title
+  const twitter_handle = hankyoProject.project.global_attributes.find(({uid}) => uid === "dZabogRgkov9zRRh7oj47r8q").value
+  const twitter_card = hankyoProject.project.global_attributes.find(({uid}) => uid === "r5BSc98jYfUZbNLxZPVSesHP").value
+
+  console.log(twitter_handle)
 
   return (
     <Head>
@@ -37,8 +39,8 @@ export default function MetaComponent({hankyoProject, meta}) {
       <meta property="og:url"           content={baseURL} />
 
       {/* Twitter */}
-      <meta name="twitter:card"         content="summary_large_image" />
-      <meta name="twitter:site"         content="@tonydefaria" />
+      <meta name="twitter:card"         content={twitter_card} />
+      <meta name="twitter:site"         content={twitter_handle} />
       <meta name="twitter:title"        content={title} />
       <meta name="twitter:description"  content={meta.description} />
       <meta name="twitter:image"        content={meta.image} />

@@ -15,26 +15,26 @@ export default function MetaComponent({hankyoProject, meta}) {
   if (isDevelopment === true) {
     baseURL = "http://" + "localhost:4000"
   } else {
-    baseURL = hankyoProject.base_url
+    baseURL = meta.url
   }
 
   return (
     <Head>
       {/* Languages */}
-      <link rel="alternate" hrefLang="x-default" href={baseURL + pathname} />
+      <link rel="alternate" hrefLang="x-default" href={baseURL} />
 
       {/* SEO */}
       <title>{hankyoProject.project.title} | {meta.title}</title>
       <meta name="description"          content={meta.description} />
       <meta name="keywords"             content={meta.keywords} />
-      <link rel="canonical"             href={baseURL + pathname} />
+      <link rel="canonical"             href={baseURL} />
 
       {/* Open Graph */}
       <meta property="og:type"          content={hankyoProject.type_of} />
       <meta property="og:title"         content={meta.title} />
       <meta property="og:description"   content={meta.description} />
       <meta property="og:image"         content={meta.image} />
-      <meta property="og:url"           content={baseURL + pathname} />
+      <meta property="og:url"           content={baseURL} />
 
       {/* Twitter */}
       <meta name="twitter:card"         content="summary_large_image" />

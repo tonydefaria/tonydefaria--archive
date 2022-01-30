@@ -16,7 +16,7 @@ export default function MetaComponent({hankyoProject, meta}) {
     baseURL = meta.url
   }
 
-  const title = hankyoProject.project.title + "|" + meta.title
+  const title = hankyoProject.project.title + " | " + meta.title
 
   return (
     <Head>

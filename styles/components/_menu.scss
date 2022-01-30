@@ -2,47 +2,71 @@
 // File: Menu
 // -------------------------------------------------------------
 
-$class: "menu";
+$class: "menu-mobile";
+
+.#{$class}-wrapper {
+  float: right;
+}
+
+.#{$class}-trigger {
+  float: right;
+  padding: 32px;
+  position: relative;
+  z-index: 1000000 !important;
+}
 
 .#{$class} {
-  float: right;
+  background-color: $black;
+  bottom: 0;
+  float: left;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
   .#{$class}-box {
     float: left;
     list-style: none;
     margin: 0;
-    padding: 16px;
+    padding: 24px;
+    width: 240px;
     .#{$class}-item {
       float: left;
       margin: 0;
-      padding: 16px;
-      width: auto;
-      &.#{$class}-desktop {
-        display: block;
-        visibility: visible;
-      }
-      &.#{$class}-mobile {
-        display: none;
-        visibility: hidden;
+      padding: 8px;
+      width: 100%;
+      .link-xxl {
+        font-size: 32px;
+        text-align: center;
+        width: 100%;
       }
     }
   }
+  &.#{$class}-show {
+    opacity: 1;
+    transition: opacity .5s;
+    visibility: visible;
+    z-index: 1;
+  }
+  &.#{$class}-hide {
+    opacity: 0;
+    transition: opacity .2s, visibility 0s .2s;
+    visibility: hidden;
+    z-index: 0;
+  }
 }
+
 
 // Media Query 240px
 // -------------------------------------------------------------
 @media #{$xxs} {
+  .#{$class}-trigger {
+    padding: 16px;
+  }
   .#{$class} {
     .#{$class}-box {
-      padding: 0;
       .#{$class}-item {
-        &.#{$class}-desktop {
-          display: none;
-          visibility: hidden;
-        }
-        &.#{$class}-mobile {
-          display: block;
-          visibility: visible;
-        }
       }
     }
   }
@@ -51,18 +75,12 @@ $class: "menu";
 // Media Query 360px
 // ------------------------------------------------------------
 @media #{$xs} {
+  .#{$class}-trigger {
+    padding: 16px;
+  }
   .#{$class} {
     .#{$class}-box {
-      padding: 0;
       .#{$class}-item {
-        &.#{$class}-desktop {
-          display: none;
-          visibility: hidden;
-        }
-        &.#{$class}-mobile {
-          display: block;
-          visibility: visible;
-        }
       }
     }
   }
@@ -71,18 +89,12 @@ $class: "menu";
 // Media Query 480px
 // -------------------------------------------------------------
 @media #{$s} {
+  .#{$class}-trigger {
+    padding: 16px;
+  }
   .#{$class} {
     .#{$class}-box {
-      padding: 0;
       .#{$class}-item {
-        &.#{$class}-desktop {
-          display: none;
-          visibility: hidden;
-        }
-        &.#{$class}-mobile {
-          display: block;
-          visibility: visible;
-        }
       }
     }
   }

@@ -21,7 +21,7 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 9999;
+  z-index: 1;
 }
 
 .footer {
@@ -35,14 +35,14 @@
   float: left;
   margin: 0;
   max-width: 100%;
-  min-height: calc(100vh - (88px + 96px)); // Minus the height of the header and footer.
+  min-height: calc(100vh - 96px); // Minus the height of the header and footer.
   padding: 0;
   width: 100%;
 }
 
 // Layout Setup
 .main {
-  padding: 48px 0;
+  padding: 88px 0 0;
   .top {
     float: left;
     width: 100%;
@@ -61,7 +61,7 @@
 // -------------------------------------------------------------
 @media #{$xxs} {
   .sticky-footer {
-    min-height: calc(100vh - (56px + 128px));
+    min-height: calc(100vh - (128px));
   }
 }
 
@@ -69,7 +69,7 @@
 // ------------------------------------------------------------
 @media #{$xs} {
   .sticky-footer {
-    min-height: calc(100vh - (56px + 128px));
+    min-height: calc(100vh - (128px));
   }
 }
 
@@ -77,7 +77,7 @@
 // -------------------------------------------------------------
 @media #{$s} {
   .sticky-footer {
-    min-height: calc(100vh - (56px + 128px));
+    min-height: calc(100vh - (128px));
   }
 }
 

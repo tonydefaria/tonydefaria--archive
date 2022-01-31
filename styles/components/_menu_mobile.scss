@@ -12,7 +12,12 @@ $class: "menu-mobile";
   float: right;
   padding: 32px;
   position: relative;
-  z-index: 1000000 !important;
+  z-index: 10;
+  .icon {
+    float: left;
+    height: 24px;
+    width: 24px;
+  }
 }
 
 .#{$class} {
@@ -45,18 +50,17 @@ $class: "menu-mobile";
   }
   &.#{$class}-show {
     opacity: 1;
-    transition: opacity .5s;
+    transition: opacity .50s;
     visibility: visible;
     z-index: 1;
   }
   &.#{$class}-hide {
     opacity: 0;
-    transition: opacity .2s, visibility 0s .2s;
+    transition: opacity 0s, visibility 0s 0s;
     visibility: hidden;
     z-index: 0;
   }
 }
-
 
 // Media Query 240px
 // -------------------------------------------------------------

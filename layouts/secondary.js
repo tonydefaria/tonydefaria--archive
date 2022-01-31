@@ -23,14 +23,10 @@ export default function Secondary({ children }) {
   return (
     <div>
       <FaviconComponent project={project} />
-      <header className="universal header">
-        <div className="universal-box">
-          <div className="universal-row">
-            <BrandLogoComponent link_colour="link-black" />
-            <MenuComponent />
-            <MenuMobileComponent />
-          </div>
-        </div>
+      <header className="universal header fixed-header">
+        <BrandLogoComponent link_colour="link-black" />
+        <MenuComponent />
+        <MenuMobileComponent />
       </header>
 
       <div className="sticky-footer">
@@ -51,11 +47,11 @@ export default function Secondary({ children }) {
           </div>
         </div>
       </footer>
-      {/*
-        <div className="width-wide flex-h-center">
-          <CookiesComponent />
-        </div>
-      */}
+
+      <div className="width-wide flex-h-center">
+        <CookiesComponent />
+      </div>
+
     </div>
   )
 }

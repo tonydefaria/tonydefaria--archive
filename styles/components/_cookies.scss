@@ -10,6 +10,7 @@ $class: "cookies";
   float: left;
   position: fixed;
   width: auto;
+  z-index: 999999 !important;
   .#{$class}-box {
     float: left;
     width: 100%;

@@ -4,18 +4,24 @@
 import Link from "next/link"
 import React, { useState, useEffect } from "react"
 
+// Icons
+import MenuIcon from "../icons/menu";
 
 export default function MenuMobileComponent() {
-
   const [isActive, setActive] = useState("false")
 
+  // Toggle
   const handleToggle = () => {
     setActive(!isActive);
   };
 
   return (
     <div className="menu-mobile-wrapper">
-      <a onClick={handleToggle} className={`menu-mobile-trigger link-m float-right ${isActive ? "link-black" : "link-white"}`}>Menu</a>
+      <a onClick={handleToggle} className={`menu-mobile-trigger link float-right ${isActive ? "link-black" : "link-white"}`}>
+        <div className="icon">
+          <MenuIcon />
+        </div>
+      </a>
       <div onClick={handleToggle} className={`menu-mobile flex-h-center flex-v-center ${isActive ? "menu-mobile-hide" : "menu-mobile-show"}`}>
         <ul className="menu-mobile-box">
           <li className="menu-mobile-item">

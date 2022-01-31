@@ -124,7 +124,7 @@
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 48px;
     min-height: 48px;
   }
@@ -132,17 +132,17 @@
   // Media Query 360px
   // ------------------------------------------------------------
   @media #{$xs} {
-    font-size: 44px;
-    line-height: 52px;
-    min-height: 52px;
+    font-size: 32px;
+    line-height: 48px;
+    min-height: 48px;
   }
 
   // Media Query 480px
   // -------------------------------------------------------------
   @media #{$s} {
-    font-size: 48px;
-    line-height: 56px;
-    min-height: 56px;
+    font-size: 32px;
+    line-height: 48px;
+    min-height: 48px;
   }
 }
 

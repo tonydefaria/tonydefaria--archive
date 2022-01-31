@@ -2,6 +2,7 @@
 
 // Built-in Components
 import { useEffect } from "react";
+import { motion } from "framer-motion"
 // Components
 import BrandLogoComponent from "../components/brand_logo_component"
 import CookiesComponent from "../components/cookies_component"
@@ -23,47 +24,55 @@ export default function Primary({ children }) {
   // }, []);
 
   return (
-    <div className="keyvisual">
-      <FaviconComponent project={project} />
-      <header className="universal header fixed-header">
-        <BrandLogoComponent link_colour="link-black" />
-        <MenuComponent />
-        <MenuMobileComponent />
-      </header>
+    <motion.div
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
+      transition={{delay: .0, opacity: {duration: .250}}}
+      className="width-wide float-left"
+    >
+      <div className="keyvisual">
+        <FaviconComponent project={project} />
+        <header className="universal header fixed-header">
+          <BrandLogoComponent link_colour="link-black" />
+          <MenuComponent />
+          <MenuMobileComponent />
+        </header>
 
-      <div className="sticky-footer">
-        <main className="universal main">
+        <div className="sticky-footer">
+          <main className="universal main">
+            <div className="universal-box">
+              <div className="universal-row">
+                {children}
+              </div>
+            </div>
+          </main>
+        </div>
+
+        <footer className="universal footer">
           <div className="universal-box">
             <div className="universal-row">
-              {children}
+              <SocialNetworksComponent project={project} social_networks={social_networks} />
+              <CopyrightComponent text_colour="white-cl" />
             </div>
           </div>
-        </main>
-      </div>
+        </footer>
 
-      <footer className="universal footer">
-        <div className="universal-box">
-          <div className="universal-row">
-            <SocialNetworksComponent project={project} social_networks={social_networks} />
-            <CopyrightComponent text_colour="white-cl" />
-          </div>
+        <div className="width-wide flex-h-center">
+          <CookiesComponent />
         </div>
-      </footer>
 
-      <div className="width-wide flex-h-center">
-        <CookiesComponent />
+        <style jsx>{`
+          .keyvisual {
+            background-image: url(${img});
+            background-position: bottom right;
+            background-size: cover;
+            min-height: 100%;
+            position: absolute;
+            width: 100%;
+          }
+        `}</style>
       </div>
-
-      <style jsx>{`
-        .keyvisual {
-          background-image: url(${img});
-          background-position: bottom right;
-          background-size: cover;
-          min-height: 100%;
-          position: absolute;
-          width: 100%;
-        }
-      `}</style>
-    </div>
+    </motion.div>
   )
 }

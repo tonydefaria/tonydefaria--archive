@@ -19,39 +19,47 @@ export default function Tertiary({ children }) {
   // }, []);
 
   return (
-    <div className="black-bg float-left">
-      <FaviconComponent project={project} />
-      <header className="universal header">
-        <div className="universal-box">
-          <div className="universal-row flex-h-center">
-            <BrandIconComponent link_colour="link-white" />
-          </div>
-        </div>
-      </header>
-
-      <div className="sticky-footer">
-        <main className="universal main padding-0">
+    <motion.div
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
+      transition={{delay: 0, opacity: {duration: .250}}}
+      className="width-wide float-left"
+    >
+      <div className="black-bg float-left">
+        <FaviconComponent project={project} />
+        <header className="universal header">
           <div className="universal-box">
-            <div className="universal-row">
-              {children}
+            <div className="universal-row flex-h-center">
+              <BrandIconComponent link_colour="link-white" />
             </div>
           </div>
-        </main>
-      </div>
+        </header>
 
-      <footer className="universal footer">
-        <div className="universal-box">
-          <div className="universal-row">
-            <SocialNetworksComponent project={project} social_networks={social_networks} />
-            <CopyrightComponent text_colour="white-cl" />
-          </div>
+        <div className="sticky-footer">
+          <main className="universal main padding-0">
+            <div className="universal-box">
+              <div className="universal-row">
+                {children}
+              </div>
+            </div>
+          </main>
         </div>
-      </footer>
-      {/*
+
+        <footer className="universal footer">
+          <div className="universal-box">
+            <div className="universal-row">
+              <SocialNetworksComponent project={project} social_networks={social_networks} />
+              <CopyrightComponent text_colour="white-cl" />
+            </div>
+          </div>
+        </footer>
+
         <div className="width-wide flex-h-center">
           <CookiesComponent />
         </div>
-      */}
-    </div>
+
+      </div>
+    </motion.div>
   )
 }

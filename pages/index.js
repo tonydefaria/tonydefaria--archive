@@ -11,7 +11,6 @@ import MetaComponent from "../components/meta_component"
 import HeroComponent from "../components/hero_component"
 
 export default function Index({meta, hankyoProject, hankyoSection}) {
-
   return (
     <motion.div
       initial={{opacity: 0}}

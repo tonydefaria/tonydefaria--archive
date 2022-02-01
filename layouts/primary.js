@@ -11,12 +11,12 @@ import FaviconComponent from "../components/favicon_component"
 import MenuComponent from "../components/menu_component"
 import MenuMobileComponent from "../components/menu_mobile_component"
 import SocialNetworksComponent from "../components/social_networks_component"
-// Assets
-const img = "/images/bg.jpg";
 
 export default function Primary({ children }) {
   // Get props
   const project = children.props.hankyoProject.project
+  const section = children.props.hankyoSection.section
+  const hero = section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
   const social_networks = project.social_networks
 
   // Hooks
@@ -56,7 +56,7 @@ export default function Primary({ children }) {
       </div>
       <style jsx>{`
         .keyvisual {
-          background-image: url(${img});
+          background-image: url(${hero.image});
           background-position: bottom right;
           background-size: cover;
         }

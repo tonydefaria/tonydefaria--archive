@@ -17,7 +17,7 @@ export default function MenuMobileComponent() {
 
   return (
     <div className="menu-mobile-wrapper">
-      <a onClick={handleToggle} className={`menu-mobile-trigger link float-right ${isActive ? "link-black" : "link-white"}`}>
+      <a rel="nofollow" onClick={handleToggle} className={`menu-mobile-trigger link float-right ${isActive ? "link-black" : "link-white"}`}>
         <div className="icon">
           <MenuIcon />
         </div>

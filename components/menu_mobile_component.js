@@ -11,13 +11,14 @@ export default function MenuMobileComponent() {
   const [isActive, setActive] = useState("false")
 
   // Toggle
-  const handleToggle = () => {
+  const handleToggle = (event) => {
+    event.preventDefault();
     setActive(!isActive);
   };
 
   return (
     <div className="menu-mobile-wrapper">
-      <a rel="nofollow" onClick={handleToggle} className={`menu-mobile-trigger link float-right ${isActive ? "link-black" : "link-white"}`}>
+      <a href="#" rel="nofollow" onClick={handleToggle} className={`menu-mobile-trigger link float-right ${isActive ? "link-black" : "link-white"}`}>
         <div className="icon">
           <MenuIcon />
         </div>

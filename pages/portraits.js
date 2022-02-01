@@ -1,4 +1,4 @@
-// Contact
+// Portraits
 
 // Layout
 import Secondary from "../layouts/secondary"
@@ -7,11 +7,11 @@ import { motion } from "framer-motion"
 // Components
 import MetaComponent from "../components/meta_component"
 
-export default function Contact({meta, hankyoProject, hankyoSection}) {
+export default function Portraits({meta, hankyoProject, hankyoSection}) {
 
   const email = hankyoProject.project.global_attributes.find(({uid}) => uid === "McLJmJJZLwuvUtkBttFLr3is")
   const title = hankyoSection.section.blocks.find(({uid}) => uid === "W6AxmbQmmJQmW2iJKVPH2Zbq").title
-  const description = hankyoSection.section.blocks.find(({uid}) => uid === "UEtdRJy4D7ZPaGhhHfE4g9Qq").description
+  const description = hankyoSection.section.blocks.find(({uid}) => uid === "QQTeAbZE4jgJGgqo7ofPW4v8").description
 
   return (
     <motion.div
@@ -35,17 +35,6 @@ export default function Contact({meta, hankyoProject, hankyoSection}) {
               <h1 className="font-size-xxl">{title}</h1>
               <hr className="separator-xxs" />
               <p className="font-size-l">{description}</p>
-              <hr className="separator-s" />
-              <p className="font-size-xl font-weight-700">{email.value}</p>
-              <div className="vcard">
-                <ul className="vcard-box list-style-none">
-                  {hankyoProject.project.social_networks.map((network) => (
-                    <li key={network.uid} className="vcard-item">
-                      <a className="link-xs link-black hover-underline" rel="noreferrer noopener" href={network.url} target="_blank">{network.name}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -86,4 +75,4 @@ export async function getStaticProps() {
   }
 }
 
-Contact.Layout = Secondary
+Portraits.Layout = Secondary

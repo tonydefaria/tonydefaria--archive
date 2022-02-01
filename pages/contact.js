@@ -22,26 +22,34 @@ export default function Contact({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
-      <div className="content top">
-        <div className="content-box">
-          <div className="content-row">
-            <h1 className="font-size-xxl">{title}</h1>
-            <hr className="separator-xxs" />
-            <div className="width-wide float-left font-size-l" dangerouslySetInnerHTML={{ __html: description }} />
-            <hr className="separator-s" />
-            <p className="font-size-xl font-weight-700">{email.value}</p>
-            <div className="vcard">
-              <ul className="vcard-box list-style-none">
-                {hankyoProject.project.social_networks.map((network) => (
-                  <li key={network.uid} className="vcard-item">
-                    <a className="link-xs link-black hover-underline" rel="noreferrer noopener" href={network.url} target="_blank">{network.name}</a>
-                  </li>
-                ))}
-              </ul>
+      <motion.div
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+        transition={{delay: .250, opacity: {duration: .250}}}
+        className="width-wide float-left"
+      >
+        <div className="content top">
+          <div className="content-box">
+            <div className="content-row">
+              <h1 className="font-size-xxl">{title}</h1>
+              <hr className="separator-xxs" />
+              <div className="width-wide float-left font-size-l" dangerouslySetInnerHTML={{ __html: description }} />
+              <hr className="separator-s" />
+              <p className="font-size-xl font-weight-700">{email.value}</p>
+              <div className="vcard">
+                <ul className="vcard-box list-style-none">
+                  {hankyoProject.project.social_networks.map((network) => (
+                    <li key={network.uid} className="vcard-item">
+                      <a className="link-xs link-black hover-underline" rel="noreferrer noopener" href={network.url} target="_blank">{network.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   )
 }

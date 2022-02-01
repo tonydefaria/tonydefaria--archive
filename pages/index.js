@@ -17,7 +17,7 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
       initial={{opacity: 0}}
       animate={{opacity: 1}}
       exit={{opacity: 0}}
-      transition={{delay: .500, opacity: {duration: .500}}}
+      transition={{opacity: {duration: 0.25}}}
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
@@ -25,7 +25,7 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         exit={{opacity: 0}}
-        transition={{delay: .500, opacity: {duration: .500}}}
+        transition={{delay: .250, opacity: {duration: .250}}}
         className="width-wide float-left"
       >
         <HeroComponent hankyoSection={hankyoSection} />

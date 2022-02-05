@@ -3,15 +3,15 @@
 // Layout
 import Secondary from "../layouts/secondary"
 // Built-in Components
+import Image from "next/image"
 import { motion } from "framer-motion"
 // Components
 import MetaComponent from "../components/meta_component"
 
 export default function Portraits({meta, hankyoProject, hankyoSection}) {
 
-  const email = hankyoProject.project.global_attributes.find(({uid}) => uid === "McLJmJJZLwuvUtkBttFLr3is")
-  const title = hankyoSection.section.blocks.find(({uid}) => uid === "W6AxmbQmmJQmW2iJKVPH2Zbq").title
-  const description = hankyoSection.section.blocks.find(({uid}) => uid === "QQTeAbZE4jgJGgqo7ofPW4v8").description
+  const portrait = hankyoSection.section.blocks.find(({uid}) => uid === "gtG7jNsSsRCttnXzRH96oJdW")
+  const landscape = hankyoSection.section.blocks.find(({uid}) => uid === "tZTRvfLHh94wZ71e7ob65sPC")
 
   return (
     <motion.div
@@ -32,9 +32,9 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
         <div className="content top">
           <div className="content-box">
             <div className="content-row">
-              <h1 className="font-size-xxl">{title}</h1>
+              <h1 className="font-size-xxl">{hankyoSection.section.title}</h1>
               <hr className="separator-xxs" />
-              <p className="font-size-l">{description}</p>
+              <p className="font-size-l">{hankyoSection.section.description}</p>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ export async function getStaticProps() {
   const resProject = await fetch(`${url}/mies/project${token}`)
   const hankyoProject = await resProject.json()
   // Section
-  const sectionUID = "9tbaxmgFMVHCNBQv1FNyxbph"
+  const sectionUID = "ETawPaEzkHn3LqmnoZNkH7JE"
   const resSection = await fetch(`${url}/mies/project/sections/${sectionUID}${token}`)
   const hankyoSection = await resSection.json()
   // Meta

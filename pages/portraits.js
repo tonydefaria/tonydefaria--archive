@@ -25,8 +25,25 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
     event.preventDefault();
     setActive(!isActive);
   };
+
+
+  // Toggle
+  const handleHeight = () => {
+    document.getElementsByTagName("body")[0].clientHeight
+  };
+
   const portrait = hankyoSection.section.blocks.find(({uid}) => uid === "gtG7jNsSsRCttnXzRH96oJdW")
   const landscape = hankyoSection.section.blocks.find(({uid}) => uid === "tZTRvfLHh94wZ71e7ob65sPC")
+
+
+  // Hooks
+  useEffect(() => {
+    const h = document.getElementsByTagName("body")[0].clientHeight
+    var divs = document.getElementsByClassName('swiper-slide-inner');
+    for(var i=0; i < divs.length; i++) {
+      divs[i].style.height = h + "px"
+    }
+  }, []);
 
   return (
     <motion.div

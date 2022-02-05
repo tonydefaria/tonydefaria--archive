@@ -3,13 +3,28 @@
 // Layout
 import Secondary from "../layouts/secondary"
 // Built-in Components
+import React, { useState, useEffect } from "react"
+import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Keyboard, EffectFade, History } from "swiper";
+
 // Components
 import MetaComponent from "../components/meta_component"
 
-export default function Portraits({meta, hankyoProject, hankyoSection}) {
+import portraitImg from '../public/test-portrait.png'
+import landscapeImg from '../public/test-landscape.png'
 
+export default function Portraits({meta, hankyoProject, hankyoSection}) {
+  const [isActive, setActive] = useState("false")
+
+  // Toggle
+  const handleToggle = (event) => {
+    event.preventDefault();
+    setActive(!isActive);
+  };
   const portrait = hankyoSection.section.blocks.find(({uid}) => uid === "gtG7jNsSsRCttnXzRH96oJdW")
   const landscape = hankyoSection.section.blocks.find(({uid}) => uid === "tZTRvfLHh94wZ71e7ob65sPC")
 
@@ -35,10 +50,29 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
               <h1 className="font-size-xxl">{hankyoSection.section.title}</h1>
               <hr className="separator-xxs" />
               <p className="font-size-l">{hankyoSection.section.description}</p>
+              <hr className="separator-xxs" />
+              <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className={`button-s ${isActive ? "link-black" : "link-red"}`}>Gallery</a>
             </div>
           </div>
         </div>
       </motion.div>
+      <div className={`overlay ${isActive ? "overlay-hide" : "overlay-show"}`}>
+        <Swiper
+          slidesPerView={"auto"}
+          effect={"fade"}
+          centeredSlides={true}
+          keyboard={{ enabled: true }}
+          loop={true}
+          history={{ key: "portraits/gallery" }}
+          modules={[Keyboard, EffectFade]}
+          initialSlide={0}
+          rebuildOnUpdate={true}
+          resizeReInit={true}
+        >
+          <SwiperSlide><div className="swiper-slide-inner flex-h-center flex-v-center"><Image alt="Tony de Faria" src={landscapeImg} width={896} height={718} quality={100}/></div></SwiperSlide>
+          <SwiperSlide><div className="swiper-slide-inner flex-h-center flex-v-center"><Image alt="Tony de Faria" src={portraitImg} width={718} height={896} quality={100}/></div></SwiperSlide>
+        </Swiper>
+      </div>
     </motion.div>
   )
 }

@@ -2,6 +2,10 @@
 // File:    Layouts
 // -------------------------------------------------------------
 
+div {
+  z-index: 1;
+}
+
 .header,
 .main,
 .footer {
@@ -21,7 +25,6 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 1;
 }
 
 .footer {
@@ -61,7 +64,7 @@
 
 // Layout Setup
 .main {
-  padding: 88px 0 0;
+  padding: 48px 0 0;
   .top {
     float: left;
     width: 100%;
@@ -75,6 +78,58 @@
     width: 100%;
   }
 }
+
+.overlay {
+  background-color: $black;
+  bottom: 0;
+  display: none;
+  float: left;
+  min-height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 10 !important;
+  &.overlay-show {
+    display: block;
+    opacity: 1;
+    transition: opacity .50s;
+    visibility: visible;
+    z-index: 10 !important;
+  }
+  &.overlay-hide {
+    display: none;
+    opacity: 0;
+    transition: opacity .50s, visibility 0s .50s;
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+
+.swiper-slide {
+  background: red;
+  float: left;
+  height: 100vh;
+  width: 100vw;
+  .swiper-slide-inner {
+    background: white;
+    display: block;
+    float: left;
+    height: 100vh;
+    padding: 32px;
+    width: 100vw;
+    img {
+      @include appear-animation(.50s);
+      float: left;
+      margin: 0;
+      max-height: calc(100vh - 64px) !important;
+      padding: 0;
+    }
+  }
+}
+
 
 // Media Query 240px
 // -------------------------------------------------------------

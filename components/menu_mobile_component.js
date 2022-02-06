@@ -15,24 +15,6 @@ export default function MenuMobileComponent() {
     setActive(!isActive);
   };
 
-  // Hooks
-  // - - - - - - - - - - - - - - - - - - - - - - - - - -
-  // - - - - - - - - - - - - - - - - - - - - - - - - - -
-  // - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-  const resizeMenuMobile = useCallback(() => {
-    const bodyHeight = document.getElementsByTagName("body")[0].clientHeight
-    const stickyFooterHeight = bodyHeight
-    document.getElementById("menu-mobile").setAttribute("style","min-height:" + stickyFooterHeight + "px");
-  }, []);
-
-  useEffect(() => {
-    resizeMenuMobile()
-    window.addEventListener("resize", function(event) {
-      resizeMenuMobile()
-    }, true);
-  }, [resizeMenuMobile]);
-
   return (
     <div className="menu-mobile-wrapper">
       <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className={`menu-mobile-trigger link float-right ${isActive ? "link-black" : "link-white"}`}>

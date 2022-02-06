@@ -14,26 +14,6 @@ export default function Tertiary({ children }) {
   const project = children.props.hankyoProject.project
   const social_networks = project.social_networks
 
-  // Hooks
-  // - - - - - - - - - - - - - - - - - - - - - - - - - -
-  // - - - - - - - - - - - - - - - - - - - - - - - - - -
-  // - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-  const resizeStickyFooter = useCallback(() => {
-    const bodyHeight = document.getElementsByTagName("body")[0].clientHeight
-    const footerHeight = document.getElementsByTagName("footer")[0].clientHeight
-    const stickyFooterHeight = (bodyHeight - footerHeight)
-    document.getElementById("sticky-footer").setAttribute("style","min-height:" + stickyFooterHeight + "px");
-    console.log("Resizing Sticky Footer")
-  }, []);
-
-  useEffect(() => {
-    resizeStickyFooter()
-    window.addEventListener("resize", function(event) {
-      resizeStickyFooter()
-    }, true);
-  }, [resizeStickyFooter]);
-
   return (
     <div className="tertiary">
       <FaviconComponent project={project} />

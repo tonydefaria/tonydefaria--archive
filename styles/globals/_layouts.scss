@@ -36,6 +36,8 @@
   max-width: 100%;
   padding: 0;
   width: 100%;
+  min-height: calc(100vh - 96px);
+  // min-height: -webkit-fill-available;
 }
 
 .primary,
@@ -125,7 +127,8 @@
 // -------------------------------------------------------------
 @media #{$xxs} {
   .sticky-footer {
-    // min-height: calc(100vh - (128px));
+    min-height: -webkit-fill-available;
+    min-height: calc(100vh - 112px);
   }
 }
 
@@ -133,7 +136,8 @@
 // ------------------------------------------------------------
 @media #{$xs} {
   .sticky-footer {
-    // min-height: calc(100vh - (128px));
+    min-height: -webkit-fill-available;
+    min-height: calc(100vh - 112px);
   }
 }
 
@@ -141,7 +145,8 @@
 // -------------------------------------------------------------
 @media #{$s} {
   .sticky-footer {
-    // min-height: calc(100vh - (112px));
+    min-height: -webkit-fill-available;
+    min-height: calc(100vh - 112px);
   }
 }
 

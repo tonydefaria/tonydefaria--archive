@@ -24,10 +24,14 @@ $class: "social-networks";
         padding: 16px;
       }
       .icon {
+        position: relative;
         border-radius: 4px;
         height: 32px;
         width: 32px;
-        border-radius: 4px;
+        img {
+          border-radius: 4px;
+          z-index: -1px !important;
+        }
       }
     }
   }

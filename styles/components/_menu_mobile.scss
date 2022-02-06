@@ -4,33 +4,16 @@
 
 $class: "menu-mobile";
 
-.#{$class}-wrapper {
-  float: right;
-}
-
-.#{$class}-trigger {
-  float: right;
-  padding: 32px;
-  position: relative;
-  z-index: 9999999;
-  .icon {
-    float: left;
-    height: 24px;
-    width: 24px;
-  }
-}
-
 .#{$class} {
   background-color: $black;
   bottom: 0;
   float: left;
   height: 100vh;
-  min-height: -webkit-fill-available;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 999999;
+  z-index: 9999;
   width: 100vw;
   .#{$class}-box {
     float: left;
@@ -65,9 +48,6 @@ $class: "menu-mobile";
 // Media Query 240px
 // -------------------------------------------------------------
 @media #{$xxs} {
-  .#{$class}-trigger {
-    padding: 32px 16px;
-  }
   .#{$class} {
     .#{$class}-box {
       .#{$class}-item {
@@ -79,9 +59,6 @@ $class: "menu-mobile";
 // Media Query 360px
 // ------------------------------------------------------------
 @media #{$xs} {
-  .#{$class}-trigger {
-    padding: 32px 16px;
-  }
   .#{$class} {
     .#{$class}-box {
       .#{$class}-item {
@@ -93,9 +70,6 @@ $class: "menu-mobile";
 // Media Query 480px
 // -------------------------------------------------------------
 @media #{$s} {
-  .#{$class}-trigger {
-    padding: 32px 16px;
-  }
   .#{$class} {
     .#{$class}-box {
       .#{$class}-item {
@@ -107,26 +81,14 @@ $class: "menu-mobile";
 // Media Query 720px
 // -------------------------------------------------------------
 @media #{$m} {
-  .#{$class}-wrapper {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
-  .#{$class}-trigger {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
   .#{$class} {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
     .#{$class}-box {
       .#{$class}-item {
       }
+    }
+    &.#{$class}-show {
+      display: none;
+      visibility: hidden;
     }
   }
 }
@@ -134,26 +96,14 @@ $class: "menu-mobile";
 // Media Query 960px
 // -------------------------------------------------------------
 @media #{$l} {
-  .#{$class}-wrapper {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
-  .#{$class}-trigger {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
   .#{$class} {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
     .#{$class}-box {
       .#{$class}-item {
       }
+    }
+    &.#{$class}-show {
+      display: none;
+      visibility: hidden;
     }
   }
 }
@@ -161,26 +111,14 @@ $class: "menu-mobile";
 // Media Query 1440px
 // -------------------------------------------------------------
 @media #{$xl} {
-  .#{$class}-wrapper {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
-  .#{$class}-trigger {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
   .#{$class} {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
     .#{$class}-box {
       .#{$class}-item {
       }
+    }
+    &.#{$class}-show {
+      display: none;
+      visibility: hidden;
     }
   }
 }
@@ -188,26 +126,14 @@ $class: "menu-mobile";
 // Media Query 1920px
 // -------------------------------------------------------------
 @media #{$xxl} {
-  .#{$class}-wrapper {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
-  .#{$class}-trigger {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
   .#{$class} {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    width: 0;
     .#{$class}-box {
       .#{$class}-item {
       }
+    }
+    &.#{$class}-show {
+      display: none;
+      visibility: hidden;
     }
   }
 }

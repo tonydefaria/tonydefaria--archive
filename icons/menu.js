@@ -2,11 +2,11 @@
 
 export default function Menu() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="56" viewBox="0 0 64 56">
-      <g transform="translate(-1991 -1892)">
-        <rect width="64" height="8" transform="translate(1991 1892)"/>
-        <rect width="64" height="8" transform="translate(1991 1916)"/>
-        <rect width="64" height="8" transform="translate(1991 1940)"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20">
+      <g transform="translate(-1160 -1349)">
+        <rect width="24" height="4" transform="translate(1160 1349)"/>
+        <rect width="24" height="4" transform="translate(1160 1357)"/>
+        <rect width="24" height="4" transform="translate(1160 1365)"/>
       </g>
     </svg>
   )

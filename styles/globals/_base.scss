@@ -27,6 +27,9 @@ body {
 html {
   background-color: $white;
   // scroll-behavior: smooth;
+  &.lock-scroll {
+    overflow: hidden;
+  }
 }
 
 body {
@@ -44,6 +47,9 @@ body {
   overscroll-behavior: contain;
   scrollbar-width: none;
   scroll-behavior: smooth;
+  &.lock-scroll {
+    overflow: hidden;
+  }
 }
 
 ::-webkit-scrollbar,

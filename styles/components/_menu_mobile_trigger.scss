@@ -1,11 +1,16 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Menu
+// File: Menu Mobile Trigger
 // -------------------------------------------------------------
 
-$class: "menu";
+$class: "menu-mobile-trigger";
 
 .#{$class} {
   float: right;
+  display: none;
+  position: fixed;
+  right: 0px;
+  visibility: hidden;
+  z-index: 999999 !important;
   .#{$class}-box {
     float: left;
     list-style: none;
@@ -23,14 +28,6 @@ $class: "menu";
         margin: 2px 0;
         width: 24px;
       }
-      &.mobile {
-        display: none;
-        visibility: hidden;
-      }
-      &.desktop {
-        display: block;
-        visibility: visible;
-      }
     }
   }
 }
@@ -40,17 +37,10 @@ $class: "menu";
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
+    display: block;
+    visibility: visible;
     .#{$class}-box {
-      padding: 16px 0;
       .#{$class}-item {
-        &.mobile {
-          display: block;
-          visibility: visible;
-        }
-        &.desktop {
-          display: none;
-          visibility: hidden;
-        }
       }
     }
   }
@@ -60,17 +50,10 @@ $class: "menu";
 // ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
+    display: block;
+    visibility: visible;
     .#{$class}-box {
-      padding: 16px 0;
       .#{$class}-item {
-        &.mobile {
-          display: block;
-          visibility: visible;
-        }
-        &.desktop {
-          display: none;
-          visibility: hidden;
-        }
       }
     }
   }
@@ -80,17 +63,10 @@ $class: "menu";
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
+    display: block;
+    visibility: visible;
     .#{$class}-box {
-      padding: 16px 0;
       .#{$class}-item {
-        &.mobile {
-          display: block;
-          visibility: visible;
-        }
-        &.desktop {
-          display: none;
-          visibility: hidden;
-        }
       }
     }
   }

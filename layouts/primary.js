@@ -24,7 +24,6 @@ export default function Primary({ children }) {
     const h = document.getElementsByTagName("body")[0].clientHeight
     const f = document.getElementsByTagName("footer")[0].clientHeight
     const height = (h - f)
-
     document.getElementById("sticky-footer").setAttribute("style","min-height:" + height + "px");
 
     window.addEventListener('resize', function(event) {

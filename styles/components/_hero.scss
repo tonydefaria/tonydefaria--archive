@@ -7,7 +7,7 @@ $class: "hero";
 .#{$class} {
   // background-color: red;
   float: left;
-  margin: 88px 0 0;
+  margin: 0;
   width: 720px;
   .#{$class}-box {
     float: left;
@@ -25,7 +25,7 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
-    margin: 48px 0 0;
+    margin: 0;
     width: 100%;
     .#{$class}-box {
       padding: 0;
@@ -39,7 +39,7 @@ $class: "hero";
 // ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
-    margin: 48px 0 0;
+    margin: 0;
     width: 100%;
     .#{$class}-box {
       padding: 0;
@@ -53,7 +53,7 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
-    margin: 48px 0 0;
+    margin: 0;
     width: 100%;
     .#{$class}-box {
       padding: 0;

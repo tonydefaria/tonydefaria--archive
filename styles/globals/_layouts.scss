@@ -12,9 +12,9 @@
   width: 100%;
 }
 
-.header {
-  // min-height: 80px;
-}
+// .header {
+//   min-height: 80px;
+// }
 
 .fixed-header {
   @include fixed;
@@ -23,9 +23,9 @@
   top: 0;
 }
 
-.footer {
-  // min-height: 80px;
-}
+// .footer {
+//   min-height: 80px;
+// }
 
 // Note: when using sticky footer it's important
 // header & footer have fixed heights.
@@ -59,7 +59,7 @@
 
 // Layout Setup
 .main {
-  padding: 48px 0 0;
+  padding: 88px 0 0;
   .top {
     float: left;
     width: 100%;

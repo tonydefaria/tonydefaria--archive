@@ -2,10 +2,6 @@
 // File:    Layouts
 // -------------------------------------------------------------
 
-div {
-  z-index: 1;
-}
-
 .header,
 .main,
 .footer {
@@ -34,11 +30,10 @@ div {
 // Note: when using sticky footer it's important
 // header & footer have fixed heights.
 .sticky-footer {
-  @include sticky;
+  // @include sticky;
   float: left;
   margin: 0;
   max-width: 100%;
-  min-height: calc(100vh - 96px); // Minus the height of the header and footer.
   padding: 0;
   width: 100%;
 }
@@ -91,20 +86,17 @@ div {
   top: 0;
   visibility: hidden;
   width: 100vw;
-  z-index: 10 !important;
   &.overlay-show {
     display: block;
     opacity: 1;
     transition: opacity .50s;
     visibility: visible;
-    z-index: 10 !important;
   }
   &.overlay-hide {
     display: none;
     opacity: 0;
     transition: opacity .50s, visibility 0s .50s;
     visibility: hidden;
-    z-index: 0;
   }
 }
 
@@ -133,7 +125,7 @@ div {
 // -------------------------------------------------------------
 @media #{$xxs} {
   .sticky-footer {
-    min-height: calc(100vh - (128px));
+    // min-height: calc(100vh - (128px));
   }
 }
 
@@ -141,7 +133,7 @@ div {
 // ------------------------------------------------------------
 @media #{$xs} {
   .sticky-footer {
-    min-height: calc(100vh - (128px));
+    // min-height: calc(100vh - (128px));
   }
 }
 
@@ -149,7 +141,7 @@ div {
 // -------------------------------------------------------------
 @media #{$s} {
   .sticky-footer {
-    min-height: calc(100vh - (112px));
+    // min-height: calc(100vh - (112px));
   }
 }
 

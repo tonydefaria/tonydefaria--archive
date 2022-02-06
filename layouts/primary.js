@@ -1,7 +1,7 @@
 // Primary
 
 // Built-in Components
-// import { useEffect } from "react";
+import { useEffect } from "react";
 // import { motion } from "framer-motion"
 // Components
 import BrandLogoComponent from "../components/brand_logo_component"
@@ -20,8 +20,20 @@ export default function Primary({ children }) {
   const social_networks = project.social_networks
 
   // Hooks
-  // useEffect(() => {
-  // }, []);
+  useEffect(() => {
+    const h = document.getElementsByTagName("body")[0].clientHeight
+    const f = document.getElementsByTagName("footer")[0].clientHeight
+    const height = (h - f)
+
+    document.getElementById("sticky-footer").setAttribute("style","min-height:" + height + "px");
+
+    window.addEventListener('resize', function(event) {
+      const h = document.getElementsByTagName("body")[0].clientHeight
+      const f = document.getElementsByTagName("footer")[0].clientHeight
+      const height = (h - f)
+      document.getElementById("sticky-footer").setAttribute("style","min-height:" + height + "px");
+    }, true);
+  }, []);
 
   return (
     <div className="primary keyvisual">
@@ -32,7 +44,7 @@ export default function Primary({ children }) {
         <MenuMobileComponent />
       </header>
 
-      <div className="sticky-footer">
+      <div className="sticky-footer" id="sticky-footer">
         <main className="universal main">
           <div className="universal-box">
             <div className="universal-row">

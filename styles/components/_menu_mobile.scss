@@ -12,7 +12,6 @@ $class: "menu-mobile";
   float: right;
   padding: 32px;
   position: relative;
-  z-index: 10;
   .icon {
     float: left;
     height: 24px;
@@ -26,7 +25,7 @@ $class: "menu-mobile";
   float: left;
   height: 100vh;
   left: 0;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   width: 100vw;
@@ -52,13 +51,11 @@ $class: "menu-mobile";
     opacity: 1;
     transition: opacity .50s;
     visibility: visible;
-    z-index: 1;
   }
   &.#{$class}-hide {
     opacity: 0;
     transition: opacity 0s, visibility 0s 0s;
     visibility: hidden;
-    z-index: 0;
   }
 }
 

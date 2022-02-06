@@ -104,6 +104,7 @@ img {
   max-width: 100%;
   overflow: hidden;
   padding: 0;
+  z-index: 0;
 }
 
 svg {
@@ -127,6 +128,7 @@ span {
   margin: 0;
   padding: 0;
   vertical-align: top;
+  z-index: 0;
   &.padded {
     padding: 2px 8px;
   }

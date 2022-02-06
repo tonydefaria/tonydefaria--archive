@@ -9,7 +9,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, EffectFade, History } from "swiper";
+import { Keyboard, EffectFade} from "swiper";
 
 // Components
 import MetaComponent from "../components/meta_component"
@@ -32,18 +32,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
     document.getElementsByTagName("body")[0].clientHeight
   };
 
-  const portrait = hankyoSection.section.blocks.find(({uid}) => uid === "gtG7jNsSsRCttnXzRH96oJdW")
-  const landscape = hankyoSection.section.blocks.find(({uid}) => uid === "tZTRvfLHh94wZ71e7ob65sPC")
-
-
-  // Hooks
-  useEffect(() => {
-    const h = document.getElementsByTagName("body")[0].clientHeight
-    var divs = document.getElementsByClassName('swiper-slide-inner');
-    for(var i=0; i < divs.length; i++) {
-      divs[i].style.height = h + "px"
-    }
-  }, []);
+  const hero = hankyoSection.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
 
   return (
     <motion.div
@@ -54,25 +43,18 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
-      <motion.div
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        exit={{opacity: 0}}
-        transition={{delay: .250, opacity: {duration: .250}}}
-        className="width-wide float-left"
-      >
-        <div className="content top">
-          <div className="content-box">
-            <div className="content-row">
-              <h1 className="font-size-xxl">{hankyoSection.section.title}</h1>
-              <hr className="separator-xxs" />
-              <p className="font-size-l">{hankyoSection.section.description}</p>
-              <hr className="separator-xxs" />
-              <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className={`button-s ${isActive ? "link-black" : "link-red"}`}>Gallery</a>
-            </div>
+      <hr className="separator-m" />
+      <div className="hero">
+        <div className="hero-box">
+          <div className="hero-row">
+            <h1 className="font-size-xxl">{hero.title}</h1>
+            <hr className="separator-s" />
+            <p className="font-size-xl">{hero.description}</p>
+            <hr className="separator-s" />
+            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className={`button-s ${isActive ? "button-black" : "button-red"}`}>Open Gallery</a>
           </div>
         </div>
-      </motion.div>
+      </div>
       <div className={`overlay ${isActive ? "overlay-hide" : "overlay-show"}`}>
         <Swiper
           slidesPerView={"auto"}
@@ -80,11 +62,8 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           centeredSlides={true}
           keyboard={{ enabled: true }}
           loop={true}
-          history={{ key: "portraits/gallery" }}
           modules={[Keyboard, EffectFade]}
           initialSlide={0}
-          rebuildOnUpdate={true}
-          resizeReInit={true}
         >
           <SwiperSlide><div className="swiper-slide-inner flex-h-center flex-v-center"><Image alt="Tony de Faria" src={landscapeImg} width={896} height={718} quality={100}/></div></SwiperSlide>
           <SwiperSlide><div className="swiper-slide-inner flex-h-center flex-v-center"><Image alt="Tony de Faria" src={portraitImg} width={718} height={896} quality={100}/></div></SwiperSlide>

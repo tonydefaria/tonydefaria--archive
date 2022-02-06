@@ -40,6 +40,11 @@ export default function MenuOverlayComponent() {
           <li className="menu-mobile-item">
             <Link href="/"><a className="link-xxl link-white text-align-center">Home</a></Link>
           </li>
+          {/*
+            <li className="menu-mobile-item">
+              <Link href="/portraits"><a className="link-xxl link-white text-align-center">Portraits</a></Link>
+            </li>
+          */}
           <li className="menu-mobile-item">
             <Link href="/contact"><a className="link-xxl link-white text-align-center">Contact</a></Link>
           </li>

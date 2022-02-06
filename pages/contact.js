@@ -22,25 +22,17 @@ export default function Contact({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
-      <motion.div
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        exit={{opacity: 0}}
-        transition={{delay: .250, opacity: {duration: .250}}}
-        className="width-wide float-left"
-      >
-        <div className="content top">
-          <div className="content-box">
-            <div className="content-row">
-              <h1 className="font-size-xxl">{title}</h1>
-              <hr className="separator-xxs" />
-              <p className="font-size-l">{description}</p>
-              <hr className="separator-s" />
-              <p className="font-size-xl font-weight-700">{email.value}</p>
-            </div>
+      <div className="content">
+        <div className="content-box">
+          <div className="content-row">
+            <h1 className="font-size-xxl">{title}</h1>
+            <hr className="separator-xxs" />
+            <p className="font-size-l">{description}</p>
+            <hr className="separator-s" />
+            <p className="font-size-xl font-weight-700">{email.value}</p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   )
 }

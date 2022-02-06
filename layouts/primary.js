@@ -1,7 +1,7 @@
 // Primary
 
 // Built-in Components
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 // import { motion } from "framer-motion"
 // Components
 import BrandLogoComponent from "../components/brand_logo_component"
@@ -20,27 +20,32 @@ export default function Primary({ children }) {
   const social_networks = project.social_networks
 
   // Hooks
-  useEffect(() => {
-    const h = document.getElementsByTagName("body")[0].clientHeight
-    const f = document.getElementsByTagName("footer")[0].clientHeight
-    const height = (h - f)
-    document.getElementById("sticky-footer").setAttribute("style","min-height:" + height + "px");
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    window.addEventListener('resize', function(event) {
-      const h = document.getElementsByTagName("body")[0].clientHeight
-      const f = document.getElementsByTagName("footer")[0].clientHeight
-      const height = (h - f)
-      document.getElementById("sticky-footer").setAttribute("style","min-height:" + height + "px");
-    }, true);
+  const resizeStickyFooter = useCallback(() => {
+    const bodyHeight = document.getElementsByTagName("body")[0].clientHeight
+    const footerHeight = document.getElementsByTagName("footer")[0].clientHeight
+    const stickyFooterHeight = (bodyHeight - footerHeight)
+    document.getElementById("sticky-footer").setAttribute("style","min-height:" + stickyFooterHeight + "px");
+    console.log("Resizing Sticky Footer")
   }, []);
+
+  useEffect(() => {
+    resizeStickyFooter()
+    window.addEventListener("resize", function(event) {
+      resizeStickyFooter()
+    }, true);
+  }, [resizeStickyFooter]);
 
   return (
     <div className="primary keyvisual">
       <FaviconComponent project={project} />
       <header className="universal header fixed-header">
         <BrandLogoComponent link_colour="link-black" />
-        <MenuComponent />
         <MenuMobileComponent />
+        <MenuComponent />
       </header>
 
       <div className="sticky-footer" id="sticky-footer">

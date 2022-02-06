@@ -1,7 +1,7 @@
 // Tertiary
 
 // Built-in Components
-// import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 // Components
 import BrandIconComponent from "../components/brand_icon_component"
 import CookiesComponent from "../components/cookies_component"
@@ -15,8 +15,24 @@ export default function Tertiary({ children }) {
   const social_networks = project.social_networks
 
   // Hooks
-  // useEffect(() => {
-  // }, []);
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  const resizeStickyFooter = useCallback(() => {
+    const bodyHeight = document.getElementsByTagName("body")[0].clientHeight
+    const footerHeight = document.getElementsByTagName("footer")[0].clientHeight
+    const stickyFooterHeight = (bodyHeight - footerHeight)
+    document.getElementById("sticky-footer").setAttribute("style","min-height:" + stickyFooterHeight + "px");
+    console.log("Resizing Sticky Footer")
+  }, []);
+
+  useEffect(() => {
+    resizeStickyFooter()
+    window.addEventListener("resize", function(event) {
+      resizeStickyFooter()
+    }, true);
+  }, [resizeStickyFooter]);
 
   return (
     <div className="tertiary">
@@ -29,7 +45,7 @@ export default function Tertiary({ children }) {
         </div>
       </header>
 
-      <div className="sticky-footer">
+      <div className="sticky-footer" id="sticky-footer">
         <main className="universal main padding-0">
           <div className="universal-box">
             <div className="universal-row">

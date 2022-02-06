@@ -37,15 +37,6 @@ export default function Contact({meta, hankyoProject, hankyoSection}) {
               <p className="font-size-l">{description}</p>
               <hr className="separator-s" />
               <p className="font-size-xl font-weight-700">{email.value}</p>
-              <div className="vcard">
-                <ul className="vcard-box list-style-none">
-                  {hankyoProject.project.social_networks.map((network) => (
-                    <li key={network.uid} className="vcard-item">
-                      <a className="link-xs link-black hover-underline" rel="noreferrer noopener" href={network.url} target="_blank">{network.name}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
         </div>

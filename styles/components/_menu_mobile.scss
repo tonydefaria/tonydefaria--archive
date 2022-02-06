@@ -12,6 +12,7 @@ $class: "menu-mobile";
   float: right;
   padding: 32px;
   position: relative;
+  z-index: 9999999;
   .icon {
     float: left;
     height: 24px;
@@ -23,11 +24,12 @@ $class: "menu-mobile";
   background-color: $black;
   bottom: 0;
   float: left;
-  height: 100vh;
+  // height: 100vh;
   left: 0;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
+  z-index: 999999;
   width: 100vw;
   .#{$class}-box {
     float: left;

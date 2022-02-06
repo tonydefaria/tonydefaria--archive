@@ -10,7 +10,6 @@ import CopyrightComponent from "../components/copyright_component"
 import FaviconComponent from "../components/favicon_component"
 import MenuComponent from "../components/menu_component"
 import MenuMobileComponent from "../components/menu_mobile_component"
-import MenuMobileTriggerComponent from "../components/menu_mobile_trigger_component"
 import SocialNetworksComponent from "../components/social_networks_component"
 
 export default function Primary({ children }) {
@@ -28,7 +27,6 @@ export default function Primary({ children }) {
         <MenuComponent />
       </header>
       <MenuMobileComponent />
-      <MenuMobileTriggerComponent />
       <div className="sticky-footer" id="sticky-footer">
         <main className="universal main">
           <div className="universal-box">

@@ -17,36 +17,162 @@
 @mixin separator-xxs {
   @include separator-default;
   margin: 4px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} {
+    margin: 2px 0 !important;
+  }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} {
+    margin: 2px 0 !important;
+  }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} {
+    margin: 2px 0 !important;
+  }
 }
 
 @mixin separator-xs {
   @include separator-default;
   margin: 8px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} {
+    margin: 4px 0 !important;
+  }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} {
+    margin: 4px 0 !important;
+  }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} {
+    margin: 4px 0 !important;
+  }
 }
 
 @mixin separator-s {
   @include separator-default;
   margin: 16px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} {
+    margin: 8px 0 !important;
+  }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} {
+    margin: 8px 0 !important;
+  }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} {
+    margin: 8px 0 !important;
+  }
 }
 
 @mixin separator-m {
   @include separator-default;
   margin: 32px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} {
+    margin: 16px 0 !important;
+  }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} {
+    margin: 16px 0 !important;
+  }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} {
+    margin: 16px 0 !important;
+  }
 }
 
 @mixin separator-l {
   @include separator-default;
   margin: 48px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} {
+    margin: 32px 0 !important;
+  }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} {
+    margin: 32px 0 !important;
+  }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} {
+    margin: 32px 0 !important;
+  }
 }
 
 @mixin separator-xl {
   @include separator-default;
   margin: 64px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} {
+    margin: 48px 0 !important;
+  }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} {
+    margin: 48px 0 !important;
+  }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} {
+    margin: 48px 0 !important;
+  }
 }
 
 @mixin separator-xxl {
   @include separator-default;
   margin: 96px 0 !important;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} {
+    margin: 64px 0 !important;
+  }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} {
+    margin: 64px 0 !important;
+  }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} {
+    margin: 64px 0 !important;
+  }
 }
 
 @mixin separator-dashed {

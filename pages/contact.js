@@ -22,12 +22,12 @@ export default function Contact({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
-      <div className="content">
-        <div className="content-box">
-          <div className="content-row">
+      <div className="hero">
+        <div className="hero-box">
+          <div className="hero-row">
             <h1 className="font-size-xxl">{title}</h1>
-            <hr className="separator-xxs" />
-            <p className="font-size-l">{description}</p>
+            <hr className="separator-s" />
+            <p className="font-size-xl">{description}</p>
             <hr className="separator-s" />
             <p className="font-size-xl font-weight-700">{email.value}</p>
           </div>

@@ -26,7 +26,7 @@ export default function Secondary({ children }) {
       </header>
       <MenuMobileComponent />
       <div className="sticky-footer" id="sticky-footer">
-        <main className="universal main">
+        <main className="universal main flex-v-center">
           <div className="universal-box">
             <div className="universal-row">
               {children}

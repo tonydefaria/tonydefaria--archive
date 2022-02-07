@@ -62,6 +62,8 @@
 // Layout Setup
 .main {
   padding: 88px 0 0;
+  min-height: -webkit-fill-available;
+  min-height: calc(100vh - (96px));
   .top {
     float: left;
     width: 100%;
@@ -83,6 +85,10 @@
     min-height: -webkit-fill-available;
     min-height: calc(100vh - 112px);
   }
+  .main {
+    min-height: -webkit-fill-available;
+    min-height: calc(100vh - 112px);
+  }
 }
 
 // Media Query 360px
@@ -92,12 +98,20 @@
     min-height: -webkit-fill-available;
     min-height: calc(100vh - 112px);
   }
+  .main {
+    min-height: -webkit-fill-available;
+    min-height: calc(100vh - 112px);
+  }
 }
 
 // Media Query 480px
 // -------------------------------------------------------------
 @media #{$s} {
   .sticky-footer {
+    min-height: -webkit-fill-available;
+    min-height: calc(100vh - 112px);
+  }
+  .main {
     min-height: -webkit-fill-available;
     min-height: calc(100vh - 112px);
   }

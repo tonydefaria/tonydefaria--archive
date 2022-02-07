@@ -48,7 +48,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
-      <hr className="separator-m" />
+
       <div className="hero">
         <div className="hero-box">
           <div className="hero-row">
@@ -60,6 +60,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           </div>
         </div>
       </div>
+
       <div className={`overlay ${isActive ? "overlay-hide" : "overlay-show"}`}>
         <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Menu Mobile Trigger" className="link link-black overlay-close">
           <div className="icon"><CloseIcon /></div>

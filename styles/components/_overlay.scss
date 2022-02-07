@@ -1,48 +1,51 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Menu Mobile Trigger
+// File: Overlay
 // -------------------------------------------------------------
 
-$class: "menu-mobile-trigger";
+$class: "overlay";
 
 .#{$class} {
-  float: right;
+  background-color: $white;
+  bottom: 0;
   display: none;
+  float: left;
+  height: 100vh;
+  left: 0;
+  min-height: 100%;
   position: fixed;
-  right: 0px;
+  right: 0;
+  top: 0;
   visibility: hidden;
-  z-index: 999999 !important;
-  .#{$class}-box {
-    float: left;
-    list-style: none;
-    margin: 0;
-    padding: 16px;
-    width: auto;
-    .#{$class}-item {
-      float: left;
-      margin: 0;
-      padding: 16px;
-      width: auto;
-      svg {
-        float: left;
-        height: 20px;
-        margin: 2px 0;
-        width: 24px;
-      }
-    }
+  width: 100vw;
+  z-index: 999999;
+  .#{$class}-close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    height: 24px;
+    width: 24px;
+    z-index: 9999999;
+  }
+  &.#{$class}-show {
+    display: block;
+    opacity: 1;
+    transition: opacity .50s;
+    visibility: visible;
+  }
+  &.#{$class}-hide {
+    display: none;
+    opacity: 0;
+    transition: opacity .50s, visibility 0s .50s;
+    visibility: hidden;
   }
 }
-
 
 // Media Query 240px
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
-    display: block;
-    visibility: visible;
-    .#{$class}-box {
-      padding: 16px 0;
-      .#{$class}-item {
-      }
+    .#{$class}-close {
+      right: 16px;
     }
   }
 }
@@ -51,12 +54,8 @@ $class: "menu-mobile-trigger";
 // ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
-    display: block;
-    visibility: visible;
-    .#{$class}-box {
-      padding: 16px 0;
-      .#{$class}-item {
-      }
+    .#{$class}-close {
+      right: 16px;
     }
   }
 }
@@ -65,12 +64,8 @@ $class: "menu-mobile-trigger";
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
-    display: block;
-    visibility: visible;
-    .#{$class}-box {
-      padding: 16px 0;
-      .#{$class}-item {
-      }
+    .#{$class}-close {
+      right: 16px;
     }
   }
 }
@@ -79,10 +74,6 @@ $class: "menu-mobile-trigger";
 // -------------------------------------------------------------
 @media #{$m} {
   .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
-      }
-    }
   }
 }
 
@@ -90,10 +81,6 @@ $class: "menu-mobile-trigger";
 // -------------------------------------------------------------
 @media #{$l} {
   .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
-      }
-    }
   }
 }
 
@@ -101,10 +88,6 @@ $class: "menu-mobile-trigger";
 // -------------------------------------------------------------
 @media #{$xl} {
   .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
-      }
-    }
   }
 }
 
@@ -112,9 +95,5 @@ $class: "menu-mobile-trigger";
 // -------------------------------------------------------------
 @media #{$xxl} {
   .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
-      }
-    }
   }
 }

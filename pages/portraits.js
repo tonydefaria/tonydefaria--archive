@@ -10,10 +10,12 @@ import { motion } from "framer-motion"
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, EffectFade} from "swiper";
-
 // Components
 import MetaComponent from "../components/meta_component"
 
+// Icons
+import CloseIcon from "../icons/close"
+// Images
 import portraitImg from '../public/test-portrait.png'
 import landscapeImg from '../public/test-landscape.png'
 
@@ -26,11 +28,14 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
     setActive(!isActive);
   };
 
-
-  // Toggle
-  const handleHeight = () => {
-    document.getElementsByTagName("body")[0].clientHeight
-  };
+  useEffect(() => {
+    const body = document.getElementsByTagName("body")[0]
+    if (!isActive) {
+      body.classList.add("lock-scroll")
+    } else {
+      body.classList.remove("lock-scroll")
+    }
+  }, [isActive])
 
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
 
@@ -51,12 +56,16 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
             <hr className="separator-s" />
             <p className="font-size-xl">{hero.description}</p>
             <hr className="separator-s" />
-            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className={`button-s ${isActive ? "button-black" : "button-red"}`}>Open Gallery</a>
+            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className="button-s button-black">Open Gallery</a>
           </div>
         </div>
       </div>
       <div className={`overlay ${isActive ? "overlay-hide" : "overlay-show"}`}>
+        <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Menu Mobile Trigger" className="link link-black overlay-close">
+          <div className="icon"><CloseIcon /></div>
+        </a>
         <Swiper
+          className="swiper"
           slidesPerView={"auto"}
           effect={"fade"}
           centeredSlides={true}
@@ -65,8 +74,24 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           modules={[Keyboard, EffectFade]}
           initialSlide={0}
         >
-          <SwiperSlide><div className="swiper-slide-inner flex-h-center flex-v-center"><Image alt="Tony de Faria" src={landscapeImg} width={896} height={718} quality={100}/></div></SwiperSlide>
-          <SwiperSlide><div className="swiper-slide-inner flex-h-center flex-v-center"><Image alt="Tony de Faria" src={portraitImg} width={718} height={896} quality={100}/></div></SwiperSlide>
+
+          <SwiperSlide>
+            <div className="swiper-box flex-h-center flex-v-center">
+              <figure>
+                <Image alt="Tony de Faria" src={landscapeImg} width={896} height={718} quality={100}/>
+                <figcaption>Samos, Greece, 2021</figcaption>
+              </figure>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="swiper-box flex-h-center flex-v-center">
+              <figure>
+                <Image alt="Tony de Faria" src={portraitImg} width={718} height={896} quality={100}/>
+                <figcaption>Jerash, Jordan, 2021</figcaption>
+              </figure>
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
     </motion.div>

@@ -51,7 +51,7 @@ $class: "brand";
 @media #{$xxs} {
   .#{$class} {
     .#{$class}-box {
-      padding: 16px 0 ;
+      padding: 16px 0;
       .#{$class}-item {
         &.#{$class}-desktop {
           display: none;

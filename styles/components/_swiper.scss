@@ -1,32 +1,35 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Vcard
+// File: Swiper
 // -------------------------------------------------------------
 
-$class: "vcard";
+$class: "swiper";
 
 .#{$class} {
   float: left;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  width: 100vw;
   .#{$class}-box {
+    background: $white;
+    display: block;
     float: left;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    .#{$class}-row {
+    height: 100vh;
+    padding: 32px;
+    width: 100vw;
+    figure {
       float: left;
       margin: 0;
+      max-height: calc(100vh - 64px) !important;
       padding: 0;
-      width: 100%;
-    }
-    .#{$class}-item {
-      float: left;
-      margin: 0;
-      padding: 0 16px 0 0;
-      width: auto;
-      &:last-child {
+      img {
+        @include appear-animation(.50s);
+        float: left;
+        margin: 0;
+        max-height: calc(100vh - 96px) !important;
         padding: 0;
+      }
+      figcaption {
+        @include font-size-xs;
+        font-family: $mono;
+        padding: 8px 0 0;
       }
     }
   }
@@ -37,7 +40,16 @@ $class: "vcard";
 @media #{$xxs} {
   .#{$class} {
     .#{$class}-box {
-      .#{$class}-item {
+      padding: 16px;
+      figure {
+        max-height: calc(100vh - 32px) !important;
+        img {
+          @include appear-animation(.50s);
+          max-height: calc(100vh - 64px) !important;
+        }
+        figcaption {
+          padding: 4px 0 0;
+        }
       }
     }
   }
@@ -48,7 +60,16 @@ $class: "vcard";
 @media #{$xs} {
   .#{$class} {
     .#{$class}-box {
-      .#{$class}-item {
+      padding: 16px;
+      figure {
+        max-height: calc(100vh - 32px) !important;
+        img {
+          @include appear-animation(.50s);
+          max-height: calc(100vh - 64px) !important;
+        }
+        figcaption {
+          padding: 4px 0 0;
+        }
       }
     }
   }
@@ -59,7 +80,16 @@ $class: "vcard";
 @media #{$s} {
   .#{$class} {
     .#{$class}-box {
-      .#{$class}-item {
+      padding: 16px;
+      figure {
+        max-height: calc(100vh - 32px) !important;
+        img {
+          @include appear-animation(.50s);
+          max-height: calc(100vh - 64px) !important;
+        }
+        figcaption {
+          padding: 4px 0 0;
+        }
       }
     }
   }

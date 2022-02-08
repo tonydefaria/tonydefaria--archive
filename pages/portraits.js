@@ -4,20 +4,15 @@
 import Secondary from "../layouts/secondary"
 // Built-in Components
 import React, { useState, useEffect } from "react"
-import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, EffectFade} from "swiper";
+import { Lazy, Keyboard, EffectFade} from "swiper";
 // Components
 import MetaComponent from "../components/meta_component"
-
 // Icons
 import CloseIcon from "../icons/close"
-// Images
-import portraitImg from '../public/test-portrait.png'
-import landscapeImg from '../public/test-landscape.png'
 
 export default function Portraits({meta, hankyoProject, hankyoSection}) {
   const [isActive, setActive] = useState("false")
@@ -38,6 +33,8 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
   }, [isActive])
 
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
+  // const result = hankyoSection.section.blocks.filter(type_of => type_of === "image");
+  const images = hankyoSection.section.blocks.filter(image => image.type_of === "image");
 
   return (
     <motion.div
@@ -54,7 +51,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           <div className="hero-row">
             <h1 className="font-size-xxl">{hero.title}</h1>
             <hr className="separator-s" />
-            <p className="font-size-xl">{hero.description}</p>
+            <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
             <hr className="separator-s" />
             <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className="button-s button-black">Open Gallery</a>
           </div>
@@ -66,33 +63,26 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           <div className="icon"><CloseIcon /></div>
         </a>
         <Swiper
-          className="swiper"
-          slidesPerView={"auto"}
-          effect={"fade"}
           centeredSlides={true}
-          keyboard={{ enabled: true }}
+          className="swiper"
+          effect={"fade"}
+          lazy={true}
           loop={true}
-          modules={[Keyboard, EffectFade]}
           initialSlide={0}
+          keyboard={{ enabled: true }}
+          modules={[Lazy, Keyboard, EffectFade]}
+          slidesPerView={"auto"}
         >
-
-          <SwiperSlide>
-            <div className="swiper-box flex-h-center flex-v-center">
-              <figure>
-                <Image alt="Tony de Faria" src={landscapeImg} width={896} height={718} quality={100}/>
-                <figcaption>Samos, Greece, 2021</figcaption>
-              </figure>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="swiper-box flex-h-center flex-v-center">
-              <figure>
-                <Image alt="Tony de Faria" src={portraitImg} width={718} height={896} quality={100}/>
-                <figcaption>Jerash, Jordan, 2021</figcaption>
-              </figure>
-            </div>
-          </SwiperSlide>
+          {images.map((image) => (
+            <SwiperSlide key={image.uid}>
+              <div className="swiper-box flex-h-center flex-v-center">
+                <figure>
+                  <Image alt="Tony de Faria" src={image.image} width={image.width} height={image.height} quality={100} className="swiper-lazy" />
+                  <figcaption>{image.caption}</figcaption>
+                </figure>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </motion.div>

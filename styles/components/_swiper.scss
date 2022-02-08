@@ -5,10 +5,25 @@
 $class: "swiper";
 
 .#{$class} {
+  background-color: transparent;
   float: left;
   width: 100vw;
+  .#{$class}-wrapper {
+    background-color: transparent;
+    float: left;
+    width: 100vw;
+    .#{$class}-slide {
+      background-color: transparent;
+      float: left;
+      width: 100vw;
+    }
+  }
   .#{$class}-box {
     background: $white;
+    background-image: url("/images/loading.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 87.5px 21.5px;
     display: block;
     float: left;
     height: 100vh;
@@ -20,7 +35,7 @@ $class: "swiper";
       max-height: calc(100vh - 64px) !important;
       padding: 0;
       img {
-        @include appear-animation(.50s);
+        @include appear-animation(.25s);
         float: left;
         margin: 0;
         max-height: calc(100vh - 96px) !important;
@@ -31,6 +46,16 @@ $class: "swiper";
         font-family: $mono;
         padding: 8px 0 0;
       }
+    }
+    &.#{$class}-show {
+      opacity: 1;
+      transition: opacity .50s;
+      visibility: visible;
+    }
+    &.#{$class}-hide {
+      opacity: 0;
+      transition: opacity .50s, visibility 0s .50s;
+      visibility: hidden;
     }
   }
 }

@@ -5,9 +5,9 @@
 $class: "hero";
 
 .#{$class} {
-  // background-color: red;
   float: left;
   margin: 0;
+  padding: 80px 0 0;
   width: 720px;
   .#{$class}-box {
     float: left;
@@ -17,6 +17,13 @@ $class: "hero";
       float: left;
       padding: 16px;
       width: 100%;
+      p.bg {
+        span {
+          background-color: $white;
+          color: $black;
+          padding: 2px 8px;
+        }
+      }
     }
   }
 }
@@ -25,7 +32,7 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
-    margin: 0;
+    padding: 24px 0 0;
     width: 100%;
     .#{$class}-box {
       padding: 0;
@@ -39,7 +46,7 @@ $class: "hero";
 // ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
-    margin: 0;
+    padding: 32px 0 0;
     width: 100%;
     .#{$class}-box {
       padding: 0;
@@ -53,7 +60,7 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
-    margin: 0;
+    padding: 48px 0 0;
     width: 100%;
     .#{$class}-box {
       padding: 0;
@@ -67,6 +74,7 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$m} {
   .#{$class} {
+    padding: 64px 0 0;
     .#{$class}-box {
       .#{$class}-row {
       }

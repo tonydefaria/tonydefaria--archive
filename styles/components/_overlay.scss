@@ -7,15 +7,12 @@ $class: "overlay";
 .#{$class} {
   background-color: $white;
   bottom: 0;
-  display: none;
   float: left;
   height: 100vh;
   left: 0;
-  min-height: 100%;
   position: fixed;
   right: 0;
   top: 0;
-  visibility: hidden;
   width: 100vw;
   z-index: 999999;
   .#{$class}-close {
@@ -27,13 +24,11 @@ $class: "overlay";
     z-index: 9999999;
   }
   &.#{$class}-show {
-    display: block;
     opacity: 1;
     transition: opacity .50s;
     visibility: visible;
   }
   &.#{$class}-hide {
-    display: none;
     opacity: 0;
     transition: opacity .50s, visibility 0s .50s;
     visibility: hidden;

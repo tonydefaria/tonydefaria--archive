@@ -1,7 +1,7 @@
 // Secondary
 
 // Built-in Components
-import { useEffect, useCallback } from "react";
+// import { useEffect, useCallback } from "react";
 // import { motion } from "framer-motion"
 // Components
 import BrandLogoComponent from "../components/brand_logo_component"
@@ -25,8 +25,9 @@ export default function Secondary({ children }) {
         <MenuComponent />
       </header>
       <MenuMobileComponent />
+
       <div className="sticky-footer" id="sticky-footer">
-        <main className="universal main flex-v-center">
+        <main className="universal main">
           <div className="universal-box">
             <div className="universal-row">
               {children}

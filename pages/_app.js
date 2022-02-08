@@ -9,6 +9,7 @@ import TagManager from "react-gtm-module";
 // Stylesheets
 import "../styles/composer.scss"
 import "swiper/css";
+import "swiper/css/lazy";
 import "swiper/css/effect-fade";
 
 export default function MyApp({ Component, pageProps}) {

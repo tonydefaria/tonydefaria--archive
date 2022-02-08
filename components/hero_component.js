@@ -12,7 +12,7 @@ export default function HeroComponent({hankyoSection}) {
         <div className="hero-row">
           <h1 className="font-size-display"><span className="black-bg white-cl padded">{hero.title}</span></h1>
           <hr className="separator-s" />
-          <p className="font-size-xxl"><span className="black-cl white-bg padded">{hero.description}</span></p>
+          <p className="font-size-xxl bg" dangerouslySetInnerHTML={{__html: hero.description}} />
         </div>
       </div>
     </div>

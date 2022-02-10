@@ -12,9 +12,10 @@
   width: 100%;
 }
 
-// .header {
-//   min-height: 80px;
-// }
+.header {
+  background-color: white;
+  z-index: 1;
+}
 
 .fixed-header {
   @include fixed;
@@ -61,7 +62,7 @@
 
 // Layout Setup
 .main {
-  padding: 88px 0 0;
+  padding: 88px 0 88px;
   min-height: -webkit-fill-available;
   min-height: calc(100vh - (96px));
   .top {

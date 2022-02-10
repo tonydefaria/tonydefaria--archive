@@ -4,13 +4,15 @@
 import Primary from "../layouts/primary"
 
 // Built-in Components
+import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 // Components
 import MetaComponent from "../components/meta_component"
-import HeroComponent from "../components/hero_component"
 
 export default function Index({meta, hankyoProject, hankyoSection}) {
+  const hero = hankyoSection.section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
   return (
     <motion.div
       initial={{opacity: 0}}
@@ -20,15 +22,15 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
-      <motion.div
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        exit={{opacity: 0}}
-        transition={{delay: .250, opacity: {duration: .250}}}
-        className="width-wide float-left"
-      >
-        <HeroComponent hankyoSection={hankyoSection} />
-      </motion.div>
+      <div className="hero width-wide">
+        <div className="hero-box">
+          <div className="hero-row">
+            <h1 className="font-size-display"><span className="black-cl">{hero.title}</span></h1>
+            <hr className="separator-s" />
+            <p className="font-size-xxxl black-cl" dangerouslySetInnerHTML={{__html: hero.description}} />
+          </div>
+        </div>
+      </div>
     </motion.div>
   )
 }

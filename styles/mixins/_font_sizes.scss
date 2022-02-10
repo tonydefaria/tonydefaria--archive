@@ -116,23 +116,23 @@
   }
 }
 
-@mixin font-size-display {
-  font-size: 64px;
-  line-height: 96px;
-  min-height: 96px;
+@mixin font-size-xxxl {
+  font-size: 96px;
+  line-height: 112px;
+  min-height: 112px;
 
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
-    font-size: 28px;
-    line-height: 44px;
-    min-height: 44px;
+    font-size: 24px;
+    line-height: 32px;
+    min-height: 32px;
   }
 
   // Media Query 360px
   // ------------------------------------------------------------
   @media #{$xs} {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 44px;
     min-height: 44px;
   }
@@ -140,11 +140,74 @@
   // Media Query 480px
   // -------------------------------------------------------------
   @media #{$s} {
-    font-size: 28px;
-    line-height: 44px;
-    min-height: 44px;
+    font-size: 40px;
+    line-height: 52px;
+    min-height: 52px;
+  }
+
+  // Media Query 720px
+  // -------------------------------------------------------------
+  @media #{$m} {
+    font-size: 60px;
+    line-height: 76px;
+    min-height: 76px;
+  }
+
+  // Media Query 960px
+  // -------------------------------------------------------------
+  @media #{$l} {
+    font-size: 80px;
+    line-height: 96px;
+    min-height: 96px;
   }
 }
+
+@mixin font-size-display {
+  font-size: 128px;
+  line-height: 128px;
+  min-height: 128px;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} {
+    font-size: 26px;
+    line-height: 26px;
+    min-height: 26px;
+  }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} {
+    font-size: 40px;
+    line-height: 40px;
+    min-height: 40px;
+  }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} {
+    font-size: 56px;
+    line-height: 56px;
+    min-height: 56px;
+  }
+
+  // Media Query 720px
+  // -------------------------------------------------------------
+  @media #{$m} {
+    font-size: 80px;
+    line-height: 80px;
+    min-height: 80px;
+  }
+
+  // Media Query 960px
+  // -------------------------------------------------------------
+  @media #{$l} {
+    font-size: 96px;
+    line-height: 96px;
+    min-height: 96px;
+  }
+}
+
 
 // Classes
 // -------------------------------------------------------------
@@ -181,6 +244,11 @@
 .font-size-xxl {
   @include font-size-xxl;
   p, div { @include font-size-xxl; }
+}
+
+.font-size-xxxl {
+  @include font-size-xxxl;
+  p, div { @include font-size-xxxl; }
 }
 
 .font-size-display {

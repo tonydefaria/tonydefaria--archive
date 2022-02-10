@@ -46,45 +46,52 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
 
-      <div className="hero">
-        <div className="hero-box">
+      <div className="hero width-wide">
+        <div className="hero-box half">
+          <div className="hero-row">
+            <Image alt="Tony de Faria" src={hero.image} width={hero.width} height={hero.height} quality={100} />
+          </div>
+        </div>
+        <div className="hero-box half">
           <div className="hero-row">
             <h1 className="font-size-xxl">{hero.title}</h1>
             <hr className="separator-s" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
             <hr className="separator-s" />
-            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className="button-s button-black">Open Gallery</a>
+            <p className="font-size-m"><i>Gallery coming soon.</i></p>
+            {/* <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className="button-s button-black">Open Gallery</a>*/}
           </div>
         </div>
       </div>
-
-      <div className={`overlay ${isActive ? "overlay-hide" : "overlay-show"}`}>
-        <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Menu Mobile Trigger" className="link link-black overlay-close">
-          <div className="icon"><CloseIcon /></div>
-        </a>
-        <Swiper
-          centeredSlides={true}
-          className="swiper"
-          effect={"fade"}
-          lazy={true}
-          loop={true}
-          initialSlide={0}
-          keyboard={{ enabled: true }}
-          modules={[Lazy, Keyboard, EffectFade]}
-          slidesPerView={"auto"}
-        >
-          {images.map((image) => (
-            <SwiperSlide key={image.uid}>
-              <div className="swiper-box flex-h-center flex-v-center">
-                <figure>
-                  <Image alt="Tony de Faria" src={image.image} width={image.width} height={image.height} quality={100} className="swiper-lazy" />
-                  <figcaption>{image.caption}</figcaption>
-                </figure>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      {/*
+        <div className={`overlay ${isActive ? "overlay-hide" : "overlay-show"}`}>
+          <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Menu Mobile Trigger" className="link link-black overlay-close">
+            <div className="icon"><CloseIcon /></div>
+          </a>
+          <Swiper
+            centeredSlides={true}
+            className="swiper"
+            effect={"fade"}
+            lazy={true}
+            loop={true}
+            initialSlide={0}
+            keyboard={{ enabled: true }}
+            modules={[Lazy, Keyboard, EffectFade]}
+            slidesPerView={"auto"}
+          >
+            {images.map((image) => (
+              <SwiperSlide key={image.uid}>
+                <div className="swiper-box flex-h-center flex-v-center">
+                  <figure>
+                    <Image alt="Tony de Faria" src={image.image} width={image.width} height={image.height} quality={100} className="swiper-lazy" />
+                    <figcaption>{image.caption}</figcaption>
+                  </figure>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      */}
     </motion.div>
   )
 }

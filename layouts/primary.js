@@ -20,7 +20,7 @@ export default function Primary({ children }) {
   const social_networks = project.social_networks
 
   return (
-    <div className="primary keyvisual">
+    <div className="primary keyvisua">
       <FaviconComponent project={project} />
       <header className="universal header fixed-header">
         <BrandLogoComponent link_colour="link-black" />
@@ -41,7 +41,7 @@ export default function Primary({ children }) {
         <div className="universal-box">
           <div className="universal-row">
             <SocialNetworksComponent project={project} social_networks={social_networks} />
-            <CopyrightComponent text_colour="white-cl" />
+            <CopyrightComponent text_colour="black-cl" />
           </div>
         </div>
       </footer>

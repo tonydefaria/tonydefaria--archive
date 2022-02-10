@@ -27,7 +27,7 @@ export default function Contact({meta, hankyoProject, hankyoSection}) {
           <div className="hero-row">
             <h1 className="font-size-xxl">{title}</h1>
             <hr className="separator-s" />
-            <p className="font-size-xl">{description}</p>
+            <p className="font-size-xl" dangerouslySetInnerHTML={{__html: description}} />
             <hr className="separator-s" />
             <p className="font-size-xl font-weight-700">{email.value}</p>
           </div>

@@ -25,7 +25,6 @@ export default function Secondary({ children }) {
         <MenuComponent />
       </header>
       <MenuMobileComponent />
-
       <div className="sticky-footer" id="sticky-footer">
         <main className="universal main">
           <div className="universal-box">
@@ -35,16 +34,10 @@ export default function Secondary({ children }) {
           </div>
         </main>
       </div>
-
       <footer className="universal footer">
-        <div className="universal-box">
-          <div className="universal-row">
-            <SocialNetworksComponent project={project} social_networks={social_networks} />
-            <CopyrightComponent text_colour="black-cl" />
-          </div>
-        </div>
+        <SocialNetworksComponent project={project} social_networks={social_networks} />
+        <CopyrightComponent text_colour="black-cl" />
       </footer>
-
       <div className="width-wide flex-h-center">
         <CookiesComponent />
       </div>

@@ -24,7 +24,6 @@ export default function Tertiary({ children }) {
           </div>
         </div>
       </header>
-
       <div className="sticky-footer" id="sticky-footer">
         <main className="universal main padding-0">
           <div className="universal-box">
@@ -34,16 +33,10 @@ export default function Tertiary({ children }) {
           </div>
         </main>
       </div>
-
       <footer className="universal footer">
-        <div className="universal-box">
-          <div className="universal-row">
-            <SocialNetworksComponent project={project} social_networks={social_networks} />
-            <CopyrightComponent text_colour="white-cl" />
-          </div>
-        </div>
+        <SocialNetworksComponent project={project} social_networks={social_networks} />
+        <CopyrightComponent text_colour="white-cl" />
       </footer>
-
       <div className="width-wide flex-h-center">
         <CookiesComponent />
       </div>

@@ -8,6 +8,13 @@
   @include border-box;
   -webkit-tap-highlight-color: $transparent;
   -webkit-touch-callout: none;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 html,

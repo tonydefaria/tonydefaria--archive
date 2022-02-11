@@ -16,7 +16,6 @@ export default function Primary({ children }) {
   // Get props
   const project = children.props.hankyoProject.project
   const section = children.props.hankyoSection.section
-  const hero = section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
   const social_networks = project.social_networks
 
   return (
@@ -33,8 +32,8 @@ export default function Primary({ children }) {
         </main>
       </div>
       <footer className="universal footer">
-            <SocialNetworksComponent project={project} social_networks={social_networks} />
-            <CopyrightComponent text_colour="black-cl" />
+        <SocialNetworksComponent project={project} social_networks={social_networks} />
+        <CopyrightComponent text_colour="black-cl" />
       </footer>
       <div className="width-wide flex-h-center">
         <CookiesComponent />

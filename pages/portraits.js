@@ -45,8 +45,8 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
-
-      <div className="hero width-wide">
+      <hr className="separator-l" />
+      <div className="hero">
         <div className="hero-box half">
           <div className="hero-row">
             <Image alt="Tony de Faria" src={hero.image} width={hero.width} height={hero.height} quality={100} />

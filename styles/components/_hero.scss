@@ -7,8 +7,7 @@ $class: "hero";
 .#{$class} {
   float: left;
   margin: 0;
-  padding: 80px 0 0;
-  width: 720px;
+  width: 100%;
   .#{$class}-box {
     float: left;
     padding: 16px;
@@ -21,6 +20,9 @@ $class: "hero";
     &.half {
       width: 50%;
     }
+    &.half-editorial {
+      width: 50%;
+    }
   }
 }
 
@@ -28,8 +30,6 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
-    padding: 24px 0 0;
-    width: 100%;
     .#{$class}-box {
       padding: 0;
       .#{$class}-row {
@@ -45,8 +45,6 @@ $class: "hero";
 // ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
-    padding: 32px 0 0;
-    width: 100%;
     .#{$class}-box {
       padding: 0;
       .#{$class}-row {
@@ -62,8 +60,6 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
-    padding: 48px 0 0;
-    width: 100%;
     .#{$class}-box {
       padding: 0;
       .#{$class}-row {
@@ -79,7 +75,6 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$m} {
   .#{$class} {
-    padding: 64px 0 0;
     .#{$class}-box {
       .#{$class}-row {
       }

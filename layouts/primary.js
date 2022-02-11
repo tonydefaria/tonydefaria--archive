@@ -20,7 +20,7 @@ export default function Primary({ children }) {
   const social_networks = project.social_networks
 
   return (
-    <div className="primary keyvisua">
+    <div className="primary">
       <FaviconComponent project={project} />
       <header className="universal header fixed-header">
         <BrandLogoComponent link_colour="link-black" />
@@ -29,33 +29,16 @@ export default function Primary({ children }) {
       <MenuMobileComponent />
       <div className="sticky-footer" id="sticky-footer">
         <main className="universal main">
-          <div className="universal-box">
-            <div className="universal-row">
-              {children}
-            </div>
-          </div>
+          {children}
         </main>
       </div>
-
       <footer className="universal footer">
-        <div className="universal-box">
-          <div className="universal-row">
             <SocialNetworksComponent project={project} social_networks={social_networks} />
             <CopyrightComponent text_colour="black-cl" />
-          </div>
-        </div>
       </footer>
-
       <div className="width-wide flex-h-center">
         <CookiesComponent />
       </div>
-      <style jsx>{`
-        .keyvisual {
-          background-image: url(${hero.image});
-          background-position: bottom right;
-          background-size: cover;
-        }
-      `}</style>
     </div>
   )
 }

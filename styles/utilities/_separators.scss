@@ -113,19 +113,25 @@
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
-    margin: 32px 0 !important;
+    margin: 16px 0 !important;
   }
 
   // Media Query 360px
   // ------------------------------------------------------------
   @media #{$xs} {
-    margin: 32px 0 !important;
+    margin: 24px 0 !important;
   }
 
   // Media Query 480px
   // -------------------------------------------------------------
   @media #{$s} {
     margin: 32px 0 !important;
+  }
+
+  // Media Query 720px
+  // -------------------------------------------------------------
+  @media #{$m} {
+    margin: 40px 0 !important;
   }
 }
 
@@ -159,19 +165,25 @@
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
-    margin: 64px 0 !important;
+    margin: 40px 0 !important;
   }
 
   // Media Query 360px
   // ------------------------------------------------------------
   @media #{$xs} {
-    margin: 64px 0 !important;
+    margin: 48px 0 !important;
   }
 
   // Media Query 480px
   // -------------------------------------------------------------
   @media #{$s} {
     margin: 64px 0 !important;
+  }
+
+  // Media Query 720px
+  // -------------------------------------------------------------
+  @media #{$s} {
+    margin: 80px 0 !important;
   }
 }
 

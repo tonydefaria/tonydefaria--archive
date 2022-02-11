@@ -22,12 +22,20 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
-      <div className="hero width-wide">
+      <div className="hero">
         <div className="hero-box">
           <div className="hero-row">
-            <h1 className="font-size-display"><span className="black-cl">{hero.title}</span></h1>
-            <hr className="separator-s" />
-            <p className="font-size-xxxl black-cl" dangerouslySetInnerHTML={{__html: hero.description}} />
+            <Image alt="Tony de Faria" src={hero.image} width={hero.width} height={hero.height} quality={100} />
+          </div>
+        </div>
+      </div>
+      <hr className="separator-l" />
+      <div className="hero">
+        <div className="hero-box">
+          <div className="hero-row">
+            <h1 className="font-size-display">{hero.title}</h1>
+            <hr className="separator-l" />
+            <p className="font-size-xxxl" dangerouslySetInnerHTML={{__html: hero.description}} />
           </div>
         </div>
       </div>

@@ -1,5 +1,3 @@
-// Hankyo Integration
-// ----------------------------------------------------
 // SocialNetworks Component
 
 // Built-in Components
@@ -13,7 +11,9 @@ export default function SocialNetworksComponent({project, social_networks}) {
           <li key={social_network.uid} className="social-networks-item">
             <a className="link" rel="noreferrer noopener" href={social_network.url} target="_blank">
               <div className="icon">
-                <Image src={social_network.image} width={64} height={64} alt="icon" title={project.title}/>
+                <figure>
+                  <Image src={social_network.image} width={64} height={64} quality={100} alt="Tony de Faria" title="Tony de Faria" />
+                </figure>
               </div>
             </a>
           </li>

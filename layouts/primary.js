@@ -1,7 +1,7 @@
 // Primary
 
 // Built-in Components
-// import { useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react"
 // import { motion } from "framer-motion"
 // Components
 import BrandLogoComponent from "../components/brand_logo_component"
@@ -15,8 +15,24 @@ import SocialNetworksComponent from "../components/social_networks_component"
 export default function Primary({ children }) {
   // Get props
   const project = children.props.hankyoProject.project
-  const section = children.props.hankyoSection.section
   const social_networks = project.social_networks
+  const [isActive, setActive] = useState("false")
+
+  useEffect(() => {
+    let preform
+    const body = document.getElementsByTagName("body")[0]
+    if (!isActive) {
+      body.classList.add("lock-scroll")
+    } else {
+      body.classList.remove("lock-scroll")
+    }
+    window.onresize = function() {
+      clearTimeout(preform)
+      preform = setTimeout(function() {
+        body.classList.remove("lock-scroll")
+      }, 250)
+    }
+  }, [isActive])
 
   return (
     <div className="primary">

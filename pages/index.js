@@ -25,7 +25,9 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
       <div className="hero">
         <div className="hero-box">
           <div className="hero-row">
-            <Image alt="Tony de Faria" src={hero.image} width={hero.width} height={hero.height} quality={100} />
+            <figure>
+              <Image src={hero.image} width={hero.width} height={hero.height} quality={100} alt="Tony de Faria" title="Tony de Faria" />
+            </figure>
           </div>
         </div>
       </div>

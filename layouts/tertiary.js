@@ -1,7 +1,7 @@
 // Tertiary
 
 // Built-in Components
-// import { useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react"
 // Components
 import BrandIconComponent from "../components/brand_icon_component"
 import CookiesComponent from "../components/cookies_component"
@@ -13,6 +13,23 @@ export default function Tertiary({ children }) {
   // Get props
   const project = children.props.hankyoProject.project
   const social_networks = project.social_networks
+  const [isActive, setActive] = useState("false")
+
+  useEffect(() => {
+    let preform
+    const body = document.getElementsByTagName("body")[0]
+    if (!isActive) {
+      body.classList.add("lock-scroll")
+    } else {
+      body.classList.remove("lock-scroll")
+    }
+    window.onresize = function() {
+      clearTimeout(preform)
+      preform = setTimeout(function() {
+        body.classList.remove("lock-scroll")
+      }, 250)
+    }
+  }, [isActive])
 
   return (
     <div className="tertiary">

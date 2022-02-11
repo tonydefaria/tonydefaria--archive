@@ -45,11 +45,12 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
-      <hr className="separator-l" />
-      <div className="hero">
+      <div className="hero top">
         <div className="hero-box half">
           <div className="hero-row">
-            <Image alt="Tony de Faria" src={hero.image} width={hero.width} height={hero.height} quality={100} />
+            <figure>
+              <Image src={hero.image} width={hero.width} height={hero.height} quality={100} quality={100} alt="Tony de Faria" title="Tony de Faria" />
+            </figure>
           </div>
         </div>
         <div className="hero-box half">
@@ -83,7 +84,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
               <SwiperSlide key={image.uid}>
                 <div className="swiper-box flex-h-center flex-v-center">
                   <figure>
-                    <Image alt="Tony de Faria" src={image.image} width={image.width} height={image.height} quality={100} className="swiper-lazy" />
+                    <Image src={image.image} width={image.width} height={image.height} quality={100} quality={100} alt="Tony de Faria" title="Tony de Faria" className="swiper-lazy" />
                     <figcaption>{image.caption}</figcaption>
                   </figure>
                 </div>

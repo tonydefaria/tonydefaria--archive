@@ -19,27 +19,17 @@ $class: "swiper";
     }
   }
   .#{$class}-box {
-    background: $white;
-    background-image: url("/images/loading.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 87.5px 21.5px;
     display: block;
     float: left;
     height: 100vh;
     padding: 32px;
     width: 100vw;
     figure {
-      float: left;
-      margin: 0;
       max-height: calc(100vh - 64px) !important;
-      padding: 0;
       img {
         @include appear-animation(.25s);
         float: left;
-        margin: 0;
         max-height: calc(100vh - 96px) !important;
-        padding: 0;
       }
       figcaption {
         @include font-size-xs;

@@ -1,6 +1,8 @@
+# *
 User-agent: *
 Allow: /
 
+# *
 User-agent: *
 Disallow: /components
 Disallow: /data

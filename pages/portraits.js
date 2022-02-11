@@ -49,7 +49,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
         <div className="hero-box half">
           <div className="hero-row">
             <figure>
-              <Image src={hero.image} width={hero.width} height={hero.height} quality={100} quality={100} alt="Tony de Faria" title="Tony de Faria" />
+              <Image src={hero.image} width={hero.width} height={hero.height} quality={100} alt="Tony de Faria" title="Tony de Faria" />
             </figure>
           </div>
         </div>

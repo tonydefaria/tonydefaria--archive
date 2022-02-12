@@ -8,7 +8,7 @@ $class: "cookies";
   bottom: 16px;
   display: none;
   float: left;
-  position: absolute;
+  position: fixed;
   width: auto;
   z-index: 999999 !important;
   .#{$class}-box {

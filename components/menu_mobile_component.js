@@ -35,7 +35,7 @@ export default function MenuOverlayComponent() {
             <Link href="/portraits"><a className="link-l link-white">Portraits</a></Link>
           </li>
           <li className="menu-mobile-item">
-            <Link href="/contact"><a className="link-l link-white">Contact</a></Link>
+            <Link href="/contact"><a className="link-l link-white">Say Hello</a></Link>
           </li>
         </ul>
       </div>

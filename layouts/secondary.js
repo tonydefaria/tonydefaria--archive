@@ -1,7 +1,7 @@
 // Secondary
 
 // Built-in Components
-// import React, { useState, useEffect, useCallback } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 // import { motion } from "framer-motion"
 // Components
 import BrandLogoComponent from "../components/brand_logo_component"
@@ -16,6 +16,17 @@ export default function Secondary({ children }) {
   // Get props
   const project = children.props.hankyoProject.project
   const social_networks = project.social_networks
+
+  useEffect(() => {
+    let preform
+    const body = document.getElementsByTagName("body")[0];
+    window.onresize = function() {
+      clearTimeout(preform)
+      preform = setTimeout(function() {
+        body.classList.remove("lock-scroll")
+      }, 250)
+    }
+  }, [])
 
   return (
     <div className="secondary">

@@ -15,6 +15,15 @@ export default function MenuOverlayComponent() {
     setActive(!isActive)
   }
 
+  useEffect(() => {
+    const body = document.getElementsByTagName("body")[0];
+    if (!isActive) {
+      body.classList.add("lock-scroll")
+    } else {
+      body.classList.remove("lock-scroll")
+    }
+  }, [isActive])
+
   return (
     <>
       <div className="menu-mobile-trigger">

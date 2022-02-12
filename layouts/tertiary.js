@@ -17,7 +17,7 @@ export default function Tertiary({ children }) {
 
   useEffect(() => {
     let preform
-    const body = document.getElementsByTagName("body")[0]
+    const body = document.getElementById("lock-scroll")
     if (!isActive) {
       body.classList.add("lock-scroll")
     } else {
@@ -32,7 +32,7 @@ export default function Tertiary({ children }) {
   }, [isActive])
 
   return (
-    <div className="tertiary">
+    <div className="tertiary"  id="lock-scroll">
       <FaviconComponent project={project} />
       <header className="universal header">
         <div className="universal-box">

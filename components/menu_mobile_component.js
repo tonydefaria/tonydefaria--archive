@@ -16,7 +16,7 @@ export default function MenuOverlayComponent() {
   }
 
   useEffect(() => {
-    const body = document.getElementsByTagName("body")[0]
+    const body = document.getElementById("lock-scroll")
     if (!isActive) {
       body.classList.add("lock-scroll")
     } else {

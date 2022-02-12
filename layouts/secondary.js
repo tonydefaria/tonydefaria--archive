@@ -20,7 +20,7 @@ export default function Secondary({ children }) {
 
   useEffect(() => {
     let preform
-    const body = document.getElementsByTagName("body")[0]
+    const body = document.getElementById("lock-scroll")
     if (!isActive) {
       body.classList.add("lock-scroll")
     } else {
@@ -35,7 +35,7 @@ export default function Secondary({ children }) {
   }, [isActive])
 
   return (
-    <div className="secondary">
+    <div className="secondary" id="lock-scroll">
       <FaviconComponent project={project} />
       <header className="universal header fixed-header">
         <BrandLogoComponent link_colour="link-black" />

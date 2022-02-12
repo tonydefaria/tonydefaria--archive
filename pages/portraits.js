@@ -23,15 +23,6 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
     setActive(!isActive);
   };
 
-  useEffect(() => {
-    const body = document.getElementById("lock-scroll")
-    if (!isActive) {
-      body.classList.add("lock-scroll")
-    } else {
-      body.classList.remove("lock-scroll")
-    }
-  }, [isActive])
-
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
   // const result = hankyoSection.section.blocks.filter(type_of => type_of === "image");
   const images = hankyoSection.section.blocks.filter(image => image.type_of === "image");

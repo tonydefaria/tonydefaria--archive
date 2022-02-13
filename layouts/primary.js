@@ -2,6 +2,7 @@
 
 // Built-in Components
 import React, { useState, useEffect, useCallback } from "react"
+import smoothscroll from "smoothscroll-polyfill";
 // import { motion } from "framer-motion"
 // Components
 import BrandLogoComponent from "../components/brand_logo_component"
@@ -18,6 +19,8 @@ export default function Primary({ children }) {
   const social_networks = project.social_networks
 
   useEffect(() => {
+    smoothscroll.polyfill();
+
     let preform
     const body = document.getElementsByTagName("body")[0];
     window.onresize = function() {

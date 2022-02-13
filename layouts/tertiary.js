@@ -2,6 +2,7 @@
 
 // Built-in Components
 import React, { useState, useEffect, useCallback } from "react"
+import smoothscroll from "smoothscroll-polyfill";
 // Components
 import BrandIconComponent from "../components/brand_icon_component"
 import CookiesComponent from "../components/cookies_component"
@@ -15,6 +16,8 @@ export default function Tertiary({ children }) {
   const social_networks = project.social_networks
 
   useEffect(() => {
+    smoothscroll.polyfill();
+
     let preform
     const body = document.getElementsByTagName("body")[0];
     window.onresize = function() {

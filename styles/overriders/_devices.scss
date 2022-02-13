@@ -1,76 +1,56 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Brand
+// File: Devices
 // -------------------------------------------------------------
 
-$class: "brand";
+.mobile {
+  display: none !important;
+  visibility: hidden !important;
+}
 
-.#{$class} {
-  float: left;
-  .#{$class}-box {
-    float: left;
-    list-style: none;
-    margin: 0;
-    padding: 8px 16px;
-    .#{$class}-item {
-      float: left;
-      padding: 16px;
-      &.#{$class}-icon {
-        .link {
-          height: 24px;
-          width: 23.09px;
-          .icon {
-            height: inherit;
-            width: inherit;
-          }
-        }
-      }
-      &.#{$class}-logo {
-        .link {
-          height: 24px;
-          width: 152.02px;
-          .icon {
-            height: inherit;
-            width: inherit;
-          }
-        }
-      }
-    }
-  }
+.desktop {
+  display: block !important;
+  visibility: visible !important;
 }
 
 // Media Query 240px
 // -------------------------------------------------------------
 @media #{$xxs} {
-  .#{$class} {
-    .#{$class}-box {
-      padding: 8px 0;
-      .#{$class}-item {
-      }
-    }
+  .mobile {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .desktop {
+    display: none !important;
+    visibility: hidden !important;
   }
 }
 
 // Media Query 360px
 // ------------------------------------------------------------
 @media #{$xs} {
-  .#{$class} {
-    .#{$class}-box {
-      padding: 8px 0;
-      .#{$class}-item {
-      }
-    }
+  .mobile {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .desktop {
+    display: none !important;
+    visibility: hidden !important;
   }
 }
 
 // Media Query 480px
 // -------------------------------------------------------------
 @media #{$s} {
-  .#{$class} {
-    .#{$class}-box {
-      padding: 8px 0;
-      .#{$class}-item {
-      }
-    }
+  .mobile {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .desktop {
+    display: none !important;
+    visibility: hidden !important;
   }
 }
 

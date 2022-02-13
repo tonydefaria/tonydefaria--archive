@@ -11,7 +11,7 @@ export default function BrandLogoComponent({link_colour}) {
   return (
     <div className="brand">
       <div className="brand-box">
-        <div className="brand-item brand-logo brand-desktop">
+        <div className="brand-item brand-logo desktop">
           <Link href="/">
             <a className={`link ${link_colour}`}>
               <div className="icon">
@@ -20,7 +20,7 @@ export default function BrandLogoComponent({link_colour}) {
             </a>
           </Link>
         </div>
-        <div className="brand-item brand-icon brand-mobile">
+        <div className="brand-item brand-icon mobile">
           <Link href="/">
             <a className={`link ${link_colour}`}>
               <div className="icon">

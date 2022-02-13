@@ -1,5 +1,5 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File:    Layouts
+// File: Layouts
 // -------------------------------------------------------------
 
 .header,
@@ -63,7 +63,7 @@
 
 // Layout Setup
 .main {
-  padding: 88px 0 88px;
+  padding: 72px 0;
   min-height: -webkit-fill-available;
   min-height: calc(100vh - (96px));
   .top {
@@ -83,39 +83,27 @@
 // Media Query 240px
 // -------------------------------------------------------------
 @media #{$xxs} {
-  .sticky-footer {
-    min-height: -webkit-fill-available;
-    min-height: calc(100vh - 112px);
-  }
   .main {
     min-height: -webkit-fill-available;
-    min-height: calc(100vh - 112px);
+    min-height: calc(100vh - 96px);
   }
 }
 
 // Media Query 360px
 // ------------------------------------------------------------
 @media #{$xs} {
-  .sticky-footer {
-    min-height: -webkit-fill-available;
-    min-height: calc(100vh - 112px);
-  }
   .main {
     min-height: -webkit-fill-available;
-    min-height: calc(100vh - 112px);
+    min-height: calc(100vh - 96px);
   }
 }
 
 // Media Query 480px
 // -------------------------------------------------------------
 @media #{$s} {
-  .sticky-footer {
-    min-height: -webkit-fill-available;
-    min-height: calc(100vh - 112px);
-  }
   .main {
     min-height: -webkit-fill-available;
-    min-height: calc(100vh - 112px);
+    min-height: calc(100vh - 96px);
   }
 }
 

@@ -1,5 +1,5 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File:        Composer
+// File: Composer
 // Version:     0.0.1.alpha
 // Description: A Minimal and Lightweight Design System.
 // -------------------------------------------------------------
@@ -75,6 +75,7 @@
 // ------------------------------------------------------------
 @import "./overriders/colours";
 @import "./overriders/cursors";
+@import "./overriders/devices";
 @import "./overriders/displays";
 @import "./overriders/floats";
 @import "./overriders/font_families";

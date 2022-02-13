@@ -35,15 +35,13 @@ export default function Tertiary({ children }) {
           </div>
         </div>
       </header>
-      <div className="sticky-footer" id="sticky-footer">
-        <main className="universal main padding-0">
-          <div className="universal-box">
-            <div className="universal-row">
-              {children}
-            </div>
+      <main className="universal main padding-0">
+        <div className="universal-box">
+          <div className="universal-row">
+            {children}
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
       <footer className="universal footer">
         <SocialNetworksComponent project={project} social_networks={social_networks} />
         <CopyrightComponent text_colour="white-cl" />

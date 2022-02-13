@@ -52,6 +52,9 @@ body {
   overscroll-behavior: contain;
   scrollbar-width: none;
   scroll-behavior: smooth;
+  &.scroll {
+    overflow-y: scroll !important;
+  }
   &.lock-scroll {
     overflow-y: hidden !important;
   }

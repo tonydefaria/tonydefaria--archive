@@ -29,7 +29,7 @@ export default function Primary({ children }) {
   }, [])
 
   return (
-    <div className="primary" id="lock-scroll">
+    <div className="primary">
       <FaviconComponent project={project} />
       <header className="universal header fixed-header">
         <BrandLogoComponent link_colour="link-black" />

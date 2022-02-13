@@ -3,6 +3,7 @@
 // Built-in components
 import React, { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
+import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 // Icons
 import MenuIcon from "../icons/menu"
 
@@ -16,11 +17,15 @@ export default function MenuOverlayComponent() {
   }
 
   useEffect(() => {
-    const body = document.getElementsByTagName("body")[0];
-    if (!isActive) {
-      body.classList.add("lock-scroll")
-    } else {
-      body.classList.remove("lock-scroll")
+    if (isMobile) {
+      const body = document.getElementsByTagName("body")[0];
+      if (!isActive) {
+        body.classList.remove("scroll")
+        body.classList.add("lock-scroll")
+      } else {
+        body.classList.remove("lock-scroll")
+        body.classList.add("scroll")
+      }
     }
   }, [isActive])
 

@@ -14,7 +14,7 @@ export default function MenuComponent() {
           <Link href="/portraits"><a className="link-m link-black text-align-center">Portraits</a></Link>
         </li>
         <li className="menu-item desktop">
-          <Link href="/contact"><a className="link-m link-black text-align-center">Say Hello</a></Link>
+          <Link href="/contact"><a className="link-m link-black text-align-center">Contact</a></Link>
         </li>
       </ul>
     </div>

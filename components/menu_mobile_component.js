@@ -35,7 +35,7 @@ export default function MenuOverlayComponent() {
           </li>
         </ul>
       </div>
-      <div onClick={handleToggle} className={`menu-mobile flex-h-center flex-v-center ${isActive ? "menu-mobile-hide" : "menu-mobile-show"}`} id="menu-mobile">
+      <div onClick={handleToggle} className={`menu-mobile flex-h-center ${isActive ? "menu-mobile-hide" : "menu-mobile-show"}`} id="menu-mobile">
         <ul className="menu-mobile-box">
           <li className="menu-mobile-item">
             <Link href="/"><a className="link-l link-white">Home</a></Link>
@@ -44,7 +44,7 @@ export default function MenuOverlayComponent() {
             <Link href="/portraits"><a className="link-l link-white">Portraits</a></Link>
           </li>
           <li className="menu-mobile-item">
-            <Link href="/contact"><a className="link-l link-white">Say Hello</a></Link>
+            <Link href="/contact"><a className="link-l link-white">Contact</a></Link>
           </li>
         </ul>
       </div>

@@ -20,6 +20,8 @@ $class: "menu-mobile";
     list-style: none;
     margin: 0;
     padding: 24px;
+    position: absolute;
+    top: 20%;
     width: 240px;
     .#{$class}-item {
       float: left;

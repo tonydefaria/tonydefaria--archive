@@ -31,12 +31,12 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
           </div>
         </div>
       </div>
-      <hr className="separator-l" />
       <div className="hero">
         <div className="hero-box">
           <div className="hero-row">
+            <hr className="separator-m" />
             <h1 className="font-size-display">{hero.title}</h1>
-            <hr className="separator-l" />
+            <hr className="separator-m" />
             <p className="font-size-xxxl" dangerouslySetInnerHTML={{__html: hero.description}} />
           </div>
         </div>

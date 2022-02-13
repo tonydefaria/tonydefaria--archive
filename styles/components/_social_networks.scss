@@ -10,7 +10,7 @@ $class: "social-networks";
   .#{$class}-box {
     float: left;
     list-style: none;
-    padding: 16px;
+    padding: 0 16px;
     width: auto;
     &.no-padding {
       padding: 0;

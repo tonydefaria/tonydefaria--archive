@@ -17,19 +17,11 @@ $class: "menu";
       margin: 0;
       padding: 16px;
       width: auto;
-      svg {
-        float: left;
-        height: 20px;
-        margin: 2px 0;
-        width: 24px;
-      }
-      &.mobile {
-        display: none;
-        visibility: hidden;
-      }
-      &.desktop {
-        display: block;
-        visibility: visible;
+      .link-m {
+        font-weight: 900;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
       }
     }
   }

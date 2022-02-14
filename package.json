@@ -20,7 +20,7 @@
     "react-gtm-module": "^2.0.11",
     "sass": "^1.49.7",
     "smoothscroll-polyfill": "^0.4.4",
-    "swiper": "^8.0.5"
+    "swiper": "^8.0.6"
   },
   "devDependencies": {
     "eslint": "^8.9.0",

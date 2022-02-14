@@ -16,8 +16,12 @@ $class: "hero";
       float: left;
       padding: 16px;
       width: 100%;
-      img {
-        border-radius: 4px;
+      figure {
+        width: 100%;
+        img {
+          border-radius: 4px;
+          width: 100vw !important;
+        }
       }
     }
     &.half {

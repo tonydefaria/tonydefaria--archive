@@ -9,9 +9,8 @@ import MetaComponent from "../components/meta_component"
 
 export default function Contact({meta, hankyoProject, hankyoSection}) {
 
+  const hero = hankyoSection.section.blocks.find(({uid}) => uid === "97jSqZqqUvzZmFeZH3rPXSa3")
   const email = hankyoProject.project.global_attributes.find(({uid}) => uid === "McLJmJJZLwuvUtkBttFLr3is")
-  const title = hankyoSection.section.blocks.find(({uid}) => uid === "W6AxmbQmmJQmW2iJKVPH2Zbq").title
-  const description = hankyoSection.section.blocks.find(({uid}) => uid === "UEtdRJy4D7ZPaGhhHfE4g9Qq").description
 
   return (
     <motion.div
@@ -25,9 +24,9 @@ export default function Contact({meta, hankyoProject, hankyoSection}) {
       <div className="hero top">
         <div className="hero-box half">
           <div className="hero-row">
-            <h1 className="font-size-xxl">{title}</h1>
+            <h1 className="font-size-xxl">{hero.title}</h1>
             <hr className="separator-s" />
-            <p className="font-size-xl" dangerouslySetInnerHTML={{__html: description}} />
+            <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
             <hr className="separator-s" />
             <p className="font-size-xl font-weight-700">{email.value}</p>
           </div>

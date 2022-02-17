@@ -12,7 +12,7 @@ export default function SocialNetworksComponent({project, social_networks}) {
             <a className="link" rel="noreferrer noopener" href={social_network.url} target="_blank">
               <div className="icon">
                 <figure>
-                  <Image src={social_network.image} width={64} height={64} quality={100} alt="Tony de Faria" title="Tony de Faria" />
+                  <Image src={social_network.image} width={64} height={64} quality={100} alt="Icon" title="Tony de Faria" />
                 </figure>
               </div>
             </a>

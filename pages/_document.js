@@ -1,4 +1,4 @@
-// App
+// Document
 
 // Built-in Components
 import Document, { Html, Head, Main, NextScript } from "next/document"
@@ -13,7 +13,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-        <body className="scroll">
+        <body class="scroll">
           <Main />
           <NextScript />
         </body>

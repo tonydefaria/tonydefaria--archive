@@ -4,7 +4,8 @@
 import Primary from "../layouts/primary"
 
 // Built-in Components
-import Link from "next/link"
+// import Link from "next/link"
+import Head from "next/head"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
@@ -12,6 +13,7 @@ import { motion } from "framer-motion"
 import MetaComponent from "../components/meta_component"
 
 export default function Index({meta, hankyoProject, hankyoSection}) {
+
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "wqq2dxdWkWsqRwjWAbiCEpbx")
   return (
     <motion.div
@@ -22,11 +24,14 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
+      <Head>
+        <link rel="prefetch" as="image" href={hero.image} />
+      </Head>
       <div className="hero">
         <div className="hero-box">
           <div className="hero-row">
-            <figure>
-              <Image src={hero.image} width={hero.width} height={hero.height} quality={100} alt="Tony de Faria" title="Tony de Faria" />
+            <figure className="loading">
+              <Image src={hero.image} width={hero.width} height={hero.height} quality={100} alt="Hero Image" title="Tony de Faria" />
             </figure>
           </div>
         </div>

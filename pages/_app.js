@@ -1,8 +1,8 @@
 // App
 
 // Built-in Components
-import React, { useEffect } from "react"
-import { AnimatePresence } from "framer-motion"
+import React, { useEffect, useLayoutEffect } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import Cookies from "js-cookie"
 import TagManager from "react-gtm-module";
 

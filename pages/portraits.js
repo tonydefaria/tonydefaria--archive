@@ -4,6 +4,7 @@
 import Secondary from "../layouts/secondary"
 // Built-in Components
 import React, { useState, useEffect } from "react"
+import Head from "next/head"
 import Image from "next/image"
 import { motion } from "framer-motion"
 // Swiper
@@ -25,7 +26,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
 
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
   // const result = hankyoSection.section.blocks.filter(type_of => type_of === "image");
-  const images = hankyoSection.section.blocks.filter(image => image.type_of === "image");
+  // const images = hankyoSection.section.blocks.filter(image => image.type_of === "image");
 
   return (
     <motion.div
@@ -36,11 +37,14 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
+      <Head>
+        <link rel="prefetch" as="image" href={hero.image} />
+      </Head>
       <div className="hero top">
         <div className="hero-box half">
           <div className="hero-row">
-            <figure>
-              <Image src={hero.image} width={hero.width} height={hero.height} quality={100} alt="Tony de Faria" title="Tony de Faria" />
+            <figure className="loading">
+              <Image src={hero.image} width={hero.width} height={hero.height} quality={100} alt="Hero Image" title="Tony de Faria" />
             </figure>
           </div>
         </div>
@@ -74,8 +78,8 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
             {images.map((image) => (
               <SwiperSlide key={image.uid}>
                 <div className="swiper-box flex-h-center flex-v-center">
-                  <figure>
-                    <Image src={image.image} width={image.width} height={image.height} quality={100} quality={100} alt="Tony de Faria" title="Tony de Faria" className="swiper-lazy" />
+                  <figure className="loading">
+                    <Image src={image.image} width={image.width} height={image.height} quality={100} quality={100} alt="Gallery Image" title="Tony de Faria" className="swiper-lazy" />
                     <figcaption>{image.caption}</figcaption>
                   </figure>
                 </div>

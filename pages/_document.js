@@ -13,7 +13,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-        <body class="scroll">
+        <body className="scroll">
           <Main />
           <NextScript />
         </body>

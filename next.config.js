@@ -22,7 +22,15 @@ module.exports = {
             key: "strict-transport-security",
             value: "max-age=31536000; includeSubDomains; preload",
           }
-        ]
+        ],
+        source: "/:all*(svg|jpg|png|webp)",
+        locale: false,
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, must-revalidate",
+          }
+        ],
       }
     ]
   }

@@ -25,7 +25,7 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
       <Head>
-        <link rel="prefetch" as="image" href={hero.image} />
+        <link rel="preload" as="image" href={hero.image} />
       </Head>
       <div className="hero">
         <div className="hero-box">

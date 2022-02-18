@@ -9,7 +9,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Lazy, Keyboard, EffectFade} from "swiper";
+import { Keyboard, EffectFade} from "swiper";
 // Components
 import MetaComponent from "../components/meta_component"
 // Icons
@@ -37,9 +37,9 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
       <Head>
-        <link rel="prefetch" as="image" href={hero.image} />
+        <link rel="preload" as="image" href={hero.image} />
         {images.map((image) => (
-          <link key={image.uid} rel="prefetch" as="image" href={image.image} />
+          <link key={image.uid} rel="preload" as="image" href={image.image} />
         ))}
       </Head>
       <div className="hero top">
@@ -69,18 +69,18 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           centeredSlides={true}
           className="swiper"
           effect={"fade"}
-          lazy={true}
+          // lazy={true}
           loop={true}
           initialSlide={0}
           keyboard={{ enabled: true }}
-          modules={[Lazy, Keyboard, EffectFade]}
+          modules={[Keyboard, EffectFade]}
           slidesPerView={"auto"}
         >
           {images.map((image) => (
             <SwiperSlide key={image.uid}>
               <div className="swiper-box flex-h-center flex-v-center">
                 <figure className="loading">
-                  <Image src={image.image} width={image.width} height={image.height} quality={100} alt="Gallery Image" title="Tony de Faria" className="swiper-lazy" />
+                  <Image src={image.image} width={image.width} height={image.height} quality={75} alt="Gallery Image" title="Tony de Faria" />
                   <figcaption>{image.caption}</figcaption>
                 </figure>
               </div>

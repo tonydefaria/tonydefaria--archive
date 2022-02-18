@@ -47,7 +47,7 @@ export default function MetaComponent({hankyoProject, meta}) {
 
       {/* Preloaders */}
       <link rel="dns-prefetch" href="https://use.typekit.net/sjv6gba.css" />
-      <link rel="prefetch" as="image" href={meta.image} />
+      <link rel="preload" as="image" href={meta.image} />
     </Head>
   )
 }

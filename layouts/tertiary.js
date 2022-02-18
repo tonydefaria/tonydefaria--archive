@@ -49,9 +49,11 @@ export default function Tertiary({ children }) {
         <SocialNetworksComponent project={project} social_networks={social_networks} />
         <CopyrightComponent text_colour="white-cl" />
       </footer>
-      <div className="width-wide flex-h-center">
-        <CookiesComponent />
-      </div>
+      {/*
+        <div className="width-wide flex-h-center">
+          <CookiesComponent />
+        </div>
+      */}
     </div>
   )
 }

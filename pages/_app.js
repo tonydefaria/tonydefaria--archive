@@ -3,8 +3,11 @@
 // Built-in Components
 import React, { useEffect, useLayoutEffect } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import Cookies from "js-cookie"
-import TagManager from "react-gtm-module";
+// import Cookies from "js-cookie"
+// import TagManager from "react-gtm-module";
+
+// Components
+import ScriptsComponent from "../components/scripts_component"
 
 // Stylesheets
 import "../styles/composer.scss"
@@ -16,18 +19,21 @@ export default function MyApp({ Component, pageProps}) {
   const Layout = Component.Layout ? Component.Layout : React.Fragment;
 
   // Hooks
-  useEffect(() => {
-    const cookie = Cookies.get("weLoveCookies")
-    if (cookie === "iWantCookies") {
-      TagManager.initialize({ gtmId: "GTM-W4P8CGP" })
-    }
-  }, []);
+  // useEffect(() => {
+  //   const cookie = Cookies.get("weLoveCookies")
+  //   if (cookie === "iWantCookies") {
+  //     TagManager.initialize({ gtmId: "GTM-W4P8CGP" })
+  //   }
+  // }, []);
 
   return (
-    <AnimatePresence exitBeforeEnter>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </AnimatePresence>
+    <>
+      <ScriptsComponent/>
+      <AnimatePresence exitBeforeEnter>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </AnimatePresence>
+    </>
   )
 }

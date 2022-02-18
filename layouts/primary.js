@@ -46,9 +46,11 @@ export default function Primary({ children }) {
         <SocialNetworksComponent project={project} social_networks={social_networks} />
         <CopyrightComponent text_colour="black-cl" />
       </footer>
-      <div className="width-wide flex-h-center">
-        <CookiesComponent />
-      </div>
+      {/*
+        <div className="width-wide flex-h-center">
+          <CookiesComponent />
+        </div>
+      */}
     </div>
   )
 }

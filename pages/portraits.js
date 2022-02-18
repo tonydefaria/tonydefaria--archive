@@ -16,9 +16,6 @@ import MetaComponent from "../components/meta_component"
 import CloseIcon from "../icons/close"
 
 export default function Portraits({meta, hankyoProject, hankyoSection}) {
-  // Cabin Event
-  const cabinOpenGallery = () => cabin.event("Open Gallery")
-
   const [isActive, setActive] = useState("false")
 
   // Toggle
@@ -26,11 +23,6 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
     event.preventDefault();
     setActive(!isActive);
   };
-
-  function mergeFunctions(){
-    handleToggle(event)
-    cabinOpenGallery()
-  }
 
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
   const images = hankyoSection.section.blocks.filter(image => image.type_of === "image");
@@ -64,7 +56,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
             <hr className="separator-s" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
             <hr className="separator-s" />
-            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={mergeFunctions} className="button-l button-black text-transform-uppercase font-weight-900">Open Gallery</a>
+            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} data-cabin-event="Open Gallery" className="button-l button-black text-transform-uppercase font-weight-900">Open Gallery</a>
           </div>
         </div>
       </div>

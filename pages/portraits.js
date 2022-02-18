@@ -25,9 +25,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
   };
 
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
-  // const result = hankyoSection.section.blocks.filter(type_of => type_of === "image");
   const images = hankyoSection.section.blocks.filter(image => image.type_of === "image");
-  const imagesPrefetch = hankyoSection.section.blocks.filter(image => image.type_of === "image");
 
   return (
     <motion.div
@@ -40,7 +38,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
       <Head>
         <link rel="prefetch" as="image" href={hero.image} />
-        {imagesPrefetch.map((image) => (
+        {images.map((image) => (
           <link key={image.uid} rel="prefetch" as="image" href={image.image} />
         ))}
       </Head>
@@ -82,7 +80,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
             <SwiperSlide key={image.uid}>
               <div className="swiper-box flex-h-center flex-v-center">
                 <figure className="loading">
-                  <Image src={image.image} width={image.width} height={image.height} quality={100} quality={100} alt="Gallery Image" title="Tony de Faria" className="swiper-lazy" />
+                  <Image src={image.image} width={image.width} height={image.height} quality={100} alt="Gallery Image" title="Tony de Faria" className="swiper-lazy" />
                   <figcaption>{image.caption}</figcaption>
                 </figure>
               </div>

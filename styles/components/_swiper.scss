@@ -19,6 +19,7 @@ $class: "swiper";
     }
   }
   .#{$class}-box {
+    background-color: $white;
     display: block;
     float: left;
     height: 100vh;

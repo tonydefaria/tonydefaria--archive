@@ -26,7 +26,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
 
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
   // const result = hankyoSection.section.blocks.filter(type_of => type_of === "image");
-  // const images = hankyoSection.section.blocks.filter(image => image.type_of === "image");
+  const images = hankyoSection.section.blocks.filter(image => image.type_of === "image");
 
   return (
     <motion.div
@@ -39,6 +39,9 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
       <Head>
         <link rel="prefetch" as="image" href={hero.image} />
+        {images.map((image) => (
+          <link key={image.uid} rel="prefetch" as="image" href={image.image} />
+        ))}
       </Head>
       <div className="hero top">
         <div className="hero-box half">
@@ -54,40 +57,38 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
             <hr className="separator-s" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
             <hr className="separator-s" />
-            <p className="font-size-m"><i>Gallery coming soon.</i></p>
-            {/* <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className="button-s button-black">Open Gallery</a>*/}
+            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className="button-xl button-black">Open Gallery</a>
           </div>
         </div>
       </div>
-      {/*
-        <div className={`overlay ${isActive ? "overlay-hide" : "overlay-show"}`}>
-          <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Menu Mobile Trigger" className="link link-black overlay-close">
-            <div className="icon"><CloseIcon /></div>
-          </a>
-          <Swiper
-            centeredSlides={true}
-            className="swiper"
-            effect={"fade"}
-            lazy={true}
-            loop={true}
-            initialSlide={0}
-            keyboard={{ enabled: true }}
-            modules={[Lazy, Keyboard, EffectFade]}
-            slidesPerView={"auto"}
-          >
-            {images.map((image) => (
-              <SwiperSlide key={image.uid}>
-                <div className="swiper-box flex-h-center flex-v-center">
-                  <figure className="loading">
-                    <Image src={image.image} width={image.width} height={image.height} quality={100} quality={100} alt="Gallery Image" title="Tony de Faria" className="swiper-lazy" />
-                    <figcaption>{image.caption}</figcaption>
-                  </figure>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      */}
+
+      <div className={`overlay ${isActive ? "overlay-hide" : "overlay-show"}`}>
+        <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Menu Mobile Trigger" className="link link-black overlay-close">
+          <div className="icon"><CloseIcon /></div>
+        </a>
+        <Swiper
+          centeredSlides={true}
+          className="swiper"
+          effect={"fade"}
+          lazy={true}
+          loop={true}
+          initialSlide={0}
+          keyboard={{ enabled: true }}
+          modules={[Lazy, Keyboard, EffectFade]}
+          slidesPerView={"auto"}
+        >
+          {images.map((image) => (
+            <SwiperSlide key={image.uid}>
+              <div className="swiper-box flex-h-center flex-v-center">
+                <figure className="loading">
+                  <Image src={image.image} width={image.width} height={image.height} quality={100} quality={100} alt="Gallery Image" title="Tony de Faria" className="swiper-lazy" />
+                  <figcaption>{image.caption}</figcaption>
+                </figure>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </motion.div>
   )
 }

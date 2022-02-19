@@ -12,7 +12,7 @@ export default function MetaComponent({hankyoProject, meta}) {
   } else {
     baseURL = meta.url
   }
-  const title = hankyoProject.project.title + " | " + meta.title
+  const title = meta.title
   const author = hankyoProject.project.global_attributes.find(({uid}) => uid === "vVJh6fY3hXPpTi1mnhu2g6wG").value
   const twitter_handle = hankyoProject.project.global_attributes.find(({uid}) => uid === "dZabogRgkov9zRRh7oj47r8q").value
   const twitter_card = hankyoProject.project.global_attributes.find(({uid}) => uid === "r5BSc98jYfUZbNLxZPVSesHP").value

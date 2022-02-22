@@ -9,7 +9,7 @@ export default function ScriptsComponent() {
     <>
       {/* Analytics */}
       {/* onLoad={(e) => { console.error("Loaded", e)}} */}
-      <Script async="true" defer="true" src="https://cabin.tonydefaria.com/hello.js" strategy="beforeInteractive" />
+      <Script async defer src="https://cabin.tonydefaria.com/hello.js" strategy="beforeInteractive" />
     </>
   )
 }

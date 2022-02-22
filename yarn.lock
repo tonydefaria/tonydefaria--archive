@@ -1213,10 +1213,10 @@ fp-and-or@^0.1.3:
   resolved "https://registry.yarnpkg.com/fp-and-or/-/fp-and-or-0.1.3.tgz#e6fba83872a5853a56b3ebdf8d3167f5dfca1882"
   integrity sha512-wJaE62fLaB3jCYvY2ZHjZvmKK2iiLiiehX38rz5QZxtdN8fVPJDeZUiVvJrHStdTc+23LHlyZuSEKgFc0pxi2g==
 
-framer-motion@^6.2.6:
-  version "6.2.6"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-6.2.6.tgz#75277b4944a1234beaf7453da19028bbf4f75cce"
-  integrity sha512-7eGav5MxEEzDHozQTDY6+psTIOw2i2kM1QVoJOC3bCp9VOKoo+mKR5n7aT5JPh7ksEKFYJYz0GJDils/9S+oLA==
+framer-motion@^6.2.7:
+  version "6.2.7"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-6.2.7.tgz#14e71ca933b63dc85327b3ea9ba2f1564f116dd3"
+  integrity sha512-RExmZCFpJ3OCakoXmZz8iW8ZI5MoaHmVadydetvTSrNaKmZ7ZC/JDQpNyw1NoDG+fchRGP86lXoiTFSQuin+Cg==
   dependencies:
     framesync "6.0.1"
     hey-listen "^1.0.8"
@@ -2157,10 +2157,10 @@ negotiator@^0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
-next-sitemap@^2.4.3:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.4.3.tgz#2c341ddb1b6626441161c514466d86fbace51e37"
-  integrity sha512-7XR3segHHv9rL/PrK/0xgJUqCmc/53wFOlwglmVGt9dvDkmMdCmI9lxuL59nCCdpW6OPxdCJ9ocZjydq7kjbSQ==
+next-sitemap@^2.4.6:
+  version "2.4.6"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.4.6.tgz#a92cbbfafca3884867fc0158a768597ff992d160"
+  integrity sha512-xfQbpmJF96NUgIxlOitfDyRngZB24avaWIzDOSVosEpUV2SdMNsRuAm0IeSVdYpYSI1PZ6LldvT9Xnumpc016Q==
   dependencies:
     "@corex/deepmerge" "^2.6.148"
     minimist "^1.2.5"
@@ -2238,10 +2238,10 @@ npm-bundled@^1.1.1:
   dependencies:
     npm-normalize-package-bin "^1.0.1"
 
-npm-check-updates@^12.3.1:
-  version "12.3.1"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-12.3.1.tgz#48339da0331e9c857b94be04b33dfe7f5ec34fbd"
-  integrity sha512-rvXyiUnc9zw3WXakqv0LsdFDc1V4T8DHG8AdWEjJiqfOZdBI4q8ekTt/BFqLQAtcXo5Pu6WGqjA9oDnFi4UV3g==
+npm-check-updates@^12.4.0:
+  version "12.4.0"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-12.4.0.tgz#67e8e1b88551167368ec246dfd4302ce3007d83d"
+  integrity sha512-X14H74M8SVFkStmP1NDOMh0OjLB3mU2dwUeM71zyITJHkm08MASwwTcydW6YuGcNW1RUlVq1cQY2yWijv4zKUQ==
   dependencies:
     chalk "^4.1.2"
     cint "^8.2.1"

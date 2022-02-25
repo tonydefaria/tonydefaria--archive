@@ -9,7 +9,7 @@ export default function SocialNetworksComponent({project, social_networks}) {
       <ul className="social-networks-box">
         {social_networks.map((social_network) => (
           <li key={social_network.uid} className="social-networks-item">
-            <a className="link" rel="noreferrer noopener" href={social_network.url} target="_blank">
+            <a className="link" rel="noreferrer noopener" href={social_network.url} target="_blank" data-cabin-event={social_network.name}>
               <div className="icon">
                 <figure>
                   <Image src={social_network.image} width={64} height={64} quality={100} alt="Icon" title="Tony de Faria" />

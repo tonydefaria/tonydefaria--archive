@@ -56,7 +56,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
             <hr className="separator-s" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
             <hr className="separator-s" />
-            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className="button-l button-black text-transform-uppercase font-weight-900" data-cabin-event="Portraits Gallery">Open Gallery</a>
+            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className="button-l button-black text-transform-uppercase font-weight-900" data-cabin-event="Open Portraits Gallery">Open Gallery</a>
           </div>
         </div>
       </div>

@@ -18,16 +18,16 @@ import CloseIcon from "../icons/close"
 export default function Portraits({meta, hankyoProject, hankyoSection}) {
   const [isActive, setActive] = useState("false")
 
-  // Event
-  const trackOpenPortraitsGallery = (event) => {
+  // Cabin Event
+  const trackOpenPortraitsGalleryCabin = (event) => {
     event.preventDefault()
-    cabin.event("Open Portraits Gallery")
+    window.cabin.event("Portraits Gallery")
   }
 
   // Fathom Event
   const trackOpenPortraitsGalleryFathom = (event) => {
     event.preventDefault()
-    fathom.trackGoal("HJHEPKKC", 0);
+    window.fathom.trackGoal("HJHEPKKC", 0)
   }
 
   // Toggle
@@ -37,7 +37,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
   }
 
   const bindFunctions = (event) => {
-    trackOpenPortraitsGallery(event)
+    trackOpenPortraitsGalleryCabin(event)
     trackOpenPortraitsGalleryFathom(event)
     handleToggle(event)
   }

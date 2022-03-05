@@ -35,8 +35,8 @@ export default function CursorComponent() {
 
   return (
     <>
-      <div class="cursor-outer"></div>
-      <div class="cursor-inner"></div>
+      {/* <div className="cursor-outer"></div> */}
+      <div className="cursor-inner"></div>
     </>
   )
 }

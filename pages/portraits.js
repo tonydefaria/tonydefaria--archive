@@ -18,11 +18,22 @@ import CloseIcon from "../icons/close"
 export default function Portraits({meta, hankyoProject, hankyoSection}) {
   const [isActive, setActive] = useState("false")
 
+  // Event
+  const trackOpenPortraitsGallery = (event) => {
+    event.preventDefault();
+    cabin.event("Open Portraits Gallery")
+  }
+
   // Toggle
   const handleToggle = (event) => {
     event.preventDefault();
     setActive(!isActive);
   };
+
+  const bindFunctions = (event) => {
+    trackOpenPortraitsGallery(event)
+    handleToggle(event)
+  }
 
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
   const images = hankyoSection.section.blocks.filter(image => image.type_of === "image");
@@ -56,7 +67,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
             <hr className="separator-s" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
             <hr className="separator-s" />
-            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={handleToggle} className="button-l button-black text-transform-uppercase font-weight-900" data-cabin-event="Open Portraits Gallery">Open Gallery</a>
+            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={bindFunctions} className="button-l button-black text-transform-uppercase font-weight-900">Open Gallery</a>
           </div>
         </div>
       </div>

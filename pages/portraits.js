@@ -27,7 +27,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
   // Fathom Event
   const trackOpenPortraitsGalleryFathom = (event) => {
     event.preventDefault()
-    fathom.trackGoal("OGNVGKMQ", 0)
+    fathom.trackGoal("HJHEPKKC", 0);
   }
 
   // Toggle

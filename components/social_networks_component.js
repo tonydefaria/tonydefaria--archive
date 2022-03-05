@@ -4,18 +4,13 @@
 import Image from "next/image"
 
 export default function SocialNetworksComponent({project, social_networks}) {
-
-
   // Cabin Event
   const trackSocialNetworkCabin = (event) => {
-    event.preventDefault()
     window.cabin.event("Social Network")
   }
 
-
   // Fathom Event
   const trackSocialNetworkFathom = (event) => {
-    event.preventDefault()
     document.querySelectorAll(".social-networks-track").forEach(item => {
       item.addEventListener("click", event => {
         fathom.trackGoal("QGUR77ZM", 0)

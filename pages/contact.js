@@ -6,11 +6,13 @@ import Secondary from "../layouts/secondary"
 import { motion } from "framer-motion"
 // Components
 import MetaComponent from "../components/meta_component"
+import SocialNetworksSecondaryComponent from "../components/social_networks_secondary_component"
 
 export default function Contact({meta, hankyoProject, hankyoSection}) {
 
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "97jSqZqqUvzZmFeZH3rPXSa3")
   const email = hankyoProject.project.global_attributes.find(({uid}) => uid === "McLJmJJZLwuvUtkBttFLr3is")
+  const social_networks = hankyoProject.project.social_networks
 
   return (
     <motion.div
@@ -28,7 +30,11 @@ export default function Contact({meta, hankyoProject, hankyoSection}) {
             <hr className="separator-s" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
             <hr className="separator-s" />
+            <p className="font-size-s">Email:</p>
             <p className="font-size-xl font-weight-700">{email.value}</p>
+            <hr className="separator-s" />
+            <p className="font-size-s">Social Networks:</p>
+            <SocialNetworksSecondaryComponent social_networks={social_networks} />
           </div>
         </div>
       </div>

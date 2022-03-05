@@ -13,6 +13,7 @@
     "fathom-client": "^3.4.1",
     "framer-motion": "^6.2.8",
     "js-cookie": "^3.0.1",
+    "modern-normalize": "^1.1.0",
     "next": "12.1.0",
     "npm-check-updates": "^12.5.2",
     "react": "17.0.2",

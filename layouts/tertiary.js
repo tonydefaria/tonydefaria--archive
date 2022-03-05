@@ -4,11 +4,12 @@
 import React, { useState, useEffect, useCallback } from "react"
 import smoothscroll from "smoothscroll-polyfill";
 // Components
+import CursorComponent from "../components/cursor_component"
 import BrandIconComponent from "../components/brand_icon_component"
-import CookiesComponent from "../components/cookies_component"
+// import CookiesComponent from "../components/cookies_component"
 import CopyrightComponent from "../components/copyright_component"
 import FaviconComponent from "../components/favicon_component"
-import SocialNetworksComponent from "../components/social_networks_component"
+import SocialNetworksPrimaryComponent from "../components/social_networks_primary_component"
 
 export default function Tertiary({ children }) {
   // Get props
@@ -46,7 +47,7 @@ export default function Tertiary({ children }) {
         </div>
       </main>
       <footer className="universal footer">
-        <SocialNetworksComponent project={project} social_networks={social_networks} />
+        <SocialNetworksPrimaryComponent social_networks={social_networks} />
         <CopyrightComponent text_colour="white-cl" />
       </footer>
       {/*
@@ -54,6 +55,7 @@ export default function Tertiary({ children }) {
           <CookiesComponent />
         </div>
       */}
+      <CursorComponent />
     </div>
   )
 }

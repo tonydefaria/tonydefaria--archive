@@ -1,6 +1,6 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // File: Composer
-// Version:     0.0.1.alpha
+// Version: 0.0.1.alpha
 // Description: A Minimal and Lightweight Design System.
 // -------------------------------------------------------------
 
@@ -9,6 +9,7 @@
 // 0) Vendor
 // ------------------------------------------------------------
 @import "./vendor/modern_normalize";
+// @import "node_modules/modern-normalize/modern-normalize.css";
 
 // 1) Variables
 // ------------------------------------------------------------
@@ -69,7 +70,8 @@
 @import "./components/menu_mobile_trigger";
 @import "./components/overlay";
 @import "./components/swiper";
-@import "./components/social_networks";
+@import "./components/social_networks_primary";
+@import "./components/social_networks_secondary";
 
 // 8) Overriders
 // ------------------------------------------------------------

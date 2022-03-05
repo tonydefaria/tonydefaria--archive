@@ -1,5 +1,5 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File:    Font Sizes
+// File: Font Sizes
 // -------------------------------------------------------------
 
 @mixin font-size-xxs {
@@ -24,6 +24,30 @@
   font-size: 16px;
   line-height: 24px;
   min-height: 24px;
+
+  // Media Query 240px
+  // -------------------------------------------------------------
+  @media #{$xxs} {
+    font-size: 14px;
+    line-height: 22px;
+    min-height: 22px;
+  }
+
+  // Media Query 360px
+  // ------------------------------------------------------------
+  @media #{$xs} {
+    font-size: 14px;
+    line-height: 22px;
+    min-height: 22px;
+  }
+
+  // Media Query 480px
+  // -------------------------------------------------------------
+  @media #{$s} {
+    font-size: 14px;
+    line-height: 22px;
+    min-height: 22px;
+  }
 }
 
 @mixin font-size-l {

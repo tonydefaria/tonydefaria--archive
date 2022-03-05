@@ -188,7 +188,7 @@ form {
     border-radius: 0;
     box-shadow: none;
     color: $transparent;
-    cursor: pointer;
+    // cursor: pointer;
     display: block;
     float: left;
     font-size: 14px;
@@ -233,7 +233,7 @@ form {
     width: 100%;
     label {
       color: $gray;
-      cursor: pointer;
+      // cursor: pointer;
       display: inline-block;
       font-size: 14px;
       font-weight: normal;
@@ -306,7 +306,7 @@ form {
     width: 100%;
     label {
       color: $gray;
-      cursor: pointer;
+      // cursor: pointer;
       display: inline-block;
       font-size: 14px;
       font-weight: normal;
@@ -361,7 +361,7 @@ form {
       background-repeat: no-repeat;
       background-size: 24px 24px;
       color: $gray;
-      cursor: pointer;
+      // cursor: pointer;
       font-size: 14px !important;
       padding: 0 0 0 32px;
       position: relative;
@@ -370,7 +370,7 @@ form {
     [type=file] {
       appearance: none;
       background-color: $transparent;
-      cursor: pointer;
+      // cursor: pointer;
       filter: alpha(opacity = 0);
       height: 0;
       opacity: 0;

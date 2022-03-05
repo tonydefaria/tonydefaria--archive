@@ -8,8 +8,8 @@ import Head from "next/head"
 import Image from "next/image"
 import { motion } from "framer-motion"
 // Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, EffectFade} from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Keyboard, EffectFade} from "swiper"
 // Components
 import MetaComponent from "../components/meta_component"
 // Icons
@@ -20,23 +20,30 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
 
   // Event
   const trackOpenPortraitsGallery = (event) => {
-    event.preventDefault();
+    event.preventDefault()
     cabin.event("Open Portraits Gallery")
+  }
+
+  // Fathom Event
+  const trackOpenPortraitsGalleryFathom = (event) => {
+    event.preventDefault()
+    fathom.trackGoal("OGNVGKMQ", 0)
   }
 
   // Toggle
   const handleToggle = (event) => {
-    event.preventDefault();
-    setActive(!isActive);
-  };
+    event.preventDefault()
+    setActive(!isActive)
+  }
 
   const bindFunctions = (event) => {
     trackOpenPortraitsGallery(event)
+    trackOpenPortraitsGalleryFathom(event)
     handleToggle(event)
   }
 
   const hero = hankyoSection.section.blocks.find(({uid}) => uid === "sHhk1Za3CSKpThi2X8eYDo1z")
-  const images = hankyoSection.section.blocks.filter(image => image.type_of === "image");
+  const images = hankyoSection.section.blocks.filter(image => image.type_of === "image")
 
   return (
     <motion.div

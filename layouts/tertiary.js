@@ -4,7 +4,7 @@
 import React, { useState, useEffect, useCallback } from "react"
 import smoothscroll from "smoothscroll-polyfill";
 // Components
-import CursorComponent from "../components/cursor_component"
+// import CursorComponent from "../components/cursor_component"
 import BrandIconComponent from "../components/brand_icon_component"
 // import CookiesComponent from "../components/cookies_component"
 import CopyrightComponent from "../components/copyright_component"
@@ -55,7 +55,7 @@ export default function Tertiary({ children }) {
           <CookiesComponent />
         </div>
       */}
-      <CursorComponent />
+      {/* <CursorComponent /> */}
     </div>
   )
 }

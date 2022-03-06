@@ -7,6 +7,9 @@
 *::before {
   @include border-box;
   cursor: none;
+  cursor: url("/images/cursor-dot.png") 12 12, auto;
+  cursor: url("/images/cursor-dot.svg") 12 12, auto;
+
   -webkit-tap-highlight-color: $transparent;
   -webkit-touch-callout: none;
 }
@@ -153,11 +156,11 @@ span {
   width: 12px;
   height: 12px;
   border-radius: 12px;
-  border: 1px solid $white;
+  // border: 1px solid $white;
   background-color: $yellow;
   opacity: 1;
   position: fixed;
-  transition-duration: 50ms;
+  // transition-duration: 50ms;
   transition-timing-function: ease-out;
   transform: translate(-50%, -50%);
   pointer-events: none;

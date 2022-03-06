@@ -5,7 +5,7 @@ import React, { useState, useEffect, useCallback } from "react"
 import smoothscroll from "smoothscroll-polyfill";
 // import { motion } from "framer-motion"
 // Components
-import CursorComponent from "../components/cursor_component"
+// import CursorComponent from "../components/cursor_component"
 import BrandLogoComponent from "../components/brand_logo_component"
 // import CookiesComponent from "../components/cookies_component"
 import CopyrightComponent from "../components/copyright_component"
@@ -52,7 +52,7 @@ export default function Primary({ children }) {
           <CookiesComponent />
         </div>
       */}
-      <CursorComponent />
+      {/* <CursorComponent /> */}
     </div>
   )
 }

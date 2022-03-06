@@ -29,7 +29,7 @@ $class: "swiper";
       max-height: calc(100vh - 64px) !important;
       img {
         @include appear-animation(.25s);
-        border-radius: 4px;
+        border-radius: 3px;
         float: left;
         max-height: calc(100vh - 96px) !important;
       }

@@ -6,7 +6,7 @@
   @include button-blue;
   appearance: none !important;
   border: 0 !important;
-  border-radius: 4px;
+  border-radius: 3px;
   box-sizing: border-box !important;
   display: block !important;
   float: left !important;
@@ -341,12 +341,12 @@
   @include button-colour(
     $initial-bg: $yellow,
     $initial-br: $yellow,
-    $initial-cl: $yellow-100,
-    $initial-fl: $yellow-100,
-    $hover-bg: "",
-    $hover-br: "",
-    $hover-cl: $white,
-    $hover-fl: $white,
+    $initial-cl: $black,
+    $initial-fl: $black,
+    $hover-bg: $yellow,
+    $hover-br: $yellow,
+    $hover-cl: $black,
+    $hover-fl: $black,
     $initial-outline-bg: $transparent,
     $initial-outline-br: $yellow,
     $initial-outline-cl: $yellow-300,

@@ -275,7 +275,7 @@ form {
   .checkbox {
     label {
       .checkmark {
-        @include border-corner(4px);
+        @include border-corner(3px);
         background-color: $gray-100;
       }
       input:checked ~ .checkmark {
@@ -315,7 +315,7 @@ form {
       padding: 0;
       vertical-align: middle;
       .checkmark {
-        @include border-corner(4px);
+        @include border-corner(3px);
         background-color: $gray-100;
         background-repeat: no-repeat;
         background-size: 24px 24px;
@@ -500,7 +500,7 @@ form {
   .file,
   .submit input,
   .form-errors-row {
-    @include border-corner(4px);
+    @include border-corner(3px);
   }
   // scss-lint:enable MergeableSelector
 }

@@ -29,8 +29,8 @@
 // Classes
 // -------------------------------------------------------------
 .border-box                 { @include border-box; }
-.border-corner              { @include border-corner(4px); }
-.border-top-left-corner     { @include border-top-left-corner(4px); }
-.border-top-right-corner    { @include border-top-right-corner(4px); }
-.border-bottom-left-corner  { @include border-bottom-left-corner(4px); }
-.border-bottom-right-corner { @include border-bottom-right-corner(4px); }
+.border-corner              { @include border-corner(3px); }
+.border-top-left-corner     { @include border-top-left-corner(3px); }
+.border-top-right-corner    { @include border-top-right-corner(3px); }
+.border-bottom-left-corner  { @include border-bottom-left-corner(3px); }
+.border-bottom-right-corner { @include border-bottom-right-corner(3px); }

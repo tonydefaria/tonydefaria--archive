@@ -7,9 +7,8 @@
 *::before {
   @include border-box;
   cursor: none;
-  cursor: url("/images/cursor-dot.png") 12 12, auto;
-  cursor: url("/images/cursor-dot.svg") 12 12, auto;
-
+  cursor: url("/images/cursor-yellow.png") 16 16, auto;
+  cursor: url("/images/cursor-yellow.svg") 16 16, auto;
   -webkit-tap-highlight-color: $transparent;
   -webkit-touch-callout: none;
 }
@@ -51,13 +50,13 @@ body {
 }
 
 ::-moz-selection {
-  background-color: $black;
-  color: $white;
+  background-color: $yellow;
+  color: $black;
 }
 
 ::selection {
-  background-color: $black;
-  color: $white;
+  background-color: $yellow;
+  color: $black;
 }
 
 a,
@@ -135,39 +134,6 @@ span {
   &.padded {
     padding: 2px 8px;
   }
-}
-
-// .cursor-outer {
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 100%;
-//   border: 1px solid black;
-//   transition: all 200ms ease-out;
-//   position: fixed;
-//   pointer-events: none;
-//   left: 0;
-//   top: 0;
-//   transform: translate(calc(-50% + 15px), -50%);
-//   z-index: 999999;
-// }
-
-.cursor-inner {
-  // @include appear-animation(3s);
-  width: 12px;
-  height: 12px;
-  border-radius: 12px;
-  // border: 1px solid $white;
-  background-color: $yellow;
-  opacity: 1;
-  position: fixed;
-  // transition-duration: 50ms;
-  transition-timing-function: ease-out;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  // transition: width .3s, height .3s, opacity 1s;
-  z-index: 999999;
-  // left: 50vw;
-  // top: 50vh;
 }
 
 // Media Query 240px

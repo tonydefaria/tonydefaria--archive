@@ -67,18 +67,13 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
             <hr className="separator-xs" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
             <hr className="separator-xs" />
-            <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={bindFunctions} className="button-l button-yellow text-transform-uppercase font-weight-900">Open Gallery</a>
-            <hr className="separator-xs" />
-            <p className="font-size-xs font-family-mono">
-              <strong>Note: </strong>
-              To navigate between images, swipe left/right or use the left/right keys.
-            </p>
+            <a aria-label="Gallery Trigger" href="#" rel="nofollow" onClick={bindFunctions} id="gallery-trigger" className="button-l button-yellow text-transform-uppercase font-weight-900">Open Gallery</a>
           </div>
         </div>
       </div>
 
       <div className={`overlay ${isActive ? "overlay-hide" : "overlay-show"}`}>
-        <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Menu Mobile Trigger" className="link link-black overlay-close">
+        <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Overlay Trigger" id="overlay-trigger" className="link link-black overlay-close">
           <div className="icon"><CloseIcon /></div>
         </a>
         <Swiper
@@ -92,6 +87,21 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           modules={[Keyboard, EffectFade]}
           slidesPerView={"auto"}
         >
+
+          <div className={`swiper-instructions flex-h-center flex-v-center ${isActive ? "hide-element" : "swiper-instructions-hide"}`}>
+            <div className="swiper-instructions-box">
+              <div className="swiper-instructions-row">
+                <p className="font-size-xs font-family-mono text-align-center">
+                  <strong>SWIPE LEFT/RIGHT</strong>
+                  <br />
+                  or use
+                  <br />
+                  <strong>LEFT/RIGHT KEYS</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {images.map((image) => (
             <SwiperSlide key={image.uid}>
               <div className="swiper-box flex-h-center flex-v-center">

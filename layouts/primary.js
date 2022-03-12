@@ -28,6 +28,7 @@ export default function Primary({ children }) {
       clearTimeout(preform)
       preform = setTimeout(function() {
         body.classList.remove("lock-scroll")
+        body.classList.add("scroll")
       }, 250)
     }
   }, [])

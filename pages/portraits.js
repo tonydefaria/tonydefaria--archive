@@ -24,12 +24,6 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
     window.cabin.event("Portraits Gallery")
   }
 
-  // Fathom Event
-  const trackOpenPortraitsGalleryFathom = (event) => {
-    event.preventDefault()
-    window.fathom.trackGoal("HJHEPKKC", 0)
-  }
-
   // Toggle
   const handleToggle = (event) => {
     event.preventDefault()
@@ -38,7 +32,6 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
 
   const bindFunctions = (event) => {
     trackOpenPortraitsGalleryCabin(event)
-    trackOpenPortraitsGalleryFathom(event)
     handleToggle(event)
   }
 
@@ -71,10 +64,15 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
         <div className="hero-box half">
           <div className="hero-row">
             <h1 className="font-size-xxl">{hero.title}</h1>
-            <hr className="separator-s" />
+            <hr className="separator-xs" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
-            <hr className="separator-s" />
+            <hr className="separator-xs" />
             <a aria-label="Menu Trigger" href="#" rel="nofollow" onClick={bindFunctions} className="button-l button-yellow text-transform-uppercase font-weight-900">Open Gallery</a>
+            <hr className="separator-xs" />
+            <p className="font-size-xs font-family-mono">
+              <strong>Note: </strong>
+              To navigate between images, swipe left/right or use the left/right keys.
+            </p>
           </div>
         </div>
       </div>
@@ -99,7 +97,10 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
               <div className="swiper-box flex-h-center flex-v-center">
                 <figure className="loading">
                   <Image src={image.image} width={image.width} height={image.height} quality={75} alt="Gallery Image" title="Tony de Faria" />
-                  <figcaption>{image.caption}</figcaption>
+                  <figcaption>
+                    <strong>Caption: </strong>
+                    {image.caption}
+                  </figcaption>
                 </figure>
               </div>
             </SwiperSlide>

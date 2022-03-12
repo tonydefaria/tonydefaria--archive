@@ -3,12 +3,12 @@
 // Built-in components
 import React, { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
-import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
+// import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 // Icons
 import MenuIcon from "../icons/menu"
 
 export default function MenuOverlayComponent() {
-  const [isActive, setActive] = useState("false")
+  const [isActive, setActive] = useState(true)
 
   // Toggle
   const handleToggle = (event) => {
@@ -17,15 +17,13 @@ export default function MenuOverlayComponent() {
   }
 
   useEffect(() => {
-    if (isMobile) {
-      const body = document.getElementsByTagName("body")[0];
-      if (!isActive) {
-        body.classList.remove("scroll")
-        body.classList.add("lock-scroll")
-      } else {
-        body.classList.remove("lock-scroll")
-        body.classList.add("scroll")
-      }
+    const body = document.getElementsByTagName("body")[0]
+    if (!isActive) {
+      body.classList.remove("scroll")
+      body.classList.add("lock-scroll")
+    } else {
+      body.classList.remove("lock-scroll")
+      body.classList.add("scroll")
     }
   }, [isActive])
 

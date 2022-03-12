@@ -10,11 +10,11 @@ $class: "hero";
   width: 100%;
   .#{$class}-box {
     float: left;
-    padding: 16px;
+    padding: 0 16px 16px;
     width: 100%;
     .#{$class}-row {
       float: left;
-      padding: 16px;
+      padding: 0 16px 16px;
       width: 100%;
       figure {
         width: 100%;

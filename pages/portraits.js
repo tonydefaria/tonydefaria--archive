@@ -66,14 +66,14 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
             <h1 className="font-size-xxl">{hero.title}</h1>
             <hr className="separator-xs" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
-            <hr className="separator-xs" />
-            <a aria-label="Gallery Trigger" href="#" rel="nofollow" onClick={bindFunctions} id="gallery-trigger" className="button-l button-yellow text-transform-uppercase font-weight-900">Open Gallery</a>
+            <hr className="separator-s" />
+            <a href="#" rel="nofollow" onClick={bindFunctions} aria-label="Gallery Trigger" id="gallery-trigger" className="button-l button-yellow text-transform-uppercase font-weight-900">Open Gallery</a>
           </div>
         </div>
       </div>
 
       <div className={`overlay ${isActive ? "overlay-hide" : "overlay-show"}`}>
-        <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Overlay Trigger" id="overlay-trigger" className="link link-black overlay-close">
+        <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Overlay Trigger" className="link link-black overlay-close">
           <div className="icon"><CloseIcon /></div>
         </a>
         <Swiper

@@ -3,9 +3,9 @@
 // -------------------------------------------------------------
 
 @mixin shadow($colour) {
-  box-shadow: 0 0 3px $colour;
+  box-shadow: 0 0 4px $colour;
 }
 
 // Classes
 // -------------------------------------------------------------
-.shadow { @include shadow($gray-200); }
+.shadow { @include shadow($shadow); }

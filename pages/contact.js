@@ -23,7 +23,7 @@ export default function Contact({meta, hankyoProject, hankyoSection}) {
       className="width-wide float-left"
     >
       <MetaComponent hankyoProject={hankyoProject} meta={meta} />
-      <div className="hero top">
+      <div className="hero">
         <div className="hero-box half">
           <div className="hero-row">
             <h1 className="font-size-xxl">{hero.title}</h1>

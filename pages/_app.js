@@ -21,7 +21,14 @@ export default function MyApp({ Component, pageProps}) {
   // const router = useRouter()
   const Layout = Component.Layout ? Component.Layout : React.Fragment
 
-  // useEffect(() => {
+  useEffect(() => {
+    // Prevent from saving image.
+    document.addEventListener("contextmenu", function(event) {
+      if (event.target.nodeName === "IMG") {
+        event.preventDefault()
+      }
+    }, false)
+
     // const cookie = Cookies.get("weLoveCookies")
     // if (cookie === "iWantCookies") {
     //   TagManager.initialize({ gtmId: "GTM-W4P8CGP" })
@@ -49,7 +56,7 @@ export default function MyApp({ Component, pageProps}) {
     // return () => {
     //   router.events.off("routeChangeComplete", onRouteChangeComplete)
     // }
-  // }, [])
+  }, [])
 
   return (
     <>

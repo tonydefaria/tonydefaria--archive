@@ -53,7 +53,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           <link key={image.uid} rel="preload" as="image" href={image.image} />
         ))}
       </Head>
-      <div className="hero top">
+      <div className="hero">
         <div className="hero-box half">
           <div className="hero-row">
             <figure className="loading">
@@ -89,7 +89,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
         >
 
           <div className={`swiper-instructions flex-h-center flex-v-center ${isActive ? "hide-element" : "swiper-instructions-hide"}`}>
-            <div className="swiper-instructions-box">
+            <div className="swiper-instructions-box shadow">
               <div className="swiper-instructions-row">
                 <p className="font-size-xs font-family-mono text-align-center">
                   <strong>SWIPE LEFT/RIGHT</strong>

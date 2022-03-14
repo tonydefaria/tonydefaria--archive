@@ -40,7 +40,7 @@ export default function Secondary({ children }) {
         <MenuComponent />
       </header>
       <MenuMobileComponent />
-      <main className="universal main flex-h-center flex-v-center">
+      <main className="universal main">
         <div className="universal-box">
           <div className="universal-row">
             {children}

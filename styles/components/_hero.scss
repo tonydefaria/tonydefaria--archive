@@ -5,14 +5,17 @@
 $class: "hero";
 
 .#{$class} {
+  // background-image: url("/images/home-cover.gif");
   float: left;
   margin: 0;
+  padding: 64px;
   width: 100%;
   .#{$class}-box {
     float: left;
     padding: 16px;
     width: 100%;
     .#{$class}-row {
+      position: relative;
       float: left;
       padding: 16px;
       width: 100%;
@@ -22,6 +25,11 @@ $class: "hero";
           border-radius: 3px;
           width: 100vw !important;
         }
+      }
+      .overlap {
+        position: absolute;
+        top: 16px;
+        left: 0px;
       }
     }
     &.half {
@@ -34,6 +42,7 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
+    padding: 0;
     .#{$class}-box {
       padding: 0;
       .#{$class}-row {
@@ -49,6 +58,7 @@ $class: "hero";
 // ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
+    padding: 0;
     .#{$class}-box {
       padding: 0;
       .#{$class}-row {
@@ -64,6 +74,7 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
+    padding: 0;
     .#{$class}-box {
       padding: 0;
       .#{$class}-row {
@@ -79,6 +90,7 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$m} {
   .#{$class} {
+    padding: 32px;
     .#{$class}-box {
       .#{$class}-row {
       }
@@ -93,6 +105,7 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$l} {
   .#{$class} {
+    padding: 32px;
     .#{$class}-box {
       .#{$class}-row {
       }

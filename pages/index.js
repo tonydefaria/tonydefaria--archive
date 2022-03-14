@@ -27,7 +27,7 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
       <Head>
         <link rel="preload" as="image" href={hero.image} />
       </Head>
-      <div className="hero">
+      <div className="hero padding-0">
         <div className="hero-box">
           <div className="hero-row">
             <figure className="loading">

@@ -2,6 +2,15 @@
 // File: Writer
 // -------------------------------------------------------------
 
+.simple-format {
+  p {
+    margin: 0 0 96px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
 .writer {
   h1,
   h2,
@@ -73,7 +82,7 @@
   h6:first-child,
   p:first-child,
   .text:first-child {
-    margin-top: 0 !important;
+    margin-top: 0;
   }
   ol,
   ul {
@@ -142,6 +151,10 @@
 // Media Query 240px
 // -------------------------------------------------------------
 @media #{$xxs} {
+  .simple-format {
+    p { margin: 0 0 28px; }
+  }
+
   .writer {
     blockquote {
       max-width: 100%;
@@ -176,6 +189,10 @@
 // Media Query 360px
 // ------------------------------------------------------------
 @media #{$xs} {
+  .simple-format {
+    p { margin: 0 0 32px; }
+  }
+
   .writer {
     blockquote {
       max-width: 100%;
@@ -210,6 +227,10 @@
 // Media Query 480px
 // -------------------------------------------------------------
 @media #{$s} {
+  .simple-format {
+    p { margin: 0 0 32px; }
+  }
+
   .writer {
     blockquote {
       max-width: 100%;
@@ -240,11 +261,17 @@
 // Media Query 720px
 // -------------------------------------------------------------
 @media #{$m} {
+  .simple-format {
+    p { margin: 0 0 56px; }
+  }
 }
 
 // Media Query 960px
 // -------------------------------------------------------------
 @media #{$l} {
+  .simple-format {
+    p { margin: 0 0 64px; }
+  }
 }
 
 // Media Query 1440px

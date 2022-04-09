@@ -85,11 +85,14 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           <div className={`swiper-instructions flex-h-center flex-v-center ${isActive ? "hide-element" : "swiper-instructions-hide"}`}>
             <div className="swiper-instructions-box shadow">
               <div className="swiper-instructions-row">
-                <p className="font-size-xs font-family-mono text-align-center mobile">
+                <p className="font-size-xs font-family-mono text-align-center">
+                  To go through the photos
+                  <br />
                   <strong>SWIPE LEFT/RIGHT</strong>
-                </p>
-                <p className="font-size-xs font-family-mono text-align-center desktop">
-                  <strong>USE LEFT/RIGHT KEYS</strong>
+                  <br />
+                  or use
+                  <br />
+                  <strong>LEFT/RIGHT KEYS</strong>
                 </p>
               </div>
             </div>

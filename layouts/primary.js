@@ -3,11 +3,8 @@
 // Built-in Components
 import React, { useState, useEffect, useCallback } from "react"
 import smoothscroll from "smoothscroll-polyfill";
-// import { motion } from "framer-motion"
 // Components
-// import CursorComponent from "../components/cursor_component"
-import BrandLogoComponent from "../components/brand_logo_component"
-// import CookiesComponent from "../components/cookies_component"
+import BrandComponent from "../components/brand_component"
 import CopyrightComponent from "../components/copyright_component"
 import FaviconComponent from "../components/favicon_component"
 import MenuComponent from "../components/menu_component"
@@ -37,23 +34,21 @@ export default function Primary({ children }) {
     <div className="primary">
       <FaviconComponent project={project} />
       <header className="universal header fixed-header">
-        <BrandLogoComponent link_colour="link-black" />
-        <MenuComponent />
+        <BrandComponent link_colour="link-black" />
+        {/* <MenuComponent /> */}
       </header>
       <MenuMobileComponent />
       <main className="universal main">
-        {children}
+        <div className="universal-box">
+          <div className="universal-row">
+            {children}
+          </div>
+        </div>
       </main>
       <footer className="universal footer">
         <SocialNetworksPrimaryComponent social_networks={social_networks} />
         <CopyrightComponent text_colour="black-cl" />
       </footer>
-      {/*
-        <div className="width-wide flex-h-center">
-          <CookiesComponent />
-        </div>
-      */}
-      {/* <CursorComponent /> */}
     </div>
   )
 }

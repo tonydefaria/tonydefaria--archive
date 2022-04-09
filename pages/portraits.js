@@ -30,6 +30,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
     setActive(!isActive)
   }
 
+  // Bind
   const bindFunctions = (event) => {
     trackOpenPortraitsGalleryCabin(event)
     handleToggle(event)
@@ -54,13 +55,6 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
         ))}
       </Head>
       <div className="hero">
-        <div className="hero-box half">
-          <div className="hero-row">
-            <figure className="loading">
-              <Image src={hero.image} width={hero.width} height={hero.height} quality={100} alt="Hero Image" title="Tony de Faria" />
-            </figure>
-          </div>
-        </div>
         <div className="hero-box half">
           <div className="hero-row">
             <h1 className="font-size-xxl">{hero.title}</h1>

@@ -7,7 +7,7 @@ import Link from "next/link"
 import BrandLogo from "../icons/brand_logo";
 import BrandIcon from "../icons/brand_icon";
 
-export default function BrandLogoComponent({link_colour}) {
+export default function BrandComponent({link_colour}) {
   return (
     <div className="brand">
       <div className="brand-box">

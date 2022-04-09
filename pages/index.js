@@ -27,24 +27,35 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
       <Head>
         <link rel="preload" as="image" href={hero.image} />
       </Head>
-      <div className="hero padding-0">
-        <div className="hero-box">
-          <div className="hero-row">
-            <figure className="loading">
-              <Image src={hero.image} width={hero.width} height={hero.height} quality={100} alt="Hero Image" title="Tony de Faria" />
-            </figure>
+      {/*
+        <div className="hero">
+          <div className="hero-box">
+            <div className="hero-row">
+              <figure className="loading">
+                <Image src={hero.image} width={hero.width} height={hero.height} quality={100} alt="Hero Image" title="Tony de Faria" />
+              </figure>
+            </div>
           </div>
         </div>
-      </div>
+      */}
       <div className="hero">
-        <div className="hero-box">
+        <div className="hero-box half">
           <div className="hero-row">
-            <h1 className="font-size-display">{hero.title}</h1>
-            <hr className="separator-m" />
-            <div className="font-size-display simple-format" dangerouslySetInnerHTML={{__html: hero.description}} />
+            <h1 className="font-size-xxl">{hero.title}</h1>
+            <hr className="separator-xs" />
+            <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
           </div>
         </div>
       </div>
+      <style JSX>{`
+        .primary {
+          background-image: url(${hero.image});
+          background-repeat: no-repeat;
+          background-position: bottom right;
+          background-size: cover;
+        }
+      `}
+      </style>
     </motion.div>
   )
 }

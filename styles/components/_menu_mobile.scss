@@ -30,7 +30,7 @@ $class: "menu-mobile";
       padding: 8px;
       width: 100%;
       .link-xxl {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 700;
         text-align: center;
         text-transform: uppercase;
@@ -45,7 +45,7 @@ $class: "menu-mobile";
   }
   &.#{$class}-hide {
     opacity: 0;
-    transition: opacity 0s, visibility 0s 0s;
+    transition: opacity .50s, visibility 0s .50s;
     visibility: hidden;
   }
 }
@@ -91,10 +91,10 @@ $class: "menu-mobile";
       .#{$class}-item {
       }
     }
-    &.#{$class}-show {
-      display: none;
-      visibility: hidden;
-    }
+    // &.#{$class}-show {
+    //   display: none;
+    //   visibility: hidden;
+    // }
   }
 }
 
@@ -106,10 +106,10 @@ $class: "menu-mobile";
       .#{$class}-item {
       }
     }
-    &.#{$class}-show {
-      display: none;
-      visibility: hidden;
-    }
+    // &.#{$class}-show {
+    //   display: none;
+    //   visibility: hidden;
+    // }
   }
 }
 
@@ -121,10 +121,10 @@ $class: "menu-mobile";
       .#{$class}-item {
       }
     }
-    &.#{$class}-show {
-      display: none;
-      visibility: hidden;
-    }
+    // &.#{$class}-show {
+    //   display: none;
+    //   visibility: hidden;
+    // }
   }
 }
 
@@ -136,9 +136,9 @@ $class: "menu-mobile";
       .#{$class}-item {
       }
     }
-    &.#{$class}-show {
-      display: none;
-      visibility: hidden;
-    }
+    // &.#{$class}-show {
+    //   display: none;
+    //   visibility: hidden;
+    // }
   }
 }

@@ -18,10 +18,10 @@ $class: "overlay";
   .#{$class}-close {
     position: absolute;
     right: 16px;
-    top: 12px;
-    height: 48px;
-    width: 48px;
-    padding: 12px;
+    top: 16px;
+    height: 24px;
+    width: 24px;
+    padding: 0px;
     z-index: 9999999;
   }
   &.#{$class}-show {
@@ -40,9 +40,6 @@ $class: "overlay";
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
-    .#{$class}-close {
-      right: 4px;
-    }
   }
 }
 
@@ -50,9 +47,6 @@ $class: "overlay";
 // ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
-    .#{$class}-close {
-      right: 4px;
-    }
   }
 }
 
@@ -60,9 +54,6 @@ $class: "overlay";
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
-    .#{$class}-close {
-      right: 4px;
-    }
   }
 }
 

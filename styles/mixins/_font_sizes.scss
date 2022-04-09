@@ -5,32 +5,27 @@
 @mixin font-size-xxs {
   font-size: 10px;
   line-height: 18px;
-  min-height: 18px;
 }
 
 @mixin font-size-xs {
   font-size: 12px;
   line-height: 20px;
-  min-height: 20px;
 }
 
 @mixin font-size-s {
   font-size: 14px;
   line-height: 22px;
-  min-height: 22px;
 }
 
 @mixin font-size-m {
   font-size: 16px;
   line-height: 24px;
-  min-height: 24px;
 
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
     font-size: 14px;
     line-height: 22px;
-    min-height: 22px;
   }
 
   // Media Query 360px
@@ -38,7 +33,6 @@
   @media #{$xs} {
     font-size: 14px;
     line-height: 22px;
-    min-height: 22px;
   }
 
   // Media Query 480px
@@ -46,21 +40,18 @@
   @media #{$s} {
     font-size: 14px;
     line-height: 22px;
-    min-height: 22px;
   }
 }
 
 @mixin font-size-l {
   font-size: 20px;
   line-height: 32px;
-  min-height: 32px;
 
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
     font-size: 16px;
     line-height: 24px;
-    min-height: 24px;
   }
 
   // Media Query 360px
@@ -68,7 +59,6 @@
   @media #{$xs} {
     font-size: 16px;
     line-height: 24px;
-    min-height: 24px;
   }
 
   // Media Query 480px
@@ -76,21 +66,18 @@
   @media #{$s} {
     font-size: 16px;
     line-height: 24px;
-    min-height: 24px;
   }
 }
 
 @mixin font-size-xl {
   font-size: 24px;
   line-height: 40px;
-  min-height: 40px;
 
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
     font-size: 20px;
     line-height: 32px;
-    min-height: 32px;
   }
 
   // Media Query 360px
@@ -98,7 +85,6 @@
   @media #{$xs} {
     font-size: 20px;
     line-height: 32px;
-    min-height: 32px;
   }
 
   // Media Query 480px
@@ -106,21 +92,18 @@
   @media #{$s} {
     font-size: 20px;
     line-height: 32px;
-    min-height: 32px;
   }
 }
 
 @mixin font-size-xxl {
   font-size: 32px;
   line-height: 48px;
-  min-height: 48px;
 
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
     font-size: 24px;
     line-height: 40px;
-    min-height: 40px;
   }
 
   // Media Query 360px
@@ -128,7 +111,6 @@
   @media #{$xs} {
     font-size: 24px;
     line-height: 40px;
-    min-height: 40px;
   }
 
   // Media Query 480px
@@ -136,99 +118,93 @@
   @media #{$s} {
     font-size: 24px;
     line-height: 40px;
-    min-height: 40px;
   }
 }
 
 @mixin font-size-xxxl {
-  font-size: 128px;
-  line-height: 160px;
-  min-height: 1px;
+  font-size: 64px;
+  line-height: 96px;
 
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
-    font-size: 20px;
-    line-height: 32px;
-    min-height: 32px;
+    font-size: 24px;
+    line-height: 40px;
   }
 
   // Media Query 360px
   // ------------------------------------------------------------
   @media #{$xs} {
     font-size: 28px;
-    line-height: 44px;
-    min-height: 44px;
+    line-height: 40px;
   }
 
   // Media Query 480px
   // -------------------------------------------------------------
   @media #{$s} {
     font-size: 38px;
-    line-height: 58px;
-    min-height: 58px;
+    line-height: 54px;
   }
 
   // Media Query 720px
   // -------------------------------------------------------------
   @media #{$m} {
-    font-size: 56px;
-    line-height: 82px;
-    min-height: 82px;
+    font-size: 48px;
+    line-height: 68px;
   }
 
   // Media Query 960px
   // -------------------------------------------------------------
   @media #{$l} {
-    font-size: 80px;
-    line-height: 112px;
-    min-height: 112px;
+    font-size: 56px;
+    line-height: 80px;
   }
 }
 
 @mixin font-size-display {
-  font-size: 160px;
-  line-height: 192px;
-  min-height: 192px;
+  font-size: 212px;
+  line-height: 212px;
 
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
-    font-size: 26px;
-    line-height: 38px;
-    min-height: 38px;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   // Media Query 360px
   // ------------------------------------------------------------
   @media #{$xs} {
     font-size: 40px;
-    line-height: 56px;
-    min-height: 56px;
+    line-height: 40px;
   }
 
   // Media Query 480px
   // -------------------------------------------------------------
   @media #{$s} {
     font-size: 56px;
-    line-height: 76px;
-    min-height: 76px;
+    line-height: 56px;
   }
 
   // Media Query 720px
   // -------------------------------------------------------------
   @media #{$m} {
-    font-size: 80px;
-    line-height: 104px;
-    min-height: 104px;
+    font-size: 72px;
+    line-height: 72px;
   }
 
   // Media Query 960px
   // -------------------------------------------------------------
   @media #{$l} {
-    font-size: 112px;
-    line-height: 144px;
-    min-height: 144px;
+    font-size: 96px;
+    line-height: 96px;
+  }
+
+  // Media Query 1440px
+  // -------------------------------------------------------------
+  @media #{$xl} {
+    font-size: 160px;
+    line-height: 160px;
   }
 }
 

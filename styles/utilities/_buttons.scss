@@ -10,6 +10,7 @@
   box-sizing: border-box !important;
   display: block !important;
   float: left !important;
+  font-family: $mono !important;
   letter-spacing: .030em !important;
   text-align: center !important;
   text-decoration: none !important;
@@ -97,7 +98,7 @@
 @mixin button-l {
   @include button-default;
   @include button-builder(
-    $font: 16px,
+    $font: 14px,
     $edge: 28px,
     $icon: 28px,
     $border: 28px,

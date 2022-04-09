@@ -6,6 +6,7 @@ import Link from "next/link"
 // import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 // Icons
 import MenuIcon from "../icons/menu"
+import CloseIcon from "../icons/close"
 
 export default function MenuOverlayComponent() {
   const [isActive, setActive] = useState(true)
@@ -33,7 +34,7 @@ export default function MenuOverlayComponent() {
         <ul className="menu-mobile-trigger-box">
           <li className="menu-mobile-trigger-item">
             <a href="#" rel="nofollow" onClick={handleToggle} aria-label="Menu Mobile Trigger" className={`link ${isActive ? "link-black" : "link-white"}`}>
-            <div className="icon"><MenuIcon /></div>
+            <div className="icon">{isActive ? <MenuIcon /> : <CloseIcon />}</div>
             </a>
           </li>
         </ul>

@@ -85,7 +85,7 @@
 @media #{$xxs} {
   .main {
     min-height: -webkit-fill-available;
-    min-height: calc(100vh - 96px);
+    min-height: calc(100vh - 80px);
   }
 }
 
@@ -94,7 +94,7 @@
 @media #{$xs} {
   .main {
     min-height: -webkit-fill-available;
-    min-height: calc(100vh - 96px);
+    min-height: calc(100vh - 80px);
   }
 }
 
@@ -103,7 +103,7 @@
 @media #{$s} {
   .main {
     min-height: -webkit-fill-available;
-    min-height: calc(100vh - 96px);
+    min-height: calc(100vh - 80px);
   }
 }
 

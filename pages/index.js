@@ -42,16 +42,16 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
         <div className="hero-box half">
           <div className="hero-row">
             <h1 className="font-size-xxl">{hero.title}</h1>
-            <hr className="separator-xs" />
+            <hr className="separator-s" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
           </div>
         </div>
       </div>
-      <style JSX>{`
+      <style>{`
         .primary {
           background-image: url(${hero.image});
-          background-repeat: no-repeat;
           background-position: bottom right;
+          background-repeat: no-repeat;
           background-size: cover;
         }
       `}

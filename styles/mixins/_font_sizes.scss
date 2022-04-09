@@ -97,27 +97,27 @@
 
 @mixin font-size-xxl {
   font-size: 32px;
-  line-height: 48px;
+  line-height: 40px;
 
   // Media Query 240px
   // -------------------------------------------------------------
   @media #{$xxs} {
     font-size: 24px;
-    line-height: 40px;
+    line-height: 32px;
   }
 
   // Media Query 360px
   // ------------------------------------------------------------
   @media #{$xs} {
     font-size: 24px;
-    line-height: 40px;
+    line-height: 32px;
   }
 
   // Media Query 480px
   // -------------------------------------------------------------
   @media #{$s} {
     font-size: 24px;
-    line-height: 40px;
+    line-height: 32px;
   }
 }
 

@@ -37,10 +37,7 @@ $class: "menu-mobile-trigger";
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
-    display: block;
-    visibility: visible;
     .#{$class}-box {
-      padding: 8px 0;
       .#{$class}-item {
       }
     }
@@ -51,10 +48,7 @@ $class: "menu-mobile-trigger";
 // ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
-    display: block;
-    visibility: visible;
     .#{$class}-box {
-      padding: 8px 0;
       .#{$class}-item {
       }
     }
@@ -65,10 +59,7 @@ $class: "menu-mobile-trigger";
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
-    display: block;
-    visibility: visible;
     .#{$class}-box {
-      padding: 8px 0;
       .#{$class}-item {
       }
     }

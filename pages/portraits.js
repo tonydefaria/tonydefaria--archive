@@ -58,7 +58,7 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
         <div className="hero-box half">
           <div className="hero-row">
             <h1 className="font-size-xxl">{hero.title}</h1>
-            <hr className="separator-xs" />
+            <hr className="separator-s" />
             <p className="font-size-xl" dangerouslySetInnerHTML={{__html: hero.description}} />
             <hr className="separator-s" />
             <a href="#" rel="nofollow" onClick={bindFunctions} aria-label="Gallery Trigger" id="gallery-trigger" className="button-l button-yellow text-transform-uppercase font-weight-900">Open Gallery</a>
@@ -85,12 +85,11 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           <div className={`swiper-instructions flex-h-center flex-v-center ${isActive ? "hide-element" : "swiper-instructions-hide"}`}>
             <div className="swiper-instructions-box shadow">
               <div className="swiper-instructions-row">
-                <p className="font-size-xs font-family-mono text-align-center">
+                <p className="font-size-xs font-family-mono text-align-center mobile">
                   <strong>SWIPE LEFT/RIGHT</strong>
-                  <br />
-                  or use
-                  <br />
-                  <strong>LEFT/RIGHT KEYS</strong>.
+                </p>
+                <p className="font-size-xs font-family-mono text-align-center desktop">
+                  <strong>USE LEFT/RIGHT KEYS</strong>
                 </p>
               </div>
             </div>

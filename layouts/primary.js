@@ -33,7 +33,7 @@ export default function Primary({ children }) {
   return (
     <div className="primary">
       <FaviconComponent project={project} />
-      <header className="universal header fixed-header">
+      <header className="universal header">
         <BrandComponent link_colour="link-white" />
         {/* <MenuComponent /> */}
       </header>

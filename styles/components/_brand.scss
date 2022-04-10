@@ -6,6 +6,10 @@ $class: "brand";
 
 .#{$class} {
   float: left;
+  position: fixed;
+  left: 0;
+  visibility: visible;
+  z-index: 999999 !important;
   .#{$class}-box {
     float: left;
     list-style: none;

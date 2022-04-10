@@ -33,7 +33,7 @@ export default function Secondary({ children }) {
   return (
     <div className="secondary">
       <FaviconComponent project={project} />
-      <header className="universal header fixed-header">
+      <header className="universal header">
         <BrandComponent link_colour="link-black" />
         {/* <MenuComponent /> */}
       </header>

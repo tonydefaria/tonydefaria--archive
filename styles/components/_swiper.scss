@@ -30,7 +30,7 @@ $class: "swiper";
       background-color: $black;
       max-height: calc(100vh - 64px) !important;
       img {
-        @include appear-animation(.25s);
+        // @include appear-animation(.25s);
         border-radius: 3px;
         float: left;
         max-height: calc(100vh - 96px) !important;
@@ -43,13 +43,13 @@ $class: "swiper";
       }
     }
     &.#{$class}-show {
-      opacity: 1;
-      transition: opacity .50s;
+      // opacity: 1;
+      // transition: opacity .50s;
       visibility: visible;
     }
     &.#{$class}-hide {
-      opacity: 0;
-      transition: opacity .50s, visibility 0s .50s;
+      // opacity: 0;
+      // transition: opacity .50s, visibility 0s .50s;
       visibility: hidden;
     }
   }
@@ -64,7 +64,6 @@ $class: "swiper";
       figure {
         max-height: calc(100vh - 32px) !important;
         img {
-          @include appear-animation(.50s);
           max-height: calc(100vh - 64px) !important;
         }
         figcaption {
@@ -84,7 +83,6 @@ $class: "swiper";
       figure {
         max-height: calc(100vh - 32px) !important;
         img {
-          @include appear-animation(.50s);
           max-height: calc(100vh - 64px) !important;
         }
         figcaption {
@@ -104,7 +102,6 @@ $class: "swiper";
       figure {
         max-height: calc(100vh - 32px) !important;
         img {
-          @include appear-animation(.50s);
           max-height: calc(100vh - 64px) !important;
         }
         figcaption {

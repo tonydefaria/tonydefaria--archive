@@ -86,11 +86,9 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
             <div className="swiper-instructions-box shadow">
               <div className="swiper-instructions-row">
                 <p className="font-size-xs font-family-mono text-align-center">
-                  To go through the photos
-                  <br />
                   <strong>SWIPE LEFT/RIGHT</strong>
                   <br />
-                  or use
+                  or
                   <br />
                   <strong>LEFT/RIGHT KEYS</strong>
                 </p>

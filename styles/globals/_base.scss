@@ -6,9 +6,6 @@
 *::after,
 *::before {
   @include border-box;
-  cursor: none;
-  cursor: url("/images/cursor-red.png") 16 16, auto;
-  cursor: url("/images/cursor-red.svg") 16 16, auto;
   -webkit-tap-highlight-color: $transparent;
   -webkit-touch-callout: none;
 }
@@ -22,6 +19,9 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  cursor: none;
+  cursor: url("/images/cursor-yellow.png") 16 16, auto !important;
+  cursor: url("/images/cursor-yellow.svg") 16 16, auto !important;
 }
 
 html {
@@ -69,6 +69,9 @@ button,
   -webkit-tap-highlight-color: $transparent;
   text-decoration: none;
   vertical-align: bottom;
+  cursor: none;
+  cursor: url("/images/cursor-red.png") 16 16, auto;
+  cursor: url("/images/cursor-red.svg") 16 16, auto;
 }
 
 figure {

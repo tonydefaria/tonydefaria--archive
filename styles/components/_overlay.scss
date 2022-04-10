@@ -25,13 +25,13 @@ $class: "overlay";
     z-index: 9999999;
   }
   &.#{$class}-show {
-    // opacity: 1;
-    // transition: opacity .50s;
+    opacity: 1;
+    transition: opacity .50s;
     visibility: visible;
   }
   &.#{$class}-hide {
-    // opacity: 0;
-    // transition: opacity .50s, visibility 0s .50s;
+    opacity: 0;
+    transition: opacity .50s, visibility 0s .50s;
     visibility: hidden;
   }
 }

@@ -14,18 +14,20 @@ $class: "swiper";
     width: 100vw;
     .#{$class}-slide {
       background-color: transparent;
+      background-color: $white;
       float: left;
       width: 100vw;
     }
   }
   .#{$class}-box {
-    background-color: $white;
+    background-color: $black;
     display: block;
     float: left;
     height: 100vh;
     padding: 32px;
     width: 100vw;
     figure {
+      background-color: $black;
       max-height: calc(100vh - 64px) !important;
       img {
         @include appear-animation(.25s);
@@ -35,6 +37,7 @@ $class: "swiper";
       }
       figcaption {
         @include font-size-xs;
+        color: $white;
         font-family: $mono;
         padding: 8px 0 0;
       }

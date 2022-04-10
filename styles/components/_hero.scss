@@ -8,7 +8,6 @@ $class: "hero";
   // background-image: url("/images/home-cover.gif");
   float: left;
   margin: 0;
-  padding: 64px;
   width: 100%;
   .#{$class}-box {
     float: left;
@@ -27,11 +26,6 @@ $class: "hero";
         }
       }
     }
-    .#{$class}-separator {
-      float: left;
-      padding: 32px;
-      width: 100%;
-    }
     &.half {
       width: 50%;
     }
@@ -42,16 +36,11 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$xxs} {
   .#{$class} {
-    padding: 0;
     .#{$class}-box {
-      padding: 0;
       .#{$class}-row {
       }
       &.half {
         width: 100%;
-      }
-      .#{$class}-separator {
-        padding: 0;
       }
     }
   }
@@ -61,9 +50,7 @@ $class: "hero";
 // ------------------------------------------------------------
 @media #{$xs} {
   .#{$class} {
-    padding: 0;
     .#{$class}-box {
-      padding: 0;
       .#{$class}-row {
       }
       &.half {
@@ -80,16 +67,11 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$s} {
   .#{$class} {
-    padding: 0;
     .#{$class}-box {
-      padding: 0;
       .#{$class}-row {
       }
       &.half {
         width: 100%;
-      }
-      .#{$class}-separator {
-        padding: 8px;
       }
     }
   }
@@ -99,15 +81,11 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$m} {
   .#{$class} {
-    padding: 32px;
     .#{$class}-box {
       .#{$class}-row {
       }
       &.half {
         width: 100%;
-      }
-      .#{$class}-separator {
-        padding: 12px;
       }
     }
   }
@@ -117,15 +95,11 @@ $class: "hero";
 // -------------------------------------------------------------
 @media #{$l} {
   .#{$class} {
-    padding: 32px;
     .#{$class}-box {
       .#{$class}-row {
       }
       &.half {
         width: 100%;
-      }
-      .#{$class}-separator {
-        padding: 16px;
       }
     }
   }
@@ -137,9 +111,6 @@ $class: "hero";
   .#{$class} {
     .#{$class}-box {
       .#{$class}-row {
-      }
-      .#{$class}-separator {
-        padding: 24px;
       }
     }
   }

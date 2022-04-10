@@ -37,8 +37,8 @@ export default function Secondary({ children }) {
         <BrandComponent link_colour="link-black" />
         {/* <MenuComponent /> */}
       </header>
-      <MenuMobileComponent />
-      <main className="universal main">
+      <MenuMobileComponent link_colour="link-white" bg_colour="black-bg" trigger_colour="link-black" trigger_colour_active="link-white" social_networks={social_networks} />
+      <main className="universal main flex-v-center">
         <div className="universal-box">
           <div className="universal-row">
             {children}

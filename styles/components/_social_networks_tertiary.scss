@@ -1,65 +1,37 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File: Menu Mobile
+// File: Social Networks Tertiary
 // -------------------------------------------------------------
 
-$class: "menu-mobile";
+$class: "social-networks-tertiary";
 
 .#{$class} {
-  background-color: $black;
-  bottom: 0;
   float: left;
-  height: 100vh;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100vw;
-  z-index: 9999;
+  margin: 32px 0 0;
+  width: 100%;
   .#{$class}-box {
     float: left;
     list-style: none;
-    margin: 0;
-    padding: 24px;
-    position: absolute;
-    top: 20%;
-    width: 240px;
+    padding: 0 16px;
+    width: auto;
     .#{$class}-item {
       float: left;
       margin: 0;
-      padding: 8px;
-      width: 100%;
-      z-index: 9999;
+      padding: 16px 16px 16px 0;
+      width: auto;
+      &:first-child {
+        padding: 16px;
+      }
+      .icon {
+        position: relative;
+        border-radius: 3px;
+        height: 32px;
+        width: 32px;
+        img {
+          border-radius: 3px;
+          // z-index: -1px !important;
+        }
+      }
     }
-    .#{$class}-inner-item {
-      float: left;
-      margin: 0;
-      padding: 4px;
-    }
-    .link-m {
-      font-size: 14px;
-      font-weight: 400;
-      text-align: center;
-      text-transform: uppercase;
-      width: 100%;
-    }
-    .link-xxl {
-      font-size: 28px;
-      font-weight: 900;
-      text-align: center;
-      text-transform: uppercase;
-      width: 100%;
-    }
-  }
-  &.#{$class}-show {
-    opacity: 1;
-    transition: opacity .50s;
-    visibility: visible;
-  }
-  &.#{$class}-hide {
-    opacity: 0;
-    transition: opacity .50s, visibility 0s .50s;
-    visibility: hidden;
   }
 }
 
@@ -69,6 +41,7 @@ $class: "menu-mobile";
   .#{$class} {
     .#{$class}-box {
       .#{$class}-item {
+        padding: 8px 16px 16px 0;
       }
     }
   }
@@ -80,6 +53,7 @@ $class: "menu-mobile";
   .#{$class} {
     .#{$class}-box {
       .#{$class}-item {
+        padding: 8px 16px 16px 0;
       }
     }
   }
@@ -91,6 +65,7 @@ $class: "menu-mobile";
   .#{$class} {
     .#{$class}-box {
       .#{$class}-item {
+        padding: 8px 16px 16px 0;
       }
     }
   }
@@ -104,10 +79,6 @@ $class: "menu-mobile";
       .#{$class}-item {
       }
     }
-    // &.#{$class}-show {
-    //   display: none;
-    //   visibility: hidden;
-    // }
   }
 }
 
@@ -119,10 +90,6 @@ $class: "menu-mobile";
       .#{$class}-item {
       }
     }
-    // &.#{$class}-show {
-    //   display: none;
-    //   visibility: hidden;
-    // }
   }
 }
 
@@ -134,10 +101,6 @@ $class: "menu-mobile";
       .#{$class}-item {
       }
     }
-    // &.#{$class}-show {
-    //   display: none;
-    //   visibility: hidden;
-    // }
   }
 }
 
@@ -149,9 +112,5 @@ $class: "menu-mobile";
       .#{$class}-item {
       }
     }
-    // &.#{$class}-show {
-    //   display: none;
-    //   visibility: hidden;
-    // }
   }
 }

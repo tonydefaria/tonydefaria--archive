@@ -34,11 +34,11 @@ export default function Primary({ children }) {
     <div className="primary">
       <FaviconComponent project={project} />
       <header className="universal header fixed-header">
-        <BrandComponent link_colour="link-black" />
+        <BrandComponent link_colour="link-white" />
         {/* <MenuComponent /> */}
       </header>
-      <MenuMobileComponent />
-      <main className="universal main">
+      <MenuMobileComponent link_colour="link-black" bg_colour="white-bg" trigger_colour="link-white" trigger_colour_active="link-black" social_networks={social_networks} />
+      <main className="universal main flex-v-center">
         <div className="universal-box">
           <div className="universal-row">
             {children}
@@ -47,7 +47,7 @@ export default function Primary({ children }) {
       </main>
       <footer className="universal footer">
         <SocialNetworksPrimaryComponent social_networks={social_networks} />
-        <CopyrightComponent text_colour="black-cl" />
+        <CopyrightComponent text_colour="white-cl" />
       </footer>
     </div>
   )

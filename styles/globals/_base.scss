@@ -7,8 +7,8 @@
 *::before {
   @include border-box;
   cursor: none;
-  cursor: url("/images/cursor-yellow.png") 16 16, auto;
-  cursor: url("/images/cursor-yellow.svg") 16 16, auto;
+  cursor: url("/images/cursor-red.png") 16 16, auto;
+  cursor: url("/images/cursor-red.svg") 16 16, auto;
   -webkit-tap-highlight-color: $transparent;
   -webkit-touch-callout: none;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 html {
-  background-color: $white;
+  background-color: $black;
   scroll-behavior: smooth;
 }
 
@@ -33,7 +33,7 @@ body {
   @include border-box;
   @include clearfix;
   @include font-size-m;
-  background-color: $white;
+  background-color: $black;
   color: $black;
   font-family: $sans;
   letter-spacing: .03em;

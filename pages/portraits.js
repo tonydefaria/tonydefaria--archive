@@ -9,7 +9,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Keyboard, EffectFade} from "swiper"
+import { Lazy, Keyboard, EffectFade} from "swiper"
 // Components
 import MetaComponent from "../components/meta_component"
 // Icons
@@ -74,11 +74,11 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
           centeredSlides={true}
           className="swiper"
           effect={"fade"}
-          // lazy={true}
+          lazy={true}
           loop={true}
           initialSlide={0}
           keyboard={{ enabled: true }}
-          modules={[Keyboard, EffectFade]}
+          modules={[Lazy, Keyboard, EffectFade]}
           slidesPerView={"auto"}
         >
 
@@ -104,7 +104,6 @@ export default function Portraits({meta, hankyoProject, hankyoSection}) {
                 <figure className="loading">
                   <Image src={image.image} width={image.width} height={image.height} quality={75} alt="Gallery Image" title="Tony de Faria" />
                   <figcaption>
-                    <strong>Caption: </strong>
                     {image.caption}
                   </figcaption>
                 </figure>

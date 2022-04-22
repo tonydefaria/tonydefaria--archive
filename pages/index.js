@@ -4,7 +4,7 @@
 import Primary from "../layouts/primary"
 
 // Built-in Components
-// import Link from "next/link"
+import Link from "next/link"
 import Head from "next/head"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -44,6 +44,8 @@ export default function Index({meta, hankyoProject, hankyoSection}) {
             <h1 className="font-size-xxl white-cl">{hero.title}</h1>
             <hr className="separator-s" />
             <p className="font-size-xl white-cl" dangerouslySetInnerHTML={{__html: hero.description}} />
+            <hr className="separator-s" />
+            <Link href="/portraits"><a aria-label="Portraits" id="portraits" className="button-l button-white text-transform-uppercase font-weight-900">Portraits</a></Link>
           </div>
         </div>
       </div>
